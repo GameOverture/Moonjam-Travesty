@@ -2,7 +2,7 @@
 #include "Scene.h"
 
 Scene::Scene(HyEntity2d *pParent /*= nullptr*/) :
-	HyEntity2d(pParent)
+	HyPhysicsGrid2d(pParent)
 {
 }
 

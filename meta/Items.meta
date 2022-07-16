@@ -13,6 +13,138 @@
     "Spine": {
     },
     "Sprites": {
+        "Actors/Moon": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "3b00361c-09e3-4de1-8918-907881659564",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "e9f31726-e27f-4bc5-9043-fdd92019a8e7",
+                        "cf0c4f62-57c0-4019-a3fa-2523bdc70a5f",
+                        "98508ff8-5f44-47bc-96cb-f07d9b634127",
+                        "ac99612a-41d8-459f-9064-b7cbc915e2e7",
+                        "c0676bb4-2cb6-4df0-aa9b-14d479056834"
+                    ],
+                    "name": "SideIdle"
+                },
+                {
+                    "assetUUIDs": [
+                        "e8d811e9-b804-4055-b87c-4e874169ca1c",
+                        "5307276c-32b0-480e-b597-bbfa1e0aa2e1",
+                        "05a458ea-f949-4ad2-bcce-fee8aa3127f1",
+                        "7558522d-7742-4050-97bc-fa63e3f0e4d3",
+                        "7c03fceb-3e18-4175-afdd-d271feef55c8",
+                        "10d4a1c5-e571-46d5-952e-1bd097d9b5ef"
+                    ],
+                    "name": "SideWalk"
+                },
+                {
+                    "assetUUIDs": [
+                        "15432f27-1b25-4d63-ac4c-0410699b7528",
+                        "15432f27-1b25-4d63-ac4c-0410699b7528",
+                        "d85272b6-fad8-4754-adec-f0eec0de458c",
+                        "d33253d2-e350-43cf-9030-7d3cf71bd6e5",
+                        "d33253d2-e350-43cf-9030-7d3cf71bd6e5"
+                    ],
+                    "name": "Action"
+                },
+                {
+                    "assetUUIDs": [
+                        "6e6b2551-880d-42a6-82e7-a6cf80c28e77",
+                        "2154b6f0-f7a4-4308-a83a-bbf905be907e",
+                        "14b7afb9-071e-48dd-83ed-2c2b3a1fdb93",
+                        "bb9091b6-4756-465e-a0bd-3e81e3ca928d",
+                        "cf63b5d8-7104-403f-893a-ecdab5ae3740"
+                    ],
+                    "name": "UpIdle"
+                },
+                {
+                    "assetUUIDs": [
+                        "96d3ab29-84d5-4b87-9316-40ebdb89c199",
+                        "f2e115de-c30b-4b06-bd04-80d0637d9e93",
+                        "5bb6523d-dd9f-4c7d-a249-fe9a8f1bed62",
+                        "c72c4d84-9f8f-406b-8682-581035210bbe",
+                        "5afa7249-e1fd-45d7-98e2-da1b953ac981",
+                        "ab1c4347-9156-44e0-a7f9-05f392de8118"
+                    ],
+                    "name": "UpWalk"
+                }
+            ]
+        },
+        "Outside/Cottage": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "2a51174e-9854-499d-8ba0-bf8faec34a7d",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "e63d2273-458e-45d5-a841-0853b88123db"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Outside/Grass": {
+            "CameraPos": [
+                304,
+                185
+            ],
+            "CameraZoom": 1.3640005588531494,
+            "UUID": "22123f25-791d-4c77-904d-752b47c1f1b9",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "41be6616-b549-4488-931d-addff3e2bd59"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Outside/Path": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "752181d5-866a-40b0-8142-ad4add66ad97",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "8eeaa82d-4daf-41b7-9b42-e6b1a45cb4df"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "85f06379-6218-40e1-82c1-7a6530719fca"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Outside/Sky": {
+            "CameraPos": [
+                365,
+                309
+            ],
+            "CameraZoom": 2.199556350708008,
+            "UUID": "c9fe71e3-d7f9-4437-82bd-a34167c4d436",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "6fa199d4-0864-4580-bdac-aaf8e7152560"
+                    ],
+                    "name": ""
+                }
+            ]
+        }
     },
     "Texts": {
         "+HyInternal/+SystemText": {

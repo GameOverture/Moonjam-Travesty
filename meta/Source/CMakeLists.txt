@@ -13,13 +13,13 @@ set(GAME_SRCFILES
 	"MoonjamTravesty.h"
 	"Actors/Player.cpp"
 	"Actors/Player.h"
-	"World/Scene.cpp"
-	"World/Scene.h")
+	"Scenes/Outside/Outside.cpp"
+	"Scenes/Outside/Outside.h")
 
 set(GAME_INCLUDE_DIRS "")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}")
-list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/World")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Actors")
+list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/Outside")
 
 #################################################################################################
 # ^ ^ ^ USER CONFIG ABOVE ^ ^ ^

@@ -13,6 +13,298 @@
     "Spine": {
     },
     "Sprites": {
+        "Actors/Moon": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.75,
+                    "frames": [
+                        {
+                            "checksum": 4022493219,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -21,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 4006111294,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 901824267,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 1233705728,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 4259823642,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -21,
+                            "offsetY": -8
+                        }
+                    ],
+                    "loop": true,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.6000000238418579,
+                    "frames": [
+                        {
+                            "checksum": 2785143466,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -24,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 38702986,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 2453938706,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 2216898374,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 1448556955,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -8
+                        },
+                        {
+                            "checksum": 1330199913,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -8
+                        }
+                    ],
+                    "loop": true,
+                    "reverse": false
+                },
+                {
+                    "bounce": true,
+                    "duration": 0.41600000858306885,
+                    "frames": [
+                        {
+                            "checksum": 1379476753,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -8
+                        },
+                        {
+                            "checksum": 1379476753,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -8
+                        },
+                        {
+                            "checksum": 2867968903,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -33,
+                            "offsetY": -6
+                        },
+                        {
+                            "checksum": 236629761,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -35,
+                            "offsetY": -5
+                        },
+                        {
+                            "checksum": 236629761,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -35,
+                            "offsetY": -5
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.75,
+                    "frames": [
+                        {
+                            "checksum": 1847309435,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -21,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 3251878840,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 1471946520,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 107226663,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 2820020673,
+                            "duration": 0.15000000596046448,
+                            "offsetX": -21,
+                            "offsetY": -8
+                        }
+                    ],
+                    "loop": true,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.6000000238418579,
+                    "frames": [
+                        {
+                            "checksum": 3462530783,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -21,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 412467189,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 728645592,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 490329866,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -9
+                        },
+                        {
+                            "checksum": 401399792,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -21,
+                            "offsetY": -8
+                        },
+                        {
+                            "checksum": 3151398458,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -8
+                        }
+                    ],
+                    "loop": true,
+                    "reverse": false
+                }
+            ]
+        },
+        "Outside/Cottage": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 1173381153,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -139,
+                            "offsetY": 31
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "Outside/Grass": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 3247804070,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -500,
+                            "offsetY": -209
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "Outside/Path": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 3920728527,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -237,
+                            "offsetY": -26
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 2944413180,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -134,
+                            "offsetY": -24
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "Outside/Sky": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 3056212265,
+                            "duration": 0.01600000075995922,
+                            "offsetX": 0,
+                            "offsetY": 0
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        }
     },
     "Texts": {
         "+HyInternal/+SystemText": {
