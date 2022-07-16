@@ -1,0 +1,27 @@
+{
+    "$fileVersion": 9,
+    "BuildPath": "./build/",
+    "ConsoleInfo": {
+        "LocationX": 512,
+        "LocationY": 256,
+        "Name": "Harmony Log Console",
+        "ResolutionX": 64,
+        "ResolutionY": 80,
+        "Type": 1
+    },
+    "DataPath": "./data/",
+    "MetaPath": "./meta/",
+    "SourcePath": "meta/Source/",
+    "Title": "MoonjamTravesty",
+    "UseConsole": true,
+    "WindowInfo": [
+        {
+            "LocationX": 0,
+            "LocationY": 80,
+            "Name": "MoonjamTravesty",
+            "ResolutionX": 1280,
+            "ResolutionY": 756,
+            "Type": 0
+        }
+    ]
+}

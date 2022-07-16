@@ -1,0 +1,24 @@
+{
+    "$fileVersion": 9,
+    "banks": [
+        {
+            "bankId": 0,
+            "textures": [
+                {
+                    "assets": [
+                        {
+                            "bottom": 246,
+                            "checksum": 2756427850,
+                            "left": 0,
+                            "right": 246,
+                            "top": 0
+                        }
+                    ],
+                    "height": 2048,
+                    "textureInfo": 262147,
+                    "width": 2048
+                }
+            ]
+        }
+    ]
+}

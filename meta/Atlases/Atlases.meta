@@ -1,0 +1,42 @@
+{
+    "$fileVersion": 9,
+    "assets": [
+        {
+            "assetUUID": "bfe33b30-3c6c-454b-93da-95592ae69f3c",
+            "bankId": 0,
+            "checksum": 2756427850,
+            "cropBottom": 245,
+            "cropLeft": 0,
+            "cropRight": 245,
+            "cropTop": 0,
+            "errors": 0,
+            "filter": "",
+            "height": 246,
+            "itemType": "Text",
+            "name": "+SystemText",
+            "textureIndex": 0,
+            "textureInfo": 262147,
+            "width": 246,
+            "x": 0,
+            "y": 0
+        }
+    ],
+    "banks": [
+        {
+            "bankId": 0,
+            "bankName": "Default",
+            "cmbHeuristic": 1,
+            "cmbSortOrder": 0,
+            "maxHeight": 2048,
+            "maxWidth": 2048,
+            "sbFrameMarginBottom": 1,
+            "sbFrameMarginLeft": 0,
+            "sbFrameMarginRight": 1,
+            "sbFrameMarginTop": 0,
+            "unfilledIndices": [
+                0
+            ]
+        }
+    ],
+    "nextBankId": 1
+}

@@ -1,0 +1,90 @@
+{
+    "$fileVersion": 9,
+    "assets": [
+        {
+            "assetUUID": "2612357e-5a00-48d6-a224-29228a9b197b",
+            "bankId": 0,
+            "checksum": 2142379858,
+            "errors": 0,
+            "filter": "",
+            "itemType": "Source",
+            "name": "main.cpp"
+        },
+        {
+            "assetUUID": "1e79051a-4380-44cb-9f98-02b5156c8f59",
+            "bankId": 0,
+            "checksum": 415839713,
+            "errors": 0,
+            "filter": "",
+            "itemType": "Header",
+            "name": "pch.h"
+        },
+        {
+            "assetUUID": "bc8c0877-38fe-48f5-8797-d6a32602f0e1",
+            "bankId": 0,
+            "checksum": 782357567,
+            "errors": 0,
+            "filter": "",
+            "itemType": "Source",
+            "name": "MoonjamTravesty.cpp"
+        },
+        {
+            "assetUUID": "d456eff4-003d-408b-b1d4-ba035357d46c",
+            "bankId": 0,
+            "checksum": 4053991370,
+            "errors": 0,
+            "filter": "",
+            "itemType": "Header",
+            "name": "MoonjamTravesty.h"
+        },
+        {
+            "assetUUID": "b4d7b3bf-fc52-445d-9d43-541914886098",
+            "bankId": 0,
+            "checksum": 1620474690,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Source",
+            "name": "Player.cpp"
+        },
+        {
+            "assetUUID": "205e804b-3bb9-4a00-b96a-4621f80c97cb",
+            "bankId": 0,
+            "checksum": 3734436007,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Header",
+            "name": "Player.h"
+        },
+        {
+            "assetUUID": "dd91a292-5c0c-4b81-b882-3b0350fe967d",
+            "bankId": 0,
+            "checksum": 1640149132,
+            "errors": 0,
+            "filter": "World",
+            "itemType": "Source",
+            "name": "Scene.cpp"
+        },
+        {
+            "assetUUID": "030b941e-e62e-42cb-bf29-ac438e32b2d3",
+            "bankId": 0,
+            "checksum": 29378171,
+            "errors": 0,
+            "filter": "World",
+            "itemType": "Header",
+            "name": "Scene.h"
+        }
+    ],
+    "banks": [
+        {
+            "OutputName": "MoonjamTravesty",
+            "SrcDepends": [
+            ],
+            "UseGlfw": false,
+            "UseIcu": false,
+            "UseSdlNet": false,
+            "bankId": 0,
+            "bankName": "Default"
+        }
+    ],
+    "nextBankId": 1
+}

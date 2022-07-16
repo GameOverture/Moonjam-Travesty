@@ -1,0 +1,40 @@
+{
+    "$fileVersion": 9,
+    "Audio": {
+    },
+    "Entities2d": {
+    },
+    "Entities3d": {
+    },
+    "Particles": {
+    },
+    "Prefabs": {
+    },
+    "Spine": {
+    },
+    "Sprites": {
+    },
+    "Texts": {
+        "+HyInternal/+SystemText": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "{69bd2664-cc15-4963-b538-4a22f1efb172}",
+            "assetUUID": "{bfe33b30-3c6c-454b-93da-95592ae69f3c}",
+            "availableGlyphs": {
+                "0-9": true,
+                "A-Z": true,
+                "a-z": true,
+                "additional": "",
+                "symbols": true
+            },
+            "stateArray": [
+                {
+                    "name": ""
+                }
+            ]
+        }
+    }
+}
