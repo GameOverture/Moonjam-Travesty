@@ -2,36 +2,31 @@
 #define MoonjamTravesty_h__
 
 #include "pch.h"
+#include "Player.h"
 #include "Outside.h"
+#include "Inside.h"
+#include "Clock.h"
 
 class MoonjamTravesty : public HyEngine
 {
-	HyCamera2d *		m_pCamera;
+	static MoonjamTravesty *	sm_pInstance;
+	HyCamera2d *				m_pCamera;
 
-	enum InputAction
-	{
-		INPUT_DebugCamUp = 0,
-		INPUT_DebugCamDown,
-		INPUT_DebugCamLeft,
-		INPUT_DebugCamRight,
+	Player						m_Player;
 
-		INPUT_Menu,
-	};
+	Outside						m_Outside;
+	Inside						m_Inside;
 
-	Outside				m_Outside;
-
-	enum GameState
-	{
-		STATE_Loading = 0,
-		STATE_Outside
-	};
-	GameState			m_eState;
+	Clock						m_Clock;
 
 public:
 	MoonjamTravesty(HarmonyInit &initStruct);
 	virtual ~MoonjamTravesty();
 
 	virtual bool OnUpdate() override;
+
+	static void LeaveHouse();
+	static void EnterHouse();
 };
 
 #endif // MoonjamTravesty_h__

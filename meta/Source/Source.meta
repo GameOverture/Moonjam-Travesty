@@ -72,6 +72,186 @@
             "filter": "Scenes/Outside",
             "itemType": "Header",
             "name": "Outside.h"
+        },
+        {
+            "assetUUID": "2e5387cd-e199-4075-9502-f60e322d62d3",
+            "bankId": 0,
+            "checksum": 2270383987,
+            "errors": 0,
+            "filter": "Scenes/Inside",
+            "itemType": "Source",
+            "name": "Inside.cpp"
+        },
+        {
+            "assetUUID": "46575e26-1494-42a5-899b-84ab37a09c19",
+            "bankId": 0,
+            "checksum": 3225306920,
+            "errors": 0,
+            "filter": "Scenes/Inside",
+            "itemType": "Header",
+            "name": "Inside.h"
+        },
+        {
+            "assetUUID": "69ca63b0-9f06-4760-9631-c2bf45f6c5d9",
+            "bankId": 0,
+            "checksum": 1423501851,
+            "errors": 0,
+            "filter": "Scenes/Outside",
+            "itemType": "Source",
+            "name": "OutsideContactListener.cpp"
+        },
+        {
+            "assetUUID": "78503aac-b5db-49ad-90c8-173d6de27807",
+            "bankId": 0,
+            "checksum": 4189463250,
+            "errors": 0,
+            "filter": "Scenes/Outside",
+            "itemType": "Header",
+            "name": "OutsideContactListener.h"
+        },
+        {
+            "assetUUID": "9a611d7f-d36e-4f55-b083-4ba4aad05edf",
+            "bankId": 0,
+            "checksum": 3111457686,
+            "errors": 0,
+            "filter": "Scenes/Inside",
+            "itemType": "Source",
+            "name": "InsideContactListener.cpp"
+        },
+        {
+            "assetUUID": "185e2b07-7e29-49d9-805d-d1a2eb45693a",
+            "bankId": 0,
+            "checksum": 1496771471,
+            "errors": 0,
+            "filter": "Scenes/Inside",
+            "itemType": "Header",
+            "name": "InsideContactListener.h"
+        },
+        {
+            "assetUUID": "c4496614-740e-49da-9fed-79417811fd8c",
+            "bankId": 0,
+            "checksum": 2903210025,
+            "errors": 0,
+            "filter": "Scenes/UI",
+            "itemType": "Source",
+            "name": "Computer.cpp"
+        },
+        {
+            "assetUUID": "3cfcfdd9-5bd7-483d-9dbd-b8aeaded7187",
+            "bankId": 0,
+            "checksum": 80432323,
+            "errors": 0,
+            "filter": "Scenes/UI",
+            "itemType": "Header",
+            "name": "Computer.h"
+        },
+        {
+            "assetUUID": "6cdf68f3-c5f7-4657-8940-9ccfaddfe6d8",
+            "bankId": 0,
+            "checksum": 2179618267,
+            "errors": 0,
+            "filter": "Scenes/Outside/Attack",
+            "itemType": "Source",
+            "name": "Gun.cpp"
+        },
+        {
+            "assetUUID": "5c552af4-73a0-44af-a9d8-2cda936c7077",
+            "bankId": 0,
+            "checksum": 1869624929,
+            "errors": 0,
+            "filter": "Scenes/Outside/Attack",
+            "itemType": "Header",
+            "name": "Gun.h"
+        },
+        {
+            "assetUUID": "9dcaf308-2ff0-43aa-9fb0-25b95d30629f",
+            "bankId": 0,
+            "checksum": 839191320,
+            "errors": 0,
+            "filter": "Scenes/Outside/Attack",
+            "itemType": "Source",
+            "name": "Cum.cpp"
+        },
+        {
+            "assetUUID": "dce70885-b1f3-4fc2-9ed5-2a319aa5ffa8",
+            "bankId": 0,
+            "checksum": 2562076408,
+            "errors": 0,
+            "filter": "Scenes/Outside/Attack",
+            "itemType": "Header",
+            "name": "Cum.h"
+        },
+        {
+            "assetUUID": "c49d7fe3-9fc5-42c9-a8ca-ee0059d49a45",
+            "bankId": 0,
+            "checksum": 2286632816,
+            "errors": 0,
+            "filter": "Scenes/Outside/Attack",
+            "itemType": "Source",
+            "name": "IItem.cpp"
+        },
+        {
+            "assetUUID": "f3b251aa-b726-4c4a-bb1a-62501d7da18d",
+            "bankId": 0,
+            "checksum": 4266555903,
+            "errors": 0,
+            "filter": "Scenes/Outside/Attack",
+            "itemType": "Header",
+            "name": "IItem.h"
+        },
+        {
+            "assetUUID": "9cf21afa-21d1-418f-9ea4-7f682404ec7a",
+            "bankId": 0,
+            "checksum": 2090838763,
+            "errors": 0,
+            "filter": "Scenes/UI",
+            "itemType": "Source",
+            "name": "ProgressBar.cpp"
+        },
+        {
+            "assetUUID": "26b76d1d-0129-4047-b9b8-c5dfe3a9dfd5",
+            "bankId": 0,
+            "checksum": 3733221375,
+            "errors": 0,
+            "filter": "Scenes/UI",
+            "itemType": "Header",
+            "name": "ProgressBar.h"
+        },
+        {
+            "assetUUID": "3214d0c9-97a6-4acc-a964-d9399aa3f481",
+            "bankId": 0,
+            "checksum": 3356193772,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Source",
+            "name": "IActor.cpp"
+        },
+        {
+            "assetUUID": "0ccfb175-1b6c-43a3-bbcb-92bacf934341",
+            "bankId": 0,
+            "checksum": 105920185,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Header",
+            "name": "IActor.h"
+        },
+        {
+            "assetUUID": "a3385506-4a8f-4533-a456-de94911f5b75",
+            "bankId": 0,
+            "checksum": 1113220305,
+            "errors": 0,
+            "filter": "Scenes/UI",
+            "itemType": "Source",
+            "name": "Clock.cpp"
+        },
+        {
+            "assetUUID": "bd9c449d-18a9-4f13-8612-a8cb8b41872b",
+            "bankId": 0,
+            "checksum": 3059274192,
+            "errors": 0,
+            "filter": "Scenes/UI",
+            "itemType": "Header",
+            "name": "Clock.h"
         }
     ],
     "banks": [

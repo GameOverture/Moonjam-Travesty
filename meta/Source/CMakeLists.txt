@@ -14,12 +14,35 @@ set(GAME_SRCFILES
 	"Actors/Player.cpp"
 	"Actors/Player.h"
 	"Scenes/Outside/Outside.cpp"
-	"Scenes/Outside/Outside.h")
+	"Scenes/Outside/Outside.h"
+	"Scenes/Inside/Inside.cpp"
+	"Scenes/Inside/Inside.h"
+	"Scenes/Outside/OutsideContactListener.cpp"
+	"Scenes/Outside/OutsideContactListener.h"
+	"Scenes/Inside/InsideContactListener.cpp"
+	"Scenes/Inside/InsideContactListener.h"
+	"Scenes/UI/Computer.cpp"
+	"Scenes/UI/Computer.h"
+	"Scenes/Outside/Attack/Gun.cpp"
+	"Scenes/Outside/Attack/Gun.h"
+	"Scenes/Outside/Attack/Cum.cpp"
+	"Scenes/Outside/Attack/Cum.h"
+	"Scenes/Outside/Attack/IItem.cpp"
+	"Scenes/Outside/Attack/IItem.h"
+	"Scenes/UI/ProgressBar.cpp"
+	"Scenes/UI/ProgressBar.h"
+	"Actors/IActor.cpp"
+	"Actors/IActor.h"
+	"Scenes/UI/Clock.cpp"
+	"Scenes/UI/Clock.h")
 
 set(GAME_INCLUDE_DIRS "")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}")
+list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/UI")
+list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/Outside/Attack")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Actors")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/Outside")
+list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/Inside")
 
 #################################################################################################
 # ^ ^ ^ USER CONFIG ABOVE ^ ^ ^
@@ -75,6 +98,8 @@ if("${CMAKE_SYSTEM_NAME}" STREQUAL "Emscripten")
 	list(APPEND HYEM_LINK_FLAGS "-s USE_VORBIS=1")
 	list(APPEND HYEM_LINK_FLAGS "-s USE_SDL_MIXER=2")
 	list(APPEND HYEM_LINK_FLAGS "-s FETCH")
+	list(APPEND HYEM_LINK_FLAGS "-s EXPORTED_RUNTIME_METHODS=ccall")
+	list(APPEND HYEM_LINK_FLAGS "-s EXPORTED_FUNCTIONS=_main,_doPariplayEvent")
 	
 	if(HYBUILD_ICU)
 		list(APPEND HYEM_COMPILE_FLAGS "-s USE_ICU=1")
