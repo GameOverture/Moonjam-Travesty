@@ -130,18 +130,18 @@
         {
             "assetUUID": "c4496614-740e-49da-9fed-79417811fd8c",
             "bankId": 0,
-            "checksum": 2903210025,
+            "checksum": 4009463472,
             "errors": 0,
-            "filter": "Scenes/UI",
+            "filter": "Game/UI",
             "itemType": "Source",
             "name": "Computer.cpp"
         },
         {
             "assetUUID": "3cfcfdd9-5bd7-483d-9dbd-b8aeaded7187",
             "bankId": 0,
-            "checksum": 80432323,
+            "checksum": 308911808,
             "errors": 0,
-            "filter": "Scenes/UI",
+            "filter": "Game/UI",
             "itemType": "Header",
             "name": "Computer.h"
         },
@@ -202,18 +202,18 @@
         {
             "assetUUID": "9cf21afa-21d1-418f-9ea4-7f682404ec7a",
             "bankId": 0,
-            "checksum": 2090838763,
+            "checksum": 1896259056,
             "errors": 0,
-            "filter": "Scenes/UI",
+            "filter": "Game/UI",
             "itemType": "Source",
             "name": "ProgressBar.cpp"
         },
         {
             "assetUUID": "26b76d1d-0129-4047-b9b8-c5dfe3a9dfd5",
             "bankId": 0,
-            "checksum": 3733221375,
+            "checksum": 1460974825,
             "errors": 0,
-            "filter": "Scenes/UI",
+            "filter": "Game/UI",
             "itemType": "Header",
             "name": "ProgressBar.h"
         },
@@ -238,20 +238,38 @@
         {
             "assetUUID": "a3385506-4a8f-4533-a456-de94911f5b75",
             "bankId": 0,
-            "checksum": 1113220305,
+            "checksum": 2353472014,
             "errors": 0,
-            "filter": "Scenes/UI",
+            "filter": "Game/UI",
             "itemType": "Source",
             "name": "Clock.cpp"
         },
         {
             "assetUUID": "bd9c449d-18a9-4f13-8612-a8cb8b41872b",
             "bankId": 0,
-            "checksum": 3059274192,
+            "checksum": 3371634974,
             "errors": 0,
-            "filter": "Scenes/UI",
+            "filter": "Game/UI",
             "itemType": "Header",
             "name": "Clock.h"
+        },
+        {
+            "assetUUID": "f4c93fc4-339c-4acb-a3c4-e2a61b869bf4",
+            "bankId": 0,
+            "checksum": 1507085422,
+            "errors": 0,
+            "filter": "Game",
+            "itemType": "Source",
+            "name": "Game.cpp"
+        },
+        {
+            "assetUUID": "a1a49bd3-f84d-41d0-8bab-7f1872952686",
+            "bankId": 0,
+            "checksum": 1577220876,
+            "errors": 0,
+            "filter": "Game",
+            "itemType": "Header",
+            "name": "Game.h"
         }
     ],
     "banks": [

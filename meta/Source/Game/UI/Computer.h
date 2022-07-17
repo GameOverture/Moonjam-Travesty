@@ -7,14 +7,18 @@ class Computer : public HyUiContainer
 {
 	HySprite2d		m_Dialog;
 
+	HyButton		m_ExitBtn;
+
 	HyButton		m_WorkBtn;
 	HyLabel			m_WorkLabel;
 
-	HyButton		m_BuyCumBtn;
-	HyLabel			m_BuyCumLabel;
+	HyLabel			m_ShopLabel;
 
-	HyButton		m_BuyGunBtn;
+	HyLabel			m_BuyCumLabel;
+	HyButton		m_BuyCumBtn;
+
 	HyLabel			m_BuyGunLabel;
+	HyButton		m_BuyGunBtn;
 
 public:
 	Computer(HyEntity2d *pParent = nullptr);

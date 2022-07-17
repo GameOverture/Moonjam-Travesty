@@ -5,7 +5,7 @@
 #include "Player.h"
 #include "Outside.h"
 #include "Inside.h"
-#include "Clock.h"
+#include "Game.h"
 
 class MoonjamTravesty : public HyEngine
 {
@@ -13,11 +13,16 @@ class MoonjamTravesty : public HyEngine
 	HyCamera2d *				m_pCamera;
 
 	Player						m_Player;
-
 	Outside						m_Outside;
 	Inside						m_Inside;
+	Game						m_Game;
 
-	Clock						m_Clock;
+	enum GameState
+	{
+		STATE_Loading = 0,
+		STATE_Play
+	};
+	GameState					m_eGameState;
 
 public:
 	MoonjamTravesty(HarmonyInit &initStruct);
@@ -27,6 +32,10 @@ public:
 
 	static void LeaveHouse();
 	static void EnterHouse();
+
+	static Game &GetGame();
+	static void BuyCum();
+	static void BuyGun();
 };
 
 #endif // MoonjamTravesty_h__

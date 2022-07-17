@@ -3,9 +3,10 @@
 
 #include "Harmony/HyEngine.h"
 
-#define DISPLAYORDER_Clock			999999
-#define DISPLAYORDER_Computer		99999
-#define DISPLAYORDER_ItemSetup		99999
+#define DISPLAYORDER_Clock			9999999
+#define DISPLAYORDER_Computer		999999
+#define DISPLAYORDER_ItemSetup		999999
+#define DISPLAYORDER_DarkOverlay	99999
 
 enum Tag
 {

@@ -4,7 +4,6 @@
 #include "pch.h"
 #include "Player.h"
 #include "InsideContactListener.h"
-#include "Computer.h"
 
 class Inside : public HyPhysicsGrid2d
 {
@@ -26,8 +25,6 @@ class Inside : public HyPhysicsGrid2d
 	HyPrimitive2d				m_Wall_KitchenCounter;
 	HyPrimitive2d				m_Wall_LowLeft;
 	HyPrimitive2d				m_Wall_LowRight;
-
-	Computer					m_Computer;
 
 	enum InsideState
 	{

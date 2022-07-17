@@ -33,11 +33,13 @@ Player::Player(HyEntity2d *pParent /*= nullptr*/) :
 	if(m_bInputEnabled == false)
 		return;
 
+	float fItemWeightMod = m_pEquipedItem ? 0.6f : 1.0f;
+
 	const float fACCEL_AMT = 20.0f;
 	const float fDECEL_AMT = 38.0f;
-	const float fMAX_SPEED = 10.0f * m_fMovementMod;
+	const float fMAX_SPEED = 10.0f * m_fMovementMod * fItemWeightMod;
 	const float fOUTSIDE_GRAVITY = 50.0f;
-	const float fJUMP_PWR = 7.0f * m_fMovementMod;
+	const float fJUMP_PWR = 14.0f * m_fMovementMod * fItemWeightMod;
 	
 	if(HyEngine::Input().IsActionDown(INPUT_MoveLeft))
 	{

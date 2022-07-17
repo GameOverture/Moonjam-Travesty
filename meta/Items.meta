@@ -315,6 +315,28 @@
                 }
             ]
         },
+        "UI/Clock/BarBox": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 0.2693324089050293,
+            "UUID": "b0c0cd61-6f92-433f-a42f-16a46ff835fa",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "009c2312-e0de-4217-a41f-0db1a95e4870"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "e79c8f94-7f22-4a1c-ab7e-f23e972dc032"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
         "UI/Clock/Cover": {
             "CameraPos": [
                 0,
@@ -342,6 +364,22 @@
                 {
                     "assetUUIDs": [
                         "8120685a-ca62-4ead-a2df-e0a90c87d07c"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "UI/Clock/MoneyBox": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 0.8791103363037109,
+            "UUID": "bfa83856-cd7c-42df-96f6-829d694b1020",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "4cf692b8-5895-420f-9156-3d2518ee6ca0"
                     ],
                     "name": ""
                 }
@@ -379,6 +417,34 @@
                 }
             ]
         },
+        "UI/ComputerExitBtn": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "41f38d14-96fe-406d-b488-94b2bfaa7efa",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "54169473-8df0-4c9e-90e7-d67649b91240"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "54169473-8df0-4c9e-90e7-d67649b91240"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "54169473-8df0-4c9e-90e7-d67649b91240"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
         "UI/Dialog": {
             "CameraPos": [
                 0,
@@ -390,34 +456,6 @@
                 {
                     "assetUUIDs": [
                         "56680eda-a836-46c9-aea3-92ccf60c959d"
-                    ],
-                    "name": ""
-                }
-            ]
-        },
-        "UI/LogOffBtn": {
-            "CameraPos": [
-                0,
-                0
-            ],
-            "CameraZoom": 1,
-            "UUID": "b92546e1-e6db-4fc4-82f9-cc8ee69f84c1",
-            "stateArray": [
-                {
-                    "assetUUIDs": [
-                        "f53d935b-bad0-471a-be59-e18886fa50fd"
-                    ],
-                    "name": ""
-                },
-                {
-                    "assetUUIDs": [
-                        "53faf919-a176-47b1-9ddc-4925f308696f"
-                    ],
-                    "name": ""
-                },
-                {
-                    "assetUUIDs": [
-                        "f53d935b-bad0-471a-be59-e18886fa50fd"
                     ],
                     "name": ""
                 }
@@ -487,6 +525,27 @@
                 "A-Z": true,
                 "a-z": true,
                 "additional": "-",
+                "symbols": true
+            },
+            "stateArray": [
+                {
+                    "name": ""
+                }
+            ]
+        },
+        "UI/Clock/Text": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "69798741-c2e9-4f8e-8b87-f10939dcce88",
+            "assetUUID": "{d2e609f6-f815-4eff-9871-8c7518a6e5e0}",
+            "availableGlyphs": {
+                "0-9": true,
+                "A-Z": false,
+                "a-z": false,
+                "additional": "",
                 "symbols": true
             },
             "stateArray": [

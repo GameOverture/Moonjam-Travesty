@@ -2,6 +2,8 @@
 #include "Outside.h"
 #include "MoonjamTravesty.h"
 
+#define NUM_SKY_SPRITES 4
+
 #define ACTOR_FOREGROUND_ZOOM 1.4f
 #define ACTOR_BACKGROUND_ZOOM 1.0f
 
@@ -14,7 +16,7 @@
 const float fSETUP_INIT_DURATION = 1.0f;
 const float fSETUP_LOOP_DURATION = 4.0f;
 
-const float fMINIMUM_DIST_FROM_DOOR = 100.0f; // Valid item placement
+const float fMINIMUM_DIST_FROM_DOOR = 200.0f; // Valid item placement
 
 const float fItemHeldPosY = 55.0f;
 const float fItemHeldScale = 0.7f;
@@ -30,7 +32,7 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_b2World.SetContactListener(&m_OutsideContactListener);
 
 	float fStartX = -2000.0f;
-	for(uint32 i = 0; i < 4; i++)
+	for(uint32 i = 0; i < NUM_SKY_SPRITES; i++)
 	{
 		HySprite2d *pNewSky = HY_NEW HySprite2d("Outside", "Sky", this);
 		pNewSky->pos.Set(fStartX + (i * pNewSky->GetFrameWidth()), 0.0f);
@@ -77,6 +79,13 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_RightWall.physics.Init(HYPHYS_Static);
 	m_RightWall.physics.SetEnabled(true);
 	ChildAppend(m_RightWall);
+
+	m_NightDarkness.UseWindowCoordinates();
+	m_NightDarkness.shape.SetAsBox(HyEngine::Window().GetWidthF(), HyEngine::Window().GetHeightF());
+	m_NightDarkness.SetTint(HyColor::Black);
+	m_NightDarkness.alpha.Set(0.0f);
+	m_NightDarkness.SetDisplayOrder(DISPLAYORDER_DarkOverlay);
+	ChildAppend(m_NightDarkness);
 }
 
 /*virtual*/ Outside::~Outside()
@@ -97,6 +106,11 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 /*virtual*/ void Outside::OnUpdate() /*override*/
 {
 	m_OutsideContactListener.ProcessQueue(*this);
+
+	float fPercDayLeft = MoonjamTravesty::GetGame().GetPercentOfDayLeft();
+	m_NightDarkness.alpha.Set(0.72f * (1.0f - fPercDayLeft));
+	for(auto *pSkySprite : m_SkyList)
+		pSkySprite->SetTint(HyColor(fPercDayLeft, fPercDayLeft, fPercDayLeft));
 
 	if(m_eOutsideState != STATE_Inactive)
 	{
@@ -269,6 +283,7 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 void Outside::Init()
 {
 	SetVisible(true);
+	HyEngine::Window().GetCamera2d(0)->SetZoom(1.0f);
 	HyEngine::Window().GetCamera2d(0)->pos.Set(0.0f, 275.0f);
 
 	m_PlayerRef.physics.SetEnabled(false);

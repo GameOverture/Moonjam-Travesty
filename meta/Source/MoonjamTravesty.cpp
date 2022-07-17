@@ -7,7 +7,8 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 	HyEngine(initStruct),
 	m_pCamera(HyEngine::Window().CreateCamera2d()),
 	m_Outside(m_Player),
-	m_Inside(m_Player)
+	m_Inside(m_Player),
+	m_eGameState(STATE_Loading)
 {
 	HyEngine::Input().MapBtn(INPUT_Menu, HYKEY_Escape);
 
@@ -35,14 +36,10 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 	m_Player.Load();
 	m_Outside.Load();
 	m_Inside.Load();
-	m_Clock.Load();
+	m_Game.Load();
 	
-
 	m_Outside.Hide();
 	m_Inside.Hide();
-
-	//m_Inside.Init();
-	m_Outside.Init();
 
 	sm_pInstance = this;
 }
@@ -63,6 +60,24 @@ MoonjamTravesty::~MoonjamTravesty()
 	if(HyEngine::Input().IsActionDown(INPUT_DebugCamRight))
 		m_pCamera->pos.Offset(fDebugCamMovement * HyEngine::DeltaTime(), 0.0f);
 
+	switch(m_eGameState)
+	{
+	case STATE_Loading:
+		if(m_Player.IsLoaded() &&
+			m_Outside.IsLoaded() &&
+			m_Inside.IsLoaded() &&
+			m_Game.IsLoaded())
+		{
+			m_Inside.Init();
+			//m_Outside.Init();
+			m_Game.StartDay();
+			
+			m_eGameState = STATE_Play;
+		}
+		break;
+	case STATE_Play:
+		break;
+	}
 
 	return true;
 }
@@ -77,4 +92,21 @@ MoonjamTravesty::~MoonjamTravesty()
 {
 	sm_pInstance->m_Outside.Hide();
 	sm_pInstance->m_Inside.Init();
+}
+
+/*static*/ Game &MoonjamTravesty::GetGame()
+{
+	return sm_pInstance->m_Game;
+}
+
+/*static*/ void MoonjamTravesty::BuyCum()
+{
+	sm_pInstance->m_Game.BuyCum();
+	sm_pInstance->m_Outside.SpawnCum();
+}
+
+/*static*/ void MoonjamTravesty::BuyGun()
+{
+	sm_pInstance->m_Game.BuyGun();
+	sm_pInstance->m_Outside.SpawnGun();
 }

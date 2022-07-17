@@ -24,6 +24,8 @@ class Outside : public HyPhysicsGrid2d
 	HyPrimitive2d				m_LeftWall;
 	HyPrimitive2d				m_RightWall;
 
+	HyPrimitive2d				m_NightDarkness;
+
 	enum OutsideState
 	{
 		STATE_Inactive,

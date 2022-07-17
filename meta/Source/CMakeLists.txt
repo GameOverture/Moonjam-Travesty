@@ -21,27 +21,30 @@ set(GAME_SRCFILES
 	"Scenes/Outside/OutsideContactListener.h"
 	"Scenes/Inside/InsideContactListener.cpp"
 	"Scenes/Inside/InsideContactListener.h"
-	"Scenes/UI/Computer.cpp"
-	"Scenes/UI/Computer.h"
+	"Game/UI/Computer.cpp"
+	"Game/UI/Computer.h"
 	"Scenes/Outside/Attack/Gun.cpp"
 	"Scenes/Outside/Attack/Gun.h"
 	"Scenes/Outside/Attack/Cum.cpp"
 	"Scenes/Outside/Attack/Cum.h"
 	"Scenes/Outside/Attack/IItem.cpp"
 	"Scenes/Outside/Attack/IItem.h"
-	"Scenes/UI/ProgressBar.cpp"
-	"Scenes/UI/ProgressBar.h"
+	"Game/UI/ProgressBar.cpp"
+	"Game/UI/ProgressBar.h"
 	"Actors/IActor.cpp"
 	"Actors/IActor.h"
-	"Scenes/UI/Clock.cpp"
-	"Scenes/UI/Clock.h")
+	"Game/UI/Clock.cpp"
+	"Game/UI/Clock.h"
+	"Game/Game.cpp"
+	"Game/Game.h")
 
 set(GAME_INCLUDE_DIRS "")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}")
-list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/UI")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/Outside/Attack")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Actors")
+list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Game/UI")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/Outside")
+list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Game")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/Scenes/Inside")
 
 #################################################################################################
