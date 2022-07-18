@@ -8,8 +8,14 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 	m_pCamera(HyEngine::Window().CreateCamera2d()),
 	m_Outside(m_Player),
 	m_Inside(m_Player),
+	m_Title(),
 	m_eGameState(STATE_Loading)
 {
+	m_LoadCover.UseWindowCoordinates();
+	m_LoadCover.shape.SetAsBox(HyEngine::Window().GetWidthF(), HyEngine::Window().GetHeightF());
+	m_LoadCover.SetTint(HyColor::Black);
+	m_LoadCover.SetDisplayOrder(DISPLAYORDER_LoadCover);
+
 	HyEngine::Input().MapBtn(INPUT_Menu, HYKEY_Escape);
 
 	HyEngine::Input().MapBtn(INPUT_DebugCamUp, HYKEY_Up);
@@ -37,9 +43,11 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 	m_Outside.Load();
 	m_Inside.Load();
 	m_Game.Load();
+	m_Title.Load();
 	
 	m_Outside.Hide();
 	m_Inside.Hide();
+	m_Title.SetVisible(false);
 
 	sm_pInstance = this;
 }
@@ -68,14 +76,35 @@ MoonjamTravesty::~MoonjamTravesty()
 			m_Inside.IsLoaded() &&
 			m_Game.IsLoaded())
 		{
-			//m_Inside.Init();
-			m_Outside.Init();
-			m_Game.StartDay();
+			m_LoadCover.alpha.Tween(0.0f, 0.5f, HyTween::Linear, [](IHyNode *pThis) { pThis->SetVisible(false); });
 			
+			m_Outside.SetVisible(true);
+			m_pCamera->SetZoom(1.0f);
+			m_pCamera->pos.Set(0.0f, 275.0f);
+
+			m_Title.SetVisible(true);
+			m_Title.alpha.Set(0.0f);
+			m_Title.alpha.Tween(1.0f, 0.5);
+
+			m_eGameState = STATE_Title;
+		}
+		break;
+
+	case STATE_Title:
+		if(HyEngine::Input().IsActionReleased(INPUT_Jump))
+		{
+			m_Title.alpha.Tween(0.0f, 0.5f, HyTween::Linear, [](IHyNode *pThis) { pThis->SetVisible(false); });
+
+			m_Game.StartDay();
+			EnterHouse();
 			m_eGameState = STATE_Play;
 		}
 		break;
+
 	case STATE_Play:
+		break;
+
+	case STATE_Sleep:
 		break;
 	}
 
@@ -109,4 +138,9 @@ MoonjamTravesty::~MoonjamTravesty()
 {
 	sm_pInstance->m_Game.BuyGun();
 	sm_pInstance->m_Outside.SpawnGun();
+}
+
+/*static*/ void MoonjamTravesty::Sleep()
+{
+	sm_pInstance->m_eGameState = STATE_Sleep;
 }

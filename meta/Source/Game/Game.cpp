@@ -45,6 +45,7 @@ void Game::StartDay()
 
 void Game::EndDay()
 {
+	m_Clock.Stop();
 	m_Bills.Assemble(GetCurWorkProfit());
 	m_Bills.Load();
 	m_Bills.Show();

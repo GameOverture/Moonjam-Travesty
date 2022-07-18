@@ -27,6 +27,8 @@ class Outside : public HyPhysicsGrid2d
 
 	HyPrimitive2d				m_NightDarkness;
 
+	HyText2d					m_AirText;
+
 	enum OutsideState
 	{
 		STATE_Inactive,
@@ -49,6 +51,7 @@ class Outside : public HyPhysicsGrid2d
 	{
 		ATTACKSTATE_Inactive = 0,
 		ATTACKSTATE_Intro,
+		ATTACKSTATE_IntroPan,
 		ATTACKSTATE_Attacking
 	};
 	AttackState					m_eAttackState;

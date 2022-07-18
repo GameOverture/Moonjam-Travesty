@@ -35,6 +35,8 @@ public:
 	void Assemble(int64 iPaycheckAmt);
 
 	virtual void OnContainerUpdate() override;
+
+	static void OnEndBtn(HyButton *pBtn, void *pData);
 };
 
 #endif // Bills_h__

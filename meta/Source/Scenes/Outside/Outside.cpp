@@ -89,6 +89,13 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_NightDarkness.alpha.Set(0.0f);
 	m_NightDarkness.SetDisplayOrder(DISPLAYORDER_DarkOverlay);
 	ChildAppend(m_NightDarkness);
+
+	m_AirText.Init("", "Main", this);
+	m_AirText.SetDisplayOrder(DISPLAYORDER_DarkOverlay + 1);
+	m_AirText.UseWindowCoordinates();
+	m_AirText.SetTextAlignment(HYALIGN_Center);
+	m_AirText.pos.Set(HyEngine::Window().GetWidthF(0.5f), HyEngine::Window().GetHeightF(0.75f));
+	m_AirText.alpha.Set(0.0f);
 }
 
 /*virtual*/ Outside::~Outside()
@@ -402,24 +409,45 @@ void Outside::SetupAttack(uint32 uiDayIndex)
 	HyEngine::Window().GetCamera2d(0)->pos.Set(0.0f, 275.0f);
 
 	m_AttackStopwatch.Reset();
+	m_AttackStopwatch.Start();
 	m_eOutsideState = STATE_Attack;
 	m_eAttackState = ATTACKSTATE_Intro;
 }
 
 void Outside::AttackUpdate()
 {
-
-
 	switch(m_eAttackState)
 	{
 	case ATTACKSTATE_Inactive:
 		break;
 
 	case ATTACKSTATE_Intro:
-		//m_EnemyList
+		if(m_AttackStopwatch.TimeElapsed() >= 2.0f)
+		{
+			m_AirText.SetText("Meanwhile...");
+			m_AirText.alpha.Set(0.0f);
+			m_AirText.alpha.Tween(1.0f, 0.5f);
+			HyEngine::Window().GetCamera2d(0)->pos.Tween(-1500.0f, 275.0f, 2.0f, HyTween::QuadInOut);
+			m_eAttackState = ATTACKSTATE_IntroPan;
+		}
+		break;
+
+	case ATTACKSTATE_IntroPan:
+		if(HyEngine::Window().GetCamera2d(0)->pos.IsAnimating() == false)
+		{
+			m_AirText.alpha.Tween(0.0f, 0.5f);
+
+			m_AttackStopwatch.Reset();
+			m_AttackStopwatch.Start();
+			m_eAttackState = ATTACKSTATE_Attacking;
+		}
 		break;
 
 	case ATTACKSTATE_Attacking:
+		for(auto *pEnemy : m_EnemyList)
+		{
+
+		}
 		break;
 	}
 }

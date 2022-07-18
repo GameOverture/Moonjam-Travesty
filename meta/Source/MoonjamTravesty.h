@@ -6,6 +6,7 @@
 #include "Outside.h"
 #include "Inside.h"
 #include "Game.h"
+#include "TitleOverlay.h"
 
 class MoonjamTravesty : public HyEngine
 {
@@ -16,11 +17,16 @@ class MoonjamTravesty : public HyEngine
 	Outside						m_Outside;
 	Inside						m_Inside;
 	Game						m_Game;
+	TitleOverlay				m_Title;
+
+	HyPrimitive2d				m_LoadCover;
 
 	enum GameState
 	{
 		STATE_Loading = 0,
-		STATE_Play
+		STATE_Title,
+		STATE_Play,
+		STATE_Sleep
 	};
 	GameState					m_eGameState;
 
@@ -36,6 +42,8 @@ public:
 	static Game &GetGame();
 	static void BuyCum();
 	static void BuyGun();
+
+	static void Sleep();
 };
 
 #endif // MoonjamTravesty_h__

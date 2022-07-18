@@ -45,6 +45,8 @@ Bills::Bills(HyEntity2d *pParent /*= nullptr*/) :
 	m_MedicineChk.SetText("Medicine");
 	m_RepairsChk.SetText("Repairs");
 
+	m_EndBtn.SetButtonClickedCallback(OnEndBtn, this);
+
 	SetLayoutMargin(20, 20, 20, 20);
 }
 
@@ -125,4 +127,9 @@ void Bills::Assemble(int64 iPaycheckAmt)
 
 /*virtual*/ void Bills::OnContainerUpdate() /*override*/
 {
+}
+
+/*static*/ void Bills::OnEndBtn(HyButton *pBtn, void *pData)
+{
+	//MoonjamTravesty::GetGame().
 }

@@ -360,6 +360,24 @@
             "filter": "Actors",
             "itemType": "Header",
             "name": "IEnemy.h"
+        },
+        {
+            "assetUUID": "9281df75-2b51-448e-b549-916832e38945",
+            "bankId": 0,
+            "checksum": 2045814176,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Source",
+            "name": "TitleOverlay.cpp"
+        },
+        {
+            "assetUUID": "5f2a54f3-041a-44f0-8baf-87336bd5e9f3",
+            "bankId": 0,
+            "checksum": 917195049,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Header",
+            "name": "TitleOverlay.h"
         }
     ],
     "banks": [
