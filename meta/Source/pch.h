@@ -3,6 +3,7 @@
 
 #include "Harmony/HyEngine.h"
 
+#define DISPLAYORDER_Bills			99999999
 #define DISPLAYORDER_Clock			9999999
 #define DISPLAYORDER_Computer		999999
 #define DISPLAYORDER_ItemSetup		999999

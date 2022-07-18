@@ -68,8 +68,8 @@ MoonjamTravesty::~MoonjamTravesty()
 			m_Inside.IsLoaded() &&
 			m_Game.IsLoaded())
 		{
-			m_Inside.Init();
-			//m_Outside.Init();
+			//m_Inside.Init();
+			m_Outside.Init();
 			m_Game.StartDay();
 			
 			m_eGameState = STATE_Play;

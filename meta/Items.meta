@@ -259,6 +259,22 @@
                 }
             ]
         },
+        "UI/BillsPanel": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "e0f8f26a-2895-409f-aaf6-6e06894c7fd5",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "8a436e07-c951-467f-a1eb-9a3075054387"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
         "UI/BuyCumBtn": {
             "CameraPos": [
                 0,
@@ -528,6 +544,33 @@
                 "symbols": true
             },
             "stateArray": [
+                {
+                    "name": ""
+                }
+            ]
+        },
+        "UI/Bills": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "546bfecd-7d5c-4935-9a86-32229108e0e0",
+            "assetUUID": "{ae60d04c-e895-4bed-96dd-a6d44384a320}",
+            "availableGlyphs": {
+                "0-9": true,
+                "A-Z": true,
+                "a-z": true,
+                "additional": "",
+                "symbols": true
+            },
+            "stateArray": [
+                {
+                    "name": ""
+                },
+                {
+                    "name": ""
+                },
                 {
                     "name": ""
                 }

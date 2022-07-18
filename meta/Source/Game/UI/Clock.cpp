@@ -55,6 +55,11 @@ void Clock::Start()
 	m_Timer.Start();
 }
 
+void Clock::Stop()
+{
+	m_Timer.Pause();
+}
+
 int64 Clock::GetMoney()
 {
 	return m_MoneyBox.GetValue();

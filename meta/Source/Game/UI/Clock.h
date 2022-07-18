@@ -22,6 +22,7 @@ public:
 
 	void Reset();
 	void Start();
+	void Stop();
 
 	int64 GetMoney();
 	void OffsetMoney(int64 iOffsetAmt, float fDuration);

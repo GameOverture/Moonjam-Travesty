@@ -3,6 +3,7 @@
 
 #include "pch.h"
 #include "Computer.h"
+#include "Bills.h"
 #include "Clock.h"
 
 const int iCUM_COST = 10000;
@@ -14,9 +15,15 @@ const int64 iSTART_MONEY = 100000;
 const int64 iMAX_WORK_PROFIT = 50000;
 const float fMAX_WORK_TIME = 0.25f;
 
+const int64 iMORTGAGE_COST = 25000;
+const int64 iFOOD_COST = 10000;
+const int64 iAC_COST = 10000;
+const int64 iMEDICINE_COST = 10000;
+
 class Game : public HyEntity2d
 {
 	Computer			m_Computer;
+	Bills				m_Bills;
 	Clock				m_Clock;
 
 public:
@@ -30,6 +37,7 @@ public:
 	float GetPercentOfDayLeft();
 
 	void StartDay();
+	void EndDay();
 
 	void ShowComputer();
 	void HideComputer();

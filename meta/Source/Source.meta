@@ -270,6 +270,42 @@
             "filter": "Game",
             "itemType": "Header",
             "name": "Game.h"
+        },
+        {
+            "assetUUID": "472dd313-120d-49c9-9f3e-f58d882e9a26",
+            "bankId": 0,
+            "checksum": 1139952674,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Source",
+            "name": "Bills.cpp"
+        },
+        {
+            "assetUUID": "a94c6433-2ed6-47f2-90cd-fcfac8b4ab08",
+            "bankId": 0,
+            "checksum": 867898199,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Header",
+            "name": "Bills.h"
+        },
+        {
+            "assetUUID": "fe23b4a2-47fc-4f3a-a35c-bd73bea54adc",
+            "bankId": 0,
+            "checksum": 3234809097,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Source",
+            "name": "TheNextDay.cpp"
+        },
+        {
+            "assetUUID": "266daa62-2dce-4b3d-91ce-58ecb4622996",
+            "bankId": 0,
+            "checksum": 2973116501,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Header",
+            "name": "TheNextDay.h"
         }
     ],
     "banks": [

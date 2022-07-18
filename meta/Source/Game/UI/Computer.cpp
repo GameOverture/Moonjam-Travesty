@@ -18,6 +18,7 @@ Computer::Computer(HyEntity2d *pParent /*= nullptr*/) :
 	SetDisplayOrder(DISPLAYORDER_Computer);
 	m_Dialog.SetDisplayOrder(DISPLAYORDER_Computer - 1);
 	m_Panel.alpha.Set(0.0f);
+
 	m_ExitBtn.SetButtonClickedCallback(OnExitBtn, this);
 	
 	m_WorkBtn.SetButtonClickedCallback(OnWorkBtn, this);
@@ -82,6 +83,7 @@ Computer::Computer(HyEntity2d *pParent /*= nullptr*/) :
 
 /*static*/ void Computer::OnWorkBtn(HyButton *pBtn, void *pData)
 {
+	MoonjamTravesty::GetGame().EndDay();
 }
 
 /*static*/ void Computer::OnCumBtn(HyButton *pBtn, void *pData)
