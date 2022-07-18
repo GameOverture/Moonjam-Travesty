@@ -91,7 +91,7 @@ MoonjamTravesty::~MoonjamTravesty()
 		break;
 
 	case STATE_Title:
-		if(HyEngine::Input().IsActionReleased(INPUT_Jump))
+		if(m_Title.IsFinished())
 		{
 			m_Title.alpha.Tween(0.0f, 0.5f, HyTween::Linear, [](IHyNode *pThis) { pThis->SetVisible(false); });
 

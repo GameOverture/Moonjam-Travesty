@@ -845,6 +845,216 @@
                 }
             ]
         },
+        "UI/Title/HowToPanel": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 3889852352,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -300,
+                            "offsetY": -239
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "UI/Title/Noted": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 1.949999213218689,
+                    "frames": [
+                        {
+                            "checksum": 3158840602,
+                            "duration": 0.5,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 686748660,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3158840602,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 2301632954,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3158840602,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 686748660,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3158840602,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 2301632954,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3158840602,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 2301632954,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 363572075,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 1777316515,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 321683238,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3308382213,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3405058744,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 2186690941,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3405058744,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 2186690941,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3405058744,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3308382213,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 321683238,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 321683238,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3308382213,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3405058744,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 2186690941,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3405058744,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3308382213,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 321683238,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 1777316515,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 2,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 2301632954,
+                            "duration": 0.05000000074505806,
+                            "offsetX": 3,
+                            "offsetY": 0
+                        }
+                    ],
+                    "loop": true,
+                    "reverse": false
+                }
+            ]
+        },
         "UI/WorkBtn": {
             "stateArray": [
                 {

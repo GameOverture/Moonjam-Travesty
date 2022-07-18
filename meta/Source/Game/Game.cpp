@@ -10,7 +10,9 @@ Game::Game(HyEntity2d *pParent /*= nullptr*/) :
 	m_Computer.Hide(true);
 	m_Computer.pos.Set(50.0f, 5.0f);
 
-	m_Bills.Hide(true);	
+	m_Bills.Hide(true);
+	
+	m_Clock.SetVisible(false);
 }
 
 /*virtual*/ Game::~Game()
@@ -41,11 +43,16 @@ float Game::GetPercentOfDayLeft()
 void Game::StartDay()
 {
 	m_Clock.Start();
+	m_Clock.SetVisible(true);
 }
 
 void Game::EndDay()
 {
 	m_Clock.Stop();
+	m_Clock.SetVisible(false);
+
+	m_Computer.Hide();
+
 	m_Bills.Assemble(GetCurWorkProfit());
 	m_Bills.Load();
 	m_Bills.Show();

@@ -528,6 +528,67 @@
                 }
             ]
         },
+        "UI/Title/HowToPanel": {
+            "CameraPos": [
+                279,
+                153
+            ],
+            "CameraZoom": 1,
+            "UUID": "3119382f-2bf6-40e0-8b3d-eb667bff4ba7",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "beca28bc-7a1a-4be1-a558-a8f2eae03b90"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "UI/Title/Noted": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "bb5f36cf-92d3-4ca5-9daa-ee37c816b8fe",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "8ae4912f-cdf9-48a6-9910-7c933ce2f293",
+                        "dd55d966-fcd9-40b7-ba69-dd97f9e886f5",
+                        "77d701ad-c38d-4803-b9fb-3bd0c697c00f",
+                        "36e94904-9354-439e-85b6-f8ef917d36ff",
+                        "24d9c194-afde-4899-ba46-92cb0bc30409",
+                        "57799783-f55e-42ae-bb26-e1bee51e58fd",
+                        "af882dd9-eef1-4c6e-81ab-e5db5243a2d6",
+                        "3cbb9efb-8cfe-4c6d-a3e7-496883d3b5c0",
+                        "d297e060-358c-4868-a1c4-ddbace35d4f7",
+                        "e794044e-863d-4b4f-8278-ccce9a2dc1dd",
+                        "57a0fe87-6dfa-4c9c-8c76-d58e6937df02",
+                        "97514527-fa99-4d98-a8b4-3cb84b058b6c",
+                        "a85e4e13-5fc5-486b-98a0-50856e8f51a1",
+                        "3c128f7b-cb07-41c9-a18b-435c9d76fc58",
+                        "3145b716-55a4-434e-b630-d7c8314f3125",
+                        "80e64483-af38-406a-b7d1-9ae21a92dc19",
+                        "747f6c6e-c4c1-4060-9add-8632c428de62",
+                        "3c3c3f2c-a2d6-4eb2-83fe-615984133416",
+                        "ed2e2f61-1d23-4cbe-b98f-598317651d84",
+                        "e9c17c4b-0ced-4161-a7fb-50e9887828e0",
+                        "94c79f60-45bd-46b6-9594-cb8853001dce",
+                        "e86d6c59-930d-4b40-a0a2-d19df6b681d6",
+                        "8940a21b-1e32-4a9b-9e4b-5623423862e5",
+                        "f1e3639f-d7c7-4b90-833f-c561dccb6f65",
+                        "16831b16-b961-447a-8e5c-56817f722d6f",
+                        "85ecc69a-d2f8-4d31-bd56-66dd81deab7f",
+                        "33b17f2b-73c6-43b6-a760-71cfe129f92e",
+                        "a72f1418-c4b9-459a-9b1d-a92c1eaff928",
+                        "445cec44-cc40-477c-b4a3-6d80d136025d",
+                        "6d443f56-1b5c-4dd4-98ba-fe17b308c321"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
         "UI/WorkBtn": {
             "CameraPos": [
                 0,
