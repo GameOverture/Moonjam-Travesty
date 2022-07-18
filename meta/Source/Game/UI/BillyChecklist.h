@@ -8,9 +8,12 @@ class BillyChecklist : public HyEntity2d
 	HyPrimitive2d		m_Background;
 	HyText2d			m_Title;
 
-	HyCheckBox			m_SnackChk;
-	HyCheckBox			m_HomeworkChk;
-	HyCheckBox			m_DinnerChk;
+	HySprite2d			m_SnackChkBox;
+	HyText2d			m_SnackLbl;
+	HySprite2d			m_HomeworkChkBox;
+	HyText2d			m_HomeworkLbl;
+	HySprite2d			m_DinnerChkBox;
+	HyText2d			m_DinnerLbl;
 
 	// Stats
 	BillyFeels			m_eBillyFeels;

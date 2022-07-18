@@ -10,7 +10,11 @@
 const int iCUM_COST = 10000;
 const int iGUN_COST = 20000;
 
-const float fDAY_LENGTH = 15.0f;
+const float fSNACK_DUR = 6.0f;
+const float fDINNER_DUR = 12.0f;
+const float fHOMEWORK_DUR = 8.0f;
+
+const float fDAY_LENGTH = 1500.0f;
 const int64 iSTART_MONEY = 100000;
 
 const int64 iMAX_WORK_PROFIT = 100000;
@@ -56,6 +60,8 @@ public:
 
 	void ShowComputer();
 	void HideComputer();
+
+	BillyChecklist &GetBilly();
 
 private:
 	void BuyCum();

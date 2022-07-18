@@ -26,22 +26,35 @@ class Inside : public HyPhysicsGrid2d
 	HyPrimitive2d				m_Wall_LowLeft;
 	HyPrimitive2d				m_Wall_LowRight;
 
+	HySprite2d					m_Billy;
+
+	HyStopwatch					m_SnackStopwatch;
+	HyProgressBar				m_SnackBar;
+
+	HyStopwatch					m_DinnerStopwatch;
+	HyProgressBar				m_DinnerBar;
+
+	HyProgressBar				m_HomeworkBar;
+	HyStopwatch					m_HomeworkStopwatch;
+
 	enum InsideState
 	{
 		STATE_Inactive,
 		STATE_EnteringHouse,
 		STATE_Play,
-		STATE_PlayComputer,
 		STATE_PlayKitchen,
 		STATE_PlayHomework,
 	};
 	InsideState					m_eInsideState;
 
+
 public:
-	Inside(Player &playerRef, HyEntity2d *pParent = nullptr);
+	Inside(Player &playerRef,  HyEntity2d *pParent = nullptr);
 	virtual ~Inside();
 
 	virtual void OnUpdate() override;
+
+	void Reset();
 
 	void Init();
 	void Hide();

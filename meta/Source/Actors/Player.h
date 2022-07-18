@@ -18,11 +18,16 @@ class Player : public IActor
 
 	IItem *				m_pEquipedItem;
 
+	HyLabel				m_HoverLabel;
+
+
 public:
 	Player(HyEntity2d *pParent = nullptr);
 	virtual ~Player();
 
 	virtual void OnUpdate() override;
+
+	HyLabel &GetLabel();
 
 	void EnableInput(bool bEnable);
 	bool IsOutside();

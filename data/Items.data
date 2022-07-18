@@ -13,6 +13,54 @@
     "Spine": {
     },
     "Sprites": {
+        "Actors/Billy": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.6000000238418579,
+                    "frames": [
+                        {
+                            "checksum": 3795334815,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -13
+                        },
+                        {
+                            "checksum": 334895726,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -23,
+                            "offsetY": -13
+                        },
+                        {
+                            "checksum": 439372628,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -23,
+                            "offsetY": -13
+                        },
+                        {
+                            "checksum": 1084831405,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -23,
+                            "offsetY": -13
+                        },
+                        {
+                            "checksum": 847351725,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -22,
+                            "offsetY": -12
+                        },
+                        {
+                            "checksum": 391113926,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -23,
+                            "offsetY": -12
+                        }
+                    ],
+                    "loop": true,
+                    "reverse": false
+                }
+            ]
+        },
         "Actors/Borpa": {
             "stateArray": [
                 {
@@ -348,6 +396,64 @@
                             "duration": 0.10000000149011612,
                             "offsetX": -22,
                             "offsetY": -9
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "Actors/PlayerLabel": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0,
+                    "frames": [
+                    ],
+                    "loop": false,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 2458740151,
+                            "duration": 0.01600000075995922,
+                            "offsetX": 0,
+                            "offsetY": 0
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "Actors/ProgBar": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 2317471897,
+                            "duration": 0.01600000075995922,
+                            "offsetX": 0,
+                            "offsetY": 0
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 276501913,
+                            "duration": 0.01600000075995922,
+                            "offsetX": 0,
+                            "offsetY": 0
                         }
                     ],
                     "loop": false,
@@ -694,6 +800,38 @@
                             "duration": 0.01600000075995922,
                             "offsetX": 0,
                             "offsetY": 0
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "UI/BillyCheckbox": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 2233428990,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -21,
+                            "offsetY": -21
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 2585127700,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -21,
+                            "offsetY": -21
                         }
                     ],
                     "loop": false,

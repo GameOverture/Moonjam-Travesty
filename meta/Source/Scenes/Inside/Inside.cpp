@@ -18,6 +18,10 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_Wall_KitchenCounter(this),
 	m_Wall_LowLeft(this),
 	m_Wall_LowRight(this),
+	m_Billy("Actors", "Billy", this),
+	m_SnackBar(HyPanelInit("Actors", "ProgBar"), "", "", 2, 2, 2, 2, this),
+	m_DinnerBar(HyPanelInit("Actors", "ProgBar"), "", "", 2, 2, 2, 2, this),
+	m_HomeworkBar(HyPanelInit("Actors", "ProgBar"), "", "", 2, 2, 2, 2, this),
 	m_eInsideState(STATE_Inactive)
 {
 	SetTag(TAG_Inside);
@@ -35,14 +39,14 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_Sensor_Kitchen.SetTag(TAG_Kitchen);
 	m_Sensor_Kitchen.SetTint(HyColor::Blue);
 	m_Sensor_Kitchen.alpha.Set(fDebugShowAmt);
-	m_Sensor_Kitchen.shape.SetAsBox(160.0f, 64.0f, glm::vec2(182.0f, 543.0f), 0.0f);
+	m_Sensor_Kitchen.shape.SetAsBox(160.0f, 64.0f, glm::vec2(200.0f, 560.0f), 0.0f);
 	m_Sensor_Kitchen.physics.Init(HYPHYS_Static);
 	m_Sensor_Kitchen.physics.SetSensor(true);
 
 	m_Sensor_Homework.SetTag(TAG_Homework);
 	m_Sensor_Homework.SetTint(HyColor::Blue);
 	m_Sensor_Homework.alpha.Set(fDebugShowAmt);
-	m_Sensor_Homework.shape.SetAsBox(125.0f, 64.0f, glm::vec2(304.0f, 194.0f), 0.0f);
+	m_Sensor_Homework.shape.SetAsBox(125.0f, 64.0f, glm::vec2(200.0f, 125.0f), 0.0f);
 	m_Sensor_Homework.physics.Init(HYPHYS_Static);
 	m_Sensor_Homework.physics.SetSensor(true);
 
@@ -92,6 +96,20 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_Wall_LowRight.alpha.Set(fDebugShowAmt);
 	m_Wall_LowRight.shape.SetAsBox(342.0f, 30.0f, glm::vec2(954.0f, 30.0f), 0.0f);
 	m_Wall_LowRight.physics.Init(HYPHYS_Static);
+
+	m_Billy.pos.Set(200.0f, 200.0f);
+
+	m_SnackBar.SetRange(0, 100);
+	m_SnackBar.pos.Set(220.0f, 425.0f);
+	m_SnackBar.scale.Set(2.0f, 2.0f);
+
+	m_DinnerBar.SetRange(0, 100);
+	m_DinnerBar.pos.Set(220.0f, 425.0f);
+	m_DinnerBar.scale.Set(2.0f, 2.0f);
+
+	m_HomeworkBar.SetRange(0, 100);
+	m_HomeworkBar.pos.Set(100.0f, 50.0f);
+	m_HomeworkBar.scale.Set(2.0f, 2.0f);
 }
 
 /*virtual*/ Inside::~Inside()
@@ -115,13 +133,11 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 		}
 		break;
 
-	case STATE_PlayComputer:
+	
 	case STATE_Play:
-	case STATE_PlayKitchen:
-	case STATE_PlayHomework:
 		// Camera logic
-		HyCamera2d *pCamera = HyEngine::Window().GetCamera2d(0);
-		const float fDeadZoneAmt = HyEngine::Window().GetWidthF(0.2f);
+		//HyCamera2d *pCamera = HyEngine::Window().GetCamera2d(0);
+		//const float fDeadZoneAmt = HyEngine::Window().GetWidthF(0.2f);
 
 		//auto worldBoundsAabb = pCamera->GetWorldViewBounds();
 		//float fWorldBoundsLeft = worldBoundsAabb.lowerBound.x + fDeadZoneAmt;
@@ -132,7 +148,60 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 		//if(m_PlayerRef.pos.X() > fWorldBoundsRight)
 		//	pCamera->pos.Offset(m_PlayerRef.pos.X() - fWorldBoundsRight, 0.0f);
 		break;
+
+	case STATE_PlayKitchen:
+		if(m_SnackBar.alpha.Get() != 0.0f)
+			m_SnackBar.SetValue(static_cast<int32>(100.0f * (m_SnackStopwatch.TimeElapsed() / fSNACK_DUR)));
+		if(m_DinnerBar.alpha.Get() != 0.0f)
+			m_DinnerBar.SetValue(static_cast<int32>(100.0f * (m_DinnerStopwatch.TimeElapsed() / fDINNER_DUR)));
+
+		if(m_SnackBar.alpha.Get() != 0.0f && m_SnackStopwatch.TimeElapsed() > fSNACK_DUR)
+		{
+			m_PlayerRef.GetLabel().SetText("");
+			m_PlayerRef.GetLabel().alpha.Tween(0.0f, 0.25f);
+
+			MoonjamTravesty::GetGame().GetBilly().OnSnackTask();
+			m_SnackBar.alpha.Set(0.0f);
+			m_DinnerBar.alpha.Set(1.0f);
+		}
+		if(m_DinnerBar.alpha.Get() != 0.0f && m_DinnerStopwatch.TimeElapsed() > fDINNER_DUR)
+		{
+			m_PlayerRef.GetLabel().SetText("");
+			m_PlayerRef.GetLabel().alpha.Tween(0.0f, 0.25f);
+
+			MoonjamTravesty::GetGame().GetBilly().OnDinnerTask();
+			m_DinnerBar.alpha.Set(0.0f);
+		}
+		break;
+
+	case STATE_PlayHomework:
+		if(m_HomeworkBar.alpha.Get() != 0.0f)
+			m_HomeworkBar.SetValue(static_cast<int32>(100.0f * (m_HomeworkStopwatch.TimeElapsed() / fHOMEWORK_DUR)));
+		if(m_HomeworkBar.alpha.Get() != 0.0f && m_HomeworkStopwatch.TimeElapsed() > fHOMEWORK_DUR)
+		{
+			m_PlayerRef.GetLabel().SetText("");
+			m_PlayerRef.GetLabel().alpha.Tween(0.0f, 0.25f);
+
+			MoonjamTravesty::GetGame().GetBilly().OnHomeworkTask();
+			m_HomeworkBar.alpha.Set(0.0f);
+		}
+		break;
 	}
+}
+
+void Inside::Reset()
+{
+	m_SnackStopwatch.Reset();
+	m_SnackBar.alpha.Set(1.0f);
+	m_SnackBar.SetValue(0);
+
+	m_DinnerStopwatch.Reset();
+	m_DinnerBar.alpha.Set(0.0f);
+	m_DinnerBar.SetValue(0);
+
+	m_HomeworkStopwatch.Reset();
+	m_HomeworkBar.alpha.Set(1.0f);
+	m_HomeworkBar.SetValue(0);
 }
 
 void Inside::Init()
@@ -174,21 +243,61 @@ void Inside::OnLeaveComputer()
 
 void Inside::OnEnterKitchen()
 {
-	m_eInsideState = STATE_PlayKitchen;
+	if(MoonjamTravesty::GetGame().GetFoodCount() > 0)
+	{
+		if(m_SnackBar.alpha.Get() != 0.0f)
+		{
+			m_PlayerRef.GetLabel().SetText(std::stringstream() << "Making Snack (" << std::to_string(MoonjamTravesty::GetGame().GetFoodCount()) << "x Food Left)");
+			m_PlayerRef.GetLabel().alpha.Tween(1.0f, 0.25f);
+			m_SnackStopwatch.Start();
+		}
+		else if(m_DinnerBar.alpha.Get() != 0.0f)
+		{
+			m_PlayerRef.GetLabel().SetText(std::stringstream() << "Making Dinner (" << std::to_string(MoonjamTravesty::GetGame().GetFoodCount()) << "x Food Left)");
+			m_PlayerRef.GetLabel().alpha.Tween(1.0f, 0.25f);
+			m_DinnerStopwatch.Start();
+		}
+
+		m_eInsideState = STATE_PlayKitchen;
+	}
+	else
+	{
+		m_PlayerRef.GetLabel().SetText("No food left...");
+		m_PlayerRef.GetLabel().alpha.Tween(1.0f, 0.25f);
+	}
+
+	
 }
 
 void Inside::OnLeaveKitchen()
 {
+	m_PlayerRef.GetLabel().SetText("");
+	m_PlayerRef.GetLabel().alpha.Tween(0.0f, 0.25f);
+
+	m_SnackStopwatch.Pause();
+	m_DinnerStopwatch.Pause();
+
 	m_eInsideState = STATE_Play;
 }
 
 void Inside::OnEnterHomework()
 {
+	if(m_HomeworkBar.alpha.Get() != 0.0f)
+	{
+		m_PlayerRef.GetLabel().SetText("Doing Billy's Homework");
+		m_PlayerRef.GetLabel().alpha.Tween(1.0f, 0.25f);
+		m_HomeworkStopwatch.Start();
+	}
+
 	m_eInsideState = STATE_PlayHomework;
 }
 
 void Inside::OnLeaveHomework()
 {
+	m_PlayerRef.GetLabel().SetText("");
+	m_PlayerRef.GetLabel().alpha.Tween(0.0f, 0.25f);
+
+	m_HomeworkStopwatch.Pause();
 	m_eInsideState = STATE_Play;
 }
 

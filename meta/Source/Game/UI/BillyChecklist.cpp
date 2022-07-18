@@ -5,39 +5,40 @@ BillyChecklist::BillyChecklist(HyEntity2d *pParent /*= nullptr*/) :
 	HyEntity2d(pParent),
 	m_Background(this),
 	m_Title("UI", "Bills", this),
-	m_SnackChk(HyPanelInit(32, 32, 2), "UI", "Bills", this),
-	m_HomeworkChk(HyPanelInit(32, 32, 2), "UI", "Bills", this),
-	m_DinnerChk(HyPanelInit(32, 32, 2), "UI", "Bills", this),
+	m_SnackChkBox("UI", "BillyCheckBox", this),
+	m_SnackLbl("UI", "Bills", this),
+	m_HomeworkChkBox("UI", "BillyCheckBox", this),
+	m_HomeworkLbl("UI", "Bills", this),
+	m_DinnerChkBox("UI", "BillyCheckBox", this),
+	m_DinnerLbl("UI", "Bills", this),
+
 	m_eBillyFeels(BILLY_Okage),
 	m_iBillyGrade(BILLYGRADE_A),
 	m_iFoodCount(2)
 {
-	m_Background.shape.SetAsBox(250, 300);
+	m_Background.shape.SetAsBox(250, 280);
 	m_Background.SetTint(HyColor::DarkGray);
-	m_Background.alpha.Set(0.6f);
+	m_Background.alpha.Set(0.75f);
 	
 	m_Title.SetText("Billy Checklist");
 	m_Title.SetState(4);
 	m_Title.SetTextAlignment(HYALIGN_Center);
 	m_Title.pos.Set(125, 260);
 
-	m_SnackChk.pos.Set(20, 200);
-	m_SnackChk.SetText("Snack");
-	m_SnackChk.SetTextState(4);
-	m_SnackChk.SetAsEnabled(false);
-	m_SnackChk.SetChecked(false);
+	m_SnackChkBox.pos.Set(20, 210);
+	m_SnackLbl.SetText("Snack");
+	m_SnackLbl.pos.Set(50, 200);
+	m_SnackLbl.SetState(4);
 
-	m_HomeworkChk.pos.Set(20, 140);
-	m_HomeworkChk.SetText("Homework");
-	m_HomeworkChk.SetTextState(4);
-	m_HomeworkChk.SetAsEnabled(false);
-	m_HomeworkChk.SetChecked(false);
+	m_HomeworkChkBox.pos.Set(20, 150);
+	m_HomeworkLbl.SetText("Homework");
+	m_HomeworkLbl.pos.Set(50, 140);
+	m_HomeworkLbl.SetState(4);
 
-	m_DinnerChk.pos.Set(20, 80);
-	m_DinnerChk.SetText("Dinner");
-	m_DinnerChk.SetTextState(4);
-	m_DinnerChk.SetAsEnabled(false);
-	m_DinnerChk.SetChecked(false);
+	m_DinnerChkBox.pos.Set(20, 90);
+	m_DinnerLbl.SetText("Dinner");
+	m_DinnerLbl.pos.Set(50, 80);
+	m_DinnerLbl.SetState(4);
 }
 
 /*virtual*/ BillyChecklist::~BillyChecklist()
@@ -60,9 +61,9 @@ BillyGrade BillyChecklist::GetBillyGrade()
 
 void BillyChecklist::ResetTasks()
 {
-	m_SnackChk.SetChecked(false);
-	m_HomeworkChk.SetChecked(false);
-	m_DinnerChk.SetChecked(false);
+	m_SnackChkBox.SetState(0);
+	m_HomeworkChkBox.SetState(0);
+	m_DinnerChkBox.SetState(0);
 }
 
 int BillyChecklist::GetFoodCount()
@@ -72,34 +73,34 @@ int BillyChecklist::GetFoodCount()
 
 void BillyChecklist::OnSnackTask()
 {
-	m_SnackChk.SetChecked(true);
+	m_SnackChkBox.SetState(1);
 	m_iFoodCount--;
 }
 
 void BillyChecklist::OnHomeworkTask()
 {
-	m_HomeworkChk.SetChecked(true);
+	m_HomeworkChkBox.SetState(1);
 }
 
 void BillyChecklist::OnDinnerTask()
 {
-	m_DinnerChk.SetChecked(true);
+	m_DinnerChkBox.SetState(1);
 	m_iFoodCount--;
 }
 
 void BillyChecklist::OnEndDay() // BEFORE BILLS
 {
 	int iFoodPts = -2;
-	if(m_SnackChk.IsChecked())
+	if(m_SnackChkBox.GetState() == 1)
 		iFoodPts++;
-	if(m_DinnerChk.IsChecked())
+	if(m_DinnerChkBox.GetState() == 1)
 		iFoodPts++;
 
 	int iGradePts = 0;
 	switch(iFoodPts)
 	{
 	case 0:
-		if(m_HomeworkChk.IsChecked())
+		if(m_HomeworkChkBox.GetState() == 1)
 			iGradePts = 1;
 		break;
 
@@ -114,7 +115,7 @@ void BillyChecklist::OnEndDay() // BEFORE BILLS
 		else if(m_eBillyFeels == BILLY_Sick)
 			iGradePts -= 2;
 
-		if(m_HomeworkChk.IsChecked() == false)
+		if(m_HomeworkChkBox.GetState() == 0)
 			iGradePts--;
 		break;
 
@@ -130,7 +131,7 @@ void BillyChecklist::OnEndDay() // BEFORE BILLS
 			iGradePts -= 2;
 		}
 
-		if(m_HomeworkChk.IsChecked() == false)
+		if(m_HomeworkChkBox.GetState() == 0)
 			iGradePts--;
 		break;
 	}

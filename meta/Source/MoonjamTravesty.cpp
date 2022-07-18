@@ -100,6 +100,8 @@ MoonjamTravesty::~MoonjamTravesty()
 		m_iDayIndex = 0;
 		if(m_Title.IsFinished())
 		{
+			m_Inside.Reset();
+
 			m_Title.alpha.Tween(0.0f, 0.5f, HyTween::Linear, [](IHyNode *pThis) { pThis->SetVisible(false); });
 
 			m_Game.OnStartDay();
@@ -143,6 +145,8 @@ MoonjamTravesty::~MoonjamTravesty()
 		if(m_TheNextDay.IsFinished())
 		{
 			m_TheNextDay.alpha.Tween(0.0f, 0.6f, HyTween::Linear, [](IHyNode *pThis) { pThis->SetVisible(false); });
+
+			m_Inside.Reset();
 
 			m_Game.OnStartDay();
 			EnterHouse();

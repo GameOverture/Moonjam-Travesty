@@ -10,7 +10,8 @@ Player::Player(HyEntity2d *pParent /*= nullptr*/) :
 	m_bInputEnabled(false),
 	m_bIsGrounded(false),
 	m_bFaceUpwards(false),
-	m_pEquipedItem(nullptr)
+	m_pEquipedItem(nullptr),
+	m_HoverLabel(HyPanelInit("Actors", "PlayerLabel"), "UI", "Bills", this)
 {
 	SetTag(TAG_Player);
 
@@ -22,11 +23,16 @@ Player::Player(HyEntity2d *pParent /*= nullptr*/) :
 	physics.SetEnabled(m_bInputEnabled);
 	physics.SetSleepingAllowed(false);
 	physics.SetCcd(true);
+
+	m_HoverLabel.pos.Set(50.0f, 50.0f);
+	m_HoverLabel.alpha.Set(0.0f);
+	m_HoverLabel.SetAsSideBySide(false);
 }
 
 /*virtual*/ Player::~Player()
 {
 }
+
 
 /*virtual*/ void Player::OnUpdate() /*override*/
 {
@@ -158,6 +164,11 @@ Player::Player(HyEntity2d *pParent /*= nullptr*/) :
 			}
 		}
 	}
+}
+
+HyLabel &Player::GetLabel()
+{
+	return m_HoverLabel;
 }
 
 void Player::EnableInput(bool bEnable)

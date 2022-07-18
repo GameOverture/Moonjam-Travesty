@@ -13,6 +13,27 @@
     "Spine": {
     },
     "Sprites": {
+        "Actors/Billy": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "b51b2ab1-c710-49ef-abc5-655c90cc8210",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "380f70bb-ec78-4ada-82c2-886f2ffccfd2",
+                        "84d3c6fb-0d0f-42f4-8859-12014b898ca9",
+                        "413e41be-5641-4b05-8b0a-3ceb330d317c",
+                        "0c5bd7e6-276f-4123-8865-bd34dbc582eb",
+                        "563e3c62-df0c-4413-b89f-2577b3efe43d",
+                        "af76a240-7030-4aa2-9554-ea5178ea31f1"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
         "Actors/Borpa": {
             "CameraPos": [
                 0,
@@ -141,6 +162,49 @@
                         "2954d331-1d4b-44ba-baf5-a957059b034b"
                     ],
                     "name": "Jump"
+                }
+            ]
+        },
+        "Actors/PlayerLabel": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "f56f9cb8-bb0c-4501-84a9-b8d112a42b86",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "3dd74d03-f1d2-4890-9495-1be5d35aac55"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Actors/ProgBar": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "bc714b4d-cc27-4213-96bf-0504686a7367",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "8cba805a-1ffa-4797-a6f1-11a774b02705"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "bbf31130-dbfb-4230-8412-f4b6e880bae3"
+                    ],
+                    "name": ""
                 }
             ]
         },
@@ -397,6 +461,28 @@
                         "a74d2b43-a346-4ce7-9485-98ff57a065a2"
                     ],
                     "name": "Juicin"
+                }
+            ]
+        },
+        "UI/BillyCheckbox": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "9238c4a6-973e-4f9c-ba22-c05a4999b164",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "edb8177b-e211-4471-936c-ad454868c461"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "197b0161-3af1-4ba9-9fe7-fa7fbcce9de5"
+                    ],
+                    "name": ""
                 }
             ]
         },

@@ -98,6 +98,11 @@ void Game::HideComputer()
 	m_Computer.Hide();
 }
 
+BillyChecklist &Game::GetBilly()
+{
+	return m_BillyChecklist;
+}
+
 void Game::BuyCum()
 {
 	m_Clock.OffsetMoney(-iCUM_COST, 1.0f);
