@@ -13,6 +13,57 @@
     "Spine": {
     },
     "Sprites": {
+        "Actors/Borpa": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "cbc47140-107b-4ba9-9a5d-e6543b8143c7",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "d01e878c-8311-4d6e-8fb9-92e672324502",
+                        "9c65a18a-0560-4df8-a2ff-df1e47371f51",
+                        "1fcf136e-7957-4333-a693-6b56791586fc",
+                        "c54292a5-9b81-4bac-82c2-fe918712a50f"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Actors/EnemyHeart": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "8d7e9649-04e1-4e80-9ab2-7c905fae06cf",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "ff73829d-9131-4416-91ea-c718d7999793"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Actors/Gums": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "32575ab7-4ee0-4013-b8dc-52a2fbcc6134",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "993813f6-b1ac-48b2-abf1-7777c1857ce5"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
         "Actors/Moon": {
             "CameraPos": [
                 0,

@@ -6,6 +6,7 @@
 #include "OutsideContactListener.h"
 #include "Cum.h"
 #include "Gun.h"
+#include "IEnemy.h"
 
 class Outside : public HyPhysicsGrid2d
 {
@@ -31,13 +32,26 @@ class Outside : public HyPhysicsGrid2d
 		STATE_Inactive,
 		STATE_LeavingHouse,
 		STATE_Play,
-		STATE_EnteringHouse
+		STATE_EnteringHouse,
+
+		STATE_Attack
 	};
 	OutsideState				m_eOutsideState;
 
 	// Attack stuff
 	std::vector<Cum *>			m_CumList;
 	std::vector<Gun *>			m_GunList;
+
+	std::vector<IEnemy *>		m_EnemyList;
+	HyStopwatch					m_AttackStopwatch;
+
+	enum AttackState
+	{
+		ATTACKSTATE_Inactive = 0,
+		ATTACKSTATE_Intro,
+		ATTACKSTATE_Attacking
+	};
+	AttackState					m_eAttackState;
 
 public:
 	Outside(Player &playerRef, HyEntity2d *pParent = nullptr);
@@ -52,6 +66,9 @@ public:
 	void SpawnGun();
 
 	IItem *FindClosestItem(ItemState eItemState, float fPosX, float &fDistAwayOut);
+
+	void SetupAttack(uint32 uiDayIndex);
+	void AttackUpdate();
 };
 
 #endif // Outside_h__

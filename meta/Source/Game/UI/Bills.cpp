@@ -38,11 +38,11 @@ Bills::Bills(HyEntity2d *pParent /*= nullptr*/) :
 	m_PaycheckLbl.SetText("Paycheck");
 	m_PaycheckLbl.SetTextState(1);
 	m_MortgageChk.SetText("Mortgage");
+	m_MortgageChk.SetChecked(true);
+	m_MortgageChk.SetAsEnabled(false);
 	m_FoodChk.SetText("Food");
 	m_AcChk.SetText("Air Conditioning");
 	m_MedicineChk.SetText("Medicine");
-	m_MedicineChk.SetChecked(true);
-	m_MedicineChk.SetAsEnabled(false);
 	m_RepairsChk.SetText("Repairs");
 
 	SetLayoutMargin(20, 20, 20, 20);

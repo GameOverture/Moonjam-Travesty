@@ -9,6 +9,8 @@
 #define DISPLAYORDER_ItemSetup		999999
 #define DISPLAYORDER_DarkOverlay	99999
 
+#define DISPLAYORDER_Enemies		9999
+
 enum Tag
 {
 	// Main Classes

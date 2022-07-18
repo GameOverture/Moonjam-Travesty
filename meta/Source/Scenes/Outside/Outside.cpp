@@ -1,6 +1,8 @@
 #include "pch.h"
 #include "Outside.h"
 #include "MoonjamTravesty.h"
+#include "EnemyGums.h"
+#include "EnemyBorpa.h"
 
 #define NUM_SKY_SPRITES 4
 
@@ -25,7 +27,8 @@ const float fItemSetupOffsetX = 20.0f;
 Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	HyPhysicsGrid2d(glm::vec2(0.0f, 0.0f), 120.0f),
 	m_PlayerRef(playerRef),
-	m_eOutsideState(STATE_Inactive)
+	m_eOutsideState(STATE_Inactive),
+	m_eAttackState(ATTACKSTATE_Inactive)
 {
 	SetTag(TAG_Outside);
 
@@ -272,6 +275,11 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 			MoonjamTravesty::EnterHouse();
 			m_eOutsideState = STATE_Inactive;
 		}
+		break;
+
+	case STATE_Attack:
+		AttackUpdate();
+		break;
 	}
 
 	if(HyEngine::Input().IsActionReleased(INPUT_DebugSpawnCum))
@@ -370,4 +378,48 @@ IItem *Outside::FindClosestItem(ItemState eItemState, float fPosX, float &fDistA
 	}
 
 	return pItemToPickup;
+}
+
+void Outside::SetupAttack(uint32 uiDayIndex)
+{
+	for(auto *pEnemy : m_EnemyList)
+		delete pEnemy;
+	m_EnemyList.clear();
+
+	switch(uiDayIndex)
+	{
+	case 0:
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 0.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
+		break;
+	}
+	for(auto *pEnemy : m_EnemyList)
+		pEnemy->SetDisplayOrder(DISPLAYORDER_Enemies);
+
+	SetVisible(true);
+	HyEngine::Window().GetCamera2d(0)->SetZoom(1.0f);
+	HyEngine::Window().GetCamera2d(0)->pos.Set(0.0f, 275.0f);
+
+	m_AttackStopwatch.Reset();
+	m_eOutsideState = STATE_Attack;
+	m_eAttackState = ATTACKSTATE_Intro;
+}
+
+void Outside::AttackUpdate()
+{
+
+
+	switch(m_eAttackState)
+	{
+	case ATTACKSTATE_Inactive:
+		break;
+
+	case ATTACKSTATE_Intro:
+		//m_EnemyList
+		break;
+
+	case ATTACKSTATE_Attacking:
+		break;
+	}
 }

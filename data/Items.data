@@ -13,6 +13,78 @@
     "Spine": {
     },
     "Sprites": {
+        "Actors/Borpa": {
+            "stateArray": [
+                {
+                    "bounce": true,
+                    "duration": 0.4000000059604645,
+                    "frames": [
+                        {
+                            "checksum": 3917261038,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -55,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 4059282422,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -55,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 1481177811,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -55,
+                            "offsetY": 0
+                        },
+                        {
+                            "checksum": 3459918577,
+                            "duration": 0.10000000149011612,
+                            "offsetX": -55,
+                            "offsetY": 0
+                        }
+                    ],
+                    "loop": true,
+                    "reverse": false
+                }
+            ]
+        },
+        "Actors/EnemyHeart": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 3962867834,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -56,
+                            "offsetY": -56
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
+        "Actors/Gums": {
+            "stateArray": [
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 2149955568,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -56,
+                            "offsetY": -46
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                }
+            ]
+        },
         "Actors/Moon": {
             "stateArray": [
                 {

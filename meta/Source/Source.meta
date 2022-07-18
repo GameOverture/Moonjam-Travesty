@@ -306,6 +306,60 @@
             "filter": "Game/UI",
             "itemType": "Header",
             "name": "TheNextDay.h"
+        },
+        {
+            "assetUUID": "8313f714-a51a-47a8-bae2-b336bab62478",
+            "bankId": 0,
+            "checksum": 3201950259,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Source",
+            "name": "EnemyGums.cpp"
+        },
+        {
+            "assetUUID": "0b71b50e-6fa0-467f-a66c-38e5ee0fdadb",
+            "bankId": 0,
+            "checksum": 228017329,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Header",
+            "name": "EnemyGums.h"
+        },
+        {
+            "assetUUID": "6cb71a05-49ce-44dc-9717-d9aba55b2f4a",
+            "bankId": 0,
+            "checksum": 540705329,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Source",
+            "name": "EnemyBorpa.cpp"
+        },
+        {
+            "assetUUID": "40d354df-bad3-410b-9028-91e05d40f7c9",
+            "bankId": 0,
+            "checksum": 4036333856,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Header",
+            "name": "EnemyBorpa.h"
+        },
+        {
+            "assetUUID": "f8a7fa69-952e-4b36-b671-6852e64ab632",
+            "bankId": 0,
+            "checksum": 4115869777,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Source",
+            "name": "IEnemy.cpp"
+        },
+        {
+            "assetUUID": "94c205d5-5228-44b9-93c8-22b1de3ab51e",
+            "bankId": 0,
+            "checksum": 3042809900,
+            "errors": 0,
+            "filter": "Actors",
+            "itemType": "Header",
+            "name": "IEnemy.h"
         }
     ],
     "banks": [
