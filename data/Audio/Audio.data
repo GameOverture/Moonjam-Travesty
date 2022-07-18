@@ -3,6 +3,156 @@
     "banks": [
         {
             "assets": [
+                {
+                    "checksum": 2789927902,
+                    "fileName": "2789927902.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 3735310631,
+                    "fileName": "3735310631.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 15952909,
+                    "fileName": "0015952909.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 342308784,
+                    "fileName": "0342308784.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1730366663,
+                    "fileName": "1730366663.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 3388350953,
+                    "fileName": "3388350953.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 2286150795,
+                    "fileName": "2286150795.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1338856118,
+                    "fileName": "1338856118.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1822221458,
+                    "fileName": "1822221458.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1351391956,
+                    "fileName": "1351391956.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 3526312691,
+                    "fileName": "3526312691.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 953496131,
+                    "fileName": "0953496131.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1580150234,
+                    "fileName": "1580150234.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 374927043,
+                    "fileName": "0374927043.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 3417026958,
+                    "fileName": "3417026958.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 769948775,
+                    "fileName": "0769948775.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1340429974,
+                    "fileName": "1340429974.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1187400638,
+                    "fileName": "1187400638.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 2693190621,
+                    "fileName": "2693190621.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 4277385991,
+                    "fileName": "4277385991.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 2132954066,
+                    "fileName": "2132954066.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 1269669804,
+                    "fileName": "1269669804.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 3951642286,
+                    "fileName": "3951642286.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 170175928,
+                    "fileName": "0170175928.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                },
+                {
+                    "checksum": 3424212277,
+                    "fileName": "3424212277.wav",
+                    "globalLimit": -1,
+                    "isMusic": false
+                }
             ],
             "bankId": 0,
             "name": "Default"

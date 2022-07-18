@@ -10,19 +10,21 @@ class Computer : public HyUiContainer
 	HyButton		m_ExitBtn;
 
 	HyButton		m_WorkBtn;
-	HyLabel			m_WorkLabel;
 
-	HyLabel			m_ShopLabel;
-
-	HyLabel			m_BuyCumLabel;
+	HyText2d		m_BuyCumPrice;
 	HyButton		m_BuyCumBtn;
 
-	HyLabel			m_BuyGunLabel;
+	HyText2d		m_BuyGunPrice;
 	HyButton		m_BuyGunBtn;
 
 public:
 	Computer(HyEntity2d *pParent = nullptr);
 	virtual ~Computer();
+
+	virtual float OnBeginShow() override;
+	virtual void OnShown() override;
+	virtual float OnBeginHide() override;
+	virtual void OnHidden() override;
 
 	virtual void OnContainerUpdate() override;
 

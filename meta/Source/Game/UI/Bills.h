@@ -17,16 +17,19 @@ class Bills : public HyUiContainer
 	HyRackMeter			m_MortgageVal;
 	HyCheckBox			m_FoodChk;
 	HyRackMeter			m_FoodVal;
-	HyCheckBox			m_AcChk;
-	HyRackMeter			m_AcVal;
+	//HyCheckBox			m_AcChk;
+	//HyRackMeter			m_AcVal;
 	HyCheckBox			m_MedicineChk;
 	HyRackMeter			m_MedicineVal;
-	HyCheckBox			m_RepairsChk;
+	HyLabel				m_RepairsLbl;
 	HyRackMeter			m_RepairsVal;
 
 	HyLabel				m_DividerLine;
 	HyRackMeter			m_RemainingMoney;
 	HyButton			m_EndBtn;
+
+	HyAudio2d			m_AudBillyHasStatus;
+	HyAudio2d			m_AudBillyJuicer;
 
 	// Billy Status
 	class BillyStatus : public HyEntity2d

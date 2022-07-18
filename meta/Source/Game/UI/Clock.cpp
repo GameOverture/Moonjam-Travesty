@@ -5,8 +5,8 @@
 
 Clock::Clock(HyEntity2d *pParent /*= nullptr*/) :
 	HyEntity2d(pParent),
-	m_StaminaBox("UI/Clock", "StaminaBox", this),
-	m_StaminaBar("UI/Clock", "StaminaBar", this),
+	//m_StaminaBox("UI/Clock", "StaminaBox", this),
+	//m_StaminaBar("UI/Clock", "StaminaBar", this),
 	m_TimeBar(HyPanelInit("UI/Clock", "BarBox"), "", "", this),
 	m_DayNight("UI/Clock", "DayNight", this),
 	m_Cover("UI/Clock", "Cover", this),

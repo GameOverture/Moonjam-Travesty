@@ -19,12 +19,12 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 
 	HyEngine::Input().MapBtn(INPUT_Menu, HYKEY_Escape);
 
-	HyEngine::Input().MapBtn(INPUT_DebugCamUp, HYKEY_Up);
-	HyEngine::Input().MapBtn(INPUT_DebugCamDown, HYKEY_Down);
-	HyEngine::Input().MapBtn(INPUT_DebugCamLeft, HYKEY_Left);
-	HyEngine::Input().MapBtn(INPUT_DebugCamRight, HYKEY_Right);
-	HyEngine::Input().MapBtn(INPUT_DebugSpawnCum, HYKEY_U);
-	HyEngine::Input().MapBtn(INPUT_DebugSpawnGun, HYKEY_I);
+	//HyEngine::Input().MapBtn(INPUT_DebugCamUp, HYKEY_Up);
+	//HyEngine::Input().MapBtn(INPUT_DebugCamDown, HYKEY_Down);
+	//HyEngine::Input().MapBtn(INPUT_DebugCamLeft, HYKEY_Left);
+	//HyEngine::Input().MapBtn(INPUT_DebugCamRight, HYKEY_Right);
+	//HyEngine::Input().MapBtn(INPUT_DebugSpawnCum, HYKEY_U);
+	//HyEngine::Input().MapBtn(INPUT_DebugSpawnGun, HYKEY_I);
 
 	HyEngine::Input().MapBtn(INPUT_MoveLeft, HYKEY_A);
 	HyEngine::Input().MapBtn(INPUT_MoveRight, HYKEY_D);
@@ -46,11 +46,13 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 	m_Game.Load();
 	m_Title.Load();
 	m_TheNextDay.Load();
+	m_GameOver.Load();
 	
 	m_Outside.Hide();
 	m_Inside.Hide();
 	m_Title.SetVisible(false);
 	m_TheNextDay.SetVisible(false);
+	m_GameOver.SetVisible(false);
 
 	sm_pInstance = this;
 }
@@ -66,13 +68,13 @@ MoonjamTravesty::~MoonjamTravesty()
 	//	m_pCamera->pos.Offset(0.0f, fDebugCamMovement * HyEngine::DeltaTime());
 	//if(HyEngine::Input().IsActionDown(INPUT_DebugCamDown))
 	//	m_pCamera->pos.Offset(0.0f, -fDebugCamMovement * HyEngine::DeltaTime());
-	if(HyEngine::Input().IsActionDown(INPUT_DebugCamLeft))
-		m_pCamera->pos.Offset(-fDebugCamMovement * HyEngine::DeltaTime(), 0.0f);
-	if(HyEngine::Input().IsActionDown(INPUT_DebugCamRight))
-		m_pCamera->pos.Offset(fDebugCamMovement * HyEngine::DeltaTime(), 0.0f);
+	//if(HyEngine::Input().IsActionDown(INPUT_DebugCamLeft))
+	//	m_pCamera->pos.Offset(-fDebugCamMovement * HyEngine::DeltaTime(), 0.0f);
+	//if(HyEngine::Input().IsActionDown(INPUT_DebugCamRight))
+	//	m_pCamera->pos.Offset(fDebugCamMovement * HyEngine::DeltaTime(), 0.0f);
 
-	if(HyEngine::Input().IsActionReleased(INPUT_DebugCamUp))
-		EndDay();
+	//if(HyEngine::Input().IsActionReleased(INPUT_DebugCamUp))
+	//	EndDay();
 
 	switch(m_eGameState)
 	{
@@ -121,7 +123,7 @@ MoonjamTravesty::~MoonjamTravesty()
 			m_Inside.alpha.Set(1.0f);
 			m_Inside.Hide();
 
-			m_Game.OnEndDay();
+			m_Game.OnEndDay(m_Outside.GetHouseDamage() * iHOUSE_DAMAGE_COST);
 			m_eGameState = STATE_Bills;
 		}
 		break;
@@ -156,6 +158,8 @@ MoonjamTravesty::~MoonjamTravesty()
 		break;
 
 	case STATE_GameOver:
+
+
 		break;
 	}
 
@@ -218,10 +222,27 @@ MoonjamTravesty::~MoonjamTravesty()
 	sm_pInstance->m_Game.OnSleep(bBoughtMedicine, bBoughtFood);
 	sm_pInstance->m_Outside.SetupAttack(sm_pInstance->m_iDayIndex);
 	sm_pInstance->m_iDayIndex++;
-	sm_pInstance->m_eGameState = STATE_Attack;
+	if(sm_pInstance->m_iDayIndex > 5)
+	{
+		sm_pInstance->m_GameOver.m_GameOver.SetText("YOU WIN!");
+		GameOver(GAMEOVER_Win);
+	}
+	else
+		sm_pInstance->m_eGameState = STATE_Attack;
 }
 
 /*static*/ void MoonjamTravesty::GameOver(GameOverType eGameOverType)
 {
+	sm_pInstance->m_Outside.Hide();
+	sm_pInstance->m_Inside.Hide();
+	sm_pInstance->m_Game.m_Bills.Hide();
+	sm_pInstance->m_Game.m_Clock.SetVisible(false);
+	sm_pInstance->m_Game.HideComputer();
+	sm_pInstance->m_Title.SetVisible(false);
+	sm_pInstance->m_TheNextDay.SetVisible(false);
+	
+	sm_pInstance->m_GameOver.SetVisible(true);
+	sm_pInstance->m_GameOver.m_StoryEnds.Play();
+
 	sm_pInstance->m_eGameState = STATE_GameOver;
 }

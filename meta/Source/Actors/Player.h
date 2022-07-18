@@ -20,6 +20,8 @@ class Player : public IActor
 
 	HyLabel				m_HoverLabel;
 
+	HyAudio2d			m_AudJump;
+
 
 public:
 	Player(HyEntity2d *pParent = nullptr);

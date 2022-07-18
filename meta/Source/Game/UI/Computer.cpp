@@ -2,67 +2,80 @@
 #include "Computer.h"
 #include "MoonjamTravesty.h"
 
+const float fTRANS_IN_DUR = 0.42f;
+
 Computer::Computer(HyEntity2d *pParent /*= nullptr*/) :
 	HyUiContainer(HYORIEN_Vertical, HyPanelInit(820, 650, 2), pParent),
 	m_Dialog("UI", "Dialog", this),
-	m_ExitBtn(HyPanelInit("UI", "ComputerExitBtn")),
-	m_WorkBtn(HyPanelInit("UI", "WorkBtn"), "UI/Clock", "Text", 5, 34, 5, 34),
-	m_WorkLabel(HyPanelInit(), "UI", "Computer"),
-	m_ShopLabel(HyPanelInit(), "UI", "Computer"),
-	m_BuyCumLabel(HyPanelInit(), "UI", "Computer"),
-	m_BuyCumBtn(HyPanelInit("UI", "BuyCumBtn")),
-	m_BuyGunLabel(HyPanelInit(), "UI", "Computer"),
-	m_BuyGunBtn(HyPanelInit("UI", "BuyGunBtn"))
+	m_ExitBtn(HyPanelInit("UI", "ComputerExitBtn"), this),
+	m_WorkBtn(HyPanelInit("UI", "WorkBtn"), "UI/Clock", "Text", 5, 34, 5, 34, this),
+	m_BuyCumPrice("UI/Clock", "Text", this),
+	m_BuyCumBtn(HyPanelInit("UI", "BuyCumBtn"), this),
+	m_BuyGunPrice("UI/Clock", "Text", this),
+	m_BuyGunBtn(HyPanelInit("UI", "BuyGunBtn"), this)
 {
 	UseWindowCoordinates();
 	SetDisplayOrder(DISPLAYORDER_Computer);
 	m_Dialog.SetDisplayOrder(DISPLAYORDER_Computer - 1);
 	m_Panel.alpha.Set(0.0f);
 
+
+	m_ExitBtn.pos.Set(746, 580);
 	m_ExitBtn.SetButtonClickedCallback(OnExitBtn, this);
 	
+	m_WorkBtn.pos.Set(354, 453);
 	m_WorkBtn.SetButtonClickedCallback(OnWorkBtn, this);
 	m_WorkBtn.SetTextMonospacedDigits(true);
-	m_WorkLabel.SetText("Work.exe : Ends Day; Collects Cash");
 
-	m_ShopLabel.SetText("SHOP");
 
-	m_BuyCumLabel.SetText("Buy Sticky Paste\nHome Defense!");
 	m_BuyCumBtn.SetButtonClickedCallback(OnCumBtn, this);
-	m_BuyGunLabel.SetText("Buy Self Defense Drone\n\"Stand your ground!\"");
+	m_BuyCumBtn.pos.Set(91.0f, 54.0f);
+
+	m_BuyCumPrice.SetText(HyLocale::Money_Format(iCUM_COST));
+	m_BuyCumPrice.pos.Set(200.0f, 100.0f);
+	
 	m_BuyGunBtn.SetButtonClickedCallback(OnGunBtn, this);
+	m_BuyGunBtn.pos.Set(570.0f, 54.0f);
 
-
-
-	HyLayoutHandle hTitleBarRow = InsertLayout(HYORIEN_Horizontal);
-	InsertSpacer(HYSIZEPOLICY_Expanding, 0, hTitleBarRow);
-	InsertWidget(m_ExitBtn, hTitleBarRow);
-	InsertSpacer(HYSIZEPOLICY_Fixed, 8, hTitleBarRow);
-
-	HyLayoutHandle hWorkRow = InsertLayout(HYORIEN_Horizontal);
-	InsertWidget(m_WorkBtn, hWorkRow);
-	InsertWidget(m_WorkLabel, hWorkRow);
-
-	InsertSpacer(HYSIZEPOLICY_Fixed, 50);
-	InsertWidget(m_ShopLabel);
-	HyLayoutHandle hBuyRow = InsertLayout(HYORIEN_Horizontal);
-	
-	//InsertSpacer(HYSIZEPOLICY_Expanding, 0, hBuyRow);
-	HyLayoutHandle hCumCol = InsertLayout(HYORIEN_Vertical, hBuyRow);
-	InsertWidget(m_BuyCumLabel, hCumCol);
-	InsertWidget(m_BuyCumBtn, hCumCol);
-	
-	InsertSpacer(HYSIZEPOLICY_Expanding, 0, hBuyRow);
-	HyLayoutHandle hGunCol = InsertLayout(HYORIEN_Vertical, hBuyRow);
-	InsertWidget(m_BuyGunLabel, hGunCol);
-	InsertWidget(m_BuyGunBtn, hGunCol);
-	//InsertSpacer(HYSIZEPOLICY_Expanding, 0, hBuyRow);
-
-	InsertSpacer(HYSIZEPOLICY_Fixed, 25);
+	m_BuyGunPrice.SetText(HyLocale::Money_Format(iGUN_COST));
+	m_BuyGunPrice.pos.Set(677.0f, 100.0f);
 }
 
 /*virtual*/ Computer::~Computer()
 {
+}
+
+// Returns the duration (in seconds) of the show transition
+/*virtual*/ float Computer::OnBeginShow() /*override*/
+{
+	//alpha.Set(0.0f);
+	//alpha.Tween(1.0f, fTRANS_IN_DUR);
+
+	scale.Set(0.0001f, 0.0001f);
+	scale.Tween(1.0f, 1.0f, fTRANS_IN_DUR, HyTween::QuadOut);
+	SetVisible(true);
+
+	return fTRANS_IN_DUR;
+}
+
+/*virtual*/ void Computer::OnShown()
+{
+	SetVisible(true);
+	SetInputAllowed(true);
+}
+
+// Returns the duration (in seconds) of the hide transition
+/*virtual*/ float Computer::OnBeginHide() /*override*/
+{
+	scale.Tween(0.0001f, 0.0001f, fTRANS_IN_DUR, HyTween::QuadOut);
+
+	return fTRANS_IN_DUR;
+}
+
+/*virtual*/ void Computer::OnHidden()
+{
+	SetVisible(false);
+	SetInputAllowed(false);
 }
 
 /*virtual*/ void Computer::OnContainerUpdate() /*override*/

@@ -5,8 +5,8 @@
 
 class Clock : public HyEntity2d
 {
-	HySprite2d			m_StaminaBox;
-	HySprite2d			m_StaminaBar;
+	//HySprite2d			m_StaminaBox;
+	//HySprite2d			m_StaminaBar;
 	HyProgressBar		m_TimeBar;
 	HySprite2d			m_DayNight;
 	HySprite2d			m_Cover;

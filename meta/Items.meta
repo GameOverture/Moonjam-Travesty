@@ -1,6 +1,239 @@
 {
     "$fileVersion": 9,
     "Audio": {
+        "Sounds/BillySick": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "f2090670-3211-4581-a427-89ad4d66ab34",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "b6cca22c-2bc6-400c-8068-d03e6cf43ca5",
+                        "1d2d6865-b53f-4ac2-a633-522ed7b103ac"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/Borpa": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "f16d8fbf-eea0-42bd-abf2-fca1fa1457ae",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "83735117-5b57-4c01-a32a-fb2316104f6b",
+                        "46905fd7-5541-4e4c-844f-e257ba57adc0",
+                        "7199c3fc-2ace-4445-9888-1da05e6b414a"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/BuySound": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "5098cdcc-e2cd-4bde-9435-c9720644338f",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "93de04a5-05a8-43d6-af33-029556da3b9f"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/FasterBilly": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "1957a6f9-d491-4553-b319-24307d45d31c",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "ec179377-c985-4a06-bbe4-2266ef01e7d1",
+                        "0aefc6ee-8bf0-4730-8023-32bc5a587a34"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/Gums": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "95c9b0f0-1b71-4ac1-b708-d6065a5e4506",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "e96093b0-1133-4c7c-9c10-853b298a39ac"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/HouseDamage": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "3a9c04cc-c68a-49ca-a0a7-7b01dc64dd1b",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "93c0a44a-457f-46b1-9724-1488e8a9c239"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/Jump": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "0332daf1-224e-4781-8064-d0f242f4a8f2",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "f7052153-90aa-455b-8817-b5a3bb4e11a6",
+                        "aea9ffc8-49aa-4b34-96c9-7de352a53742"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/MinorConfirm": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "94543090-b9f4-4144-9f49-58a382436477",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "7857c312-3a6c-4c43-a3f0-13f8f0fc0149"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/ShameOnBilly": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "b42d3d20-859f-4772-adf6-57325ca2d77f",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "3713d3cb-12d8-4e13-9833-94f8956b4369",
+                        "3575c9c6-4d73-44d2-a2e0-344f1fe0f883"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/Shoot": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "18237d68-3fab-4713-ba4d-6608a0c99aaf",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "7b146c2c-8b00-45ea-8517-b5acacadf015"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/StartGame": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "1de740fc-09f9-41bd-93dc-bf195568ad06",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "cea6eb20-cb8e-4646-80bf-1d82d3a6efe6"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/StoryEnd": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "d9d5f5f3-3fb6-4c31-a39f-a934ec839c49",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "fa8058fc-1f9b-47d6-8da4-1f4bc98985cc",
+                        "dc45e447-c8a8-4600-ac13-c2ae1c1cccf0"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/TurretExplode": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "068eb282-1998-4aff-a8de-f45a6b741d3d",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "6bd11f09-e998-44c7-94ba-c33454519e82",
+                        "df00f7e9-157d-43c4-844c-c4f627566ab9"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "Sounds/TurretTalk": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "2b11b2e9-c0c9-4d2d-b0d8-e0039af594f6",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "84d1ed60-7e83-46e4-ac26-6e86ca5730d9",
+                        "14ab63f4-90e5-43fc-ab1e-dc5729b4bb03"
+                    ],
+                    "name": ""
+                }
+            ]
+        }
     },
     "Entities2d": {
     },
@@ -674,8 +907,8 @@
         },
         "UI/Dialog": {
             "CameraPos": [
-                0,
-                0
+                353,
+                218
             ],
             "CameraZoom": 1,
             "UUID": "81f7484b-e6b7-44f6-abaa-81cbd97928b8",
@@ -690,8 +923,8 @@
         },
         "UI/Title/HowToPanel": {
             "CameraPos": [
-                279,
-                153
+                -39,
+                -24
             ],
             "CameraZoom": 1,
             "UUID": "3119382f-2bf6-40e0-8b3d-eb667bff4ba7",
@@ -699,6 +932,12 @@
                 {
                     "assetUUIDs": [
                         "beca28bc-7a1a-4be1-a558-a8f2eae03b90"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "eddd368c-d26a-4723-946b-b31514aaf2fa"
                     ],
                     "name": ""
                 }

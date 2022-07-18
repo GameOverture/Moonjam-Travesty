@@ -11,7 +11,8 @@ Player::Player(HyEntity2d *pParent /*= nullptr*/) :
 	m_bIsGrounded(false),
 	m_bFaceUpwards(false),
 	m_pEquipedItem(nullptr),
-	m_HoverLabel(HyPanelInit("Actors", "PlayerLabel"), "UI", "Bills", this)
+	m_HoverLabel(HyPanelInit("Actors", "PlayerLabel"), "UI", "Bills", this),
+	m_AudJump("Sounds", "Jump", this)
 {
 	SetTag(TAG_Player);
 
@@ -105,6 +106,8 @@ Player::Player(HyEntity2d *pParent /*= nullptr*/) :
 		// Handle jump
 		if(HyEngine::Input().IsActionDown(INPUT_Jump) && m_bIsGrounded)
 		{
+			m_AudJump.Play();
+
 			m_vVelocity.y = fJUMP_PWR;
 			m_bIsGrounded = false;
 		}

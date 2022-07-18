@@ -16,6 +16,7 @@ public:
 
 	//HyPrimitive2d					m_Debug;
 
+	bool							m_bHasWarCry;
 	bool							m_bCanAttack;
 
 public:
@@ -23,6 +24,9 @@ public:
 	virtual ~IEnemy();
 
 	virtual void OnUpdate() override;
+
+	void DoWarcry();
+	bool HasWarcry();
 
 	bool CanAttack();
 

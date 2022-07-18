@@ -29,7 +29,13 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_PlayerRef(playerRef),
 	m_eOutsideState(STATE_Inactive),
 	m_eAttackState(ATTACKSTATE_Inactive),
-	m_iHouseDamage(0)
+	m_iHouseDamage(0),
+	m_AudGums("Sounds", "Gums", this),
+	m_AudBorpa("Sounds", "Borpa", this),
+	m_AudShoot("Sounds", "Shoot", this),
+	m_AudTurretTalk("Sounds", "TurretTalk", this),
+	m_AudTurretExplode("Sounds", "TurretExplode", this),
+	m_AudHouseDamage("Sounds", "HouseDamage", this)
 {
 	SetTag(TAG_Outside);
 
@@ -293,10 +299,15 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 		break;
 	}
 
-	if(HyEngine::Input().IsActionReleased(INPUT_DebugSpawnCum))
-		SpawnCum();
-	if(HyEngine::Input().IsActionReleased(INPUT_DebugSpawnGun))
-		SpawnGun();
+	//if(HyEngine::Input().IsActionReleased(INPUT_DebugSpawnCum))
+	//	SpawnCum();
+	//if(HyEngine::Input().IsActionReleased(INPUT_DebugSpawnGun))
+	//	SpawnGun();
+}
+
+int32 Outside::GetHouseDamage()
+{
+	return m_iHouseDamage;
 }
 
 void Outside::Init()
@@ -329,7 +340,7 @@ void Outside::Hide()
 void Outside::SpawnCum()
 {
 	Cum *pNewCum = HY_NEW Cum(this);
-	pNewCum->pos.Set(HyRand::Range(50.0f, 200.0f), ACTOR_ITEM_POSY);
+	pNewCum->pos.Set(HyRand::Range(50.0f, fRIGHT_BOUNDS - 100.0f), ACTOR_ITEM_POSY);
 	pNewCum->Load();
 	m_CumList.push_back(pNewCum);
 }
@@ -337,7 +348,7 @@ void Outside::SpawnCum()
 void Outside::SpawnGun()
 {
 	Gun *pNewGun = HY_NEW Gun(this);
-	pNewGun->pos.Set(HyRand::Range(50.0f, 200.0f), ACTOR_ITEM_POSY);
+	pNewGun->pos.Set(HyRand::Range(50.0f, fRIGHT_BOUNDS - 100.0f), ACTOR_ITEM_POSY);
 	pNewGun->Load();
 	m_GunList.push_back(pNewGun);
 }
@@ -402,10 +413,61 @@ void Outside::SetupAttack(uint32 uiDayIndex)
 	switch(uiDayIndex)
 	{
 	case 0:
-	default:
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 0.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 4.0f, this));
+		break;
+
+	case 1:
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 0.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 4.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 6.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 8.0f, this));
+		break;
+
+	case 2:
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 0.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 3.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 4.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 6.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 7.0f, this));
+		break;
+	
+	case 3:
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 0.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 2.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(2, 3.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 4.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 6.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 7.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 8.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 9.0f, this));
+		break;
+
+	case 4:
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 0.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 2.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 3.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 4.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 6.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 7.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 8.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 9.0f, this));
+		break;
+
+	default:
+		m_EnemyList.push_back(HY_NEW EnemyGums(4, 0.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(4, 1.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(4, 2.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(4, 3.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(4, 4.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(4, 5.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(4, 6.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(4, 7.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(4, 8.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(4, 9.0f, this));
 		break;
 	}
 	for(auto *pEnemy : m_EnemyList)
@@ -463,7 +525,18 @@ void Outside::AttackUpdate()
 		for(auto *pEnemy : m_EnemyList)
 		{
 			if(m_AttackStopwatch.TimeElapsed() > pEnemy->GetDeferTime())
+			{
+				if(pEnemy->HasWarcry() == false)
+				{
+					if(pEnemy->GetTag() == TAG_Borpa)
+						m_AudBorpa.Play();
+					else
+						m_AudGums.Play();
+					pEnemy->DoWarcry();
+				}
+
 				pEnemy->AttackUpdate();
+			}
 		}
 
 		bool bAttackOngoing = false;
@@ -476,6 +549,7 @@ void Outside::AttackUpdate()
 
 				if(pEnemy->pos.X() > -32.0f)
 				{
+					m_AudHouseDamage.Play();
 					pEnemy->AttackHouse();
 					m_iHouseDamage++;
 				}
@@ -497,6 +571,7 @@ void Outside::AttackUpdate()
 			{
 				if(pEnemy->CanAttack() && pEnemy->pos.X() >= fFireThreshold)
 				{
+					m_AudShoot.Play();
 					pGun->Shoot(pEnemy->pos.X());
 					pEnemy->TakeDamage();
 					break;
@@ -513,8 +588,14 @@ void Outside::AttackUpdate()
 		break; }
 
 	case ATTACKSTATE_Outro:
-		if(m_AttackStopwatch.TimeElapsed() > 3.0f)
+		if(m_AttackStopwatch.TimeElapsed() > 6.0f)
+		{
+			for(auto *pEnemy : m_EnemyList)
+				delete pEnemy;
+			m_EnemyList.clear();
+
 			m_eAttackState = ATTACKSTATE_Finished;
+		}
 		break;
 
 	case ATTACKSTATE_Finished:
@@ -581,6 +662,9 @@ void Outside::DestroyGun()
 
 	if(pGunToDelete)
 	{
+		m_AudTurretTalk.Play();
+		m_AudTurretExplode.Play();
+
 		for(auto iter = m_GunList.begin(); iter != m_GunList.end(); ++iter)
 		{
 			if(pGunToDelete == (*iter))

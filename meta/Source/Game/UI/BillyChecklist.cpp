@@ -17,7 +17,7 @@ BillyChecklist::BillyChecklist(HyEntity2d *pParent /*= nullptr*/) :
 	m_iFoodCount(2)
 {
 	m_Background.shape.SetAsBox(250, 280);
-	m_Background.SetTint(HyColor::DarkGray);
+	m_Background.SetTint(HyColor::Black);
 	m_Background.alpha.Set(0.75f);
 	
 	m_Title.SetText("Billy Checklist");

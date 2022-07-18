@@ -396,6 +396,24 @@
             "filter": "Game/UI",
             "itemType": "Header",
             "name": "BillyChecklist.h"
+        },
+        {
+            "assetUUID": "9d84cdd9-0672-43ea-aa5a-8dcad4d37e4b",
+            "bankId": 0,
+            "checksum": 590914877,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Source",
+            "name": "GameOver.cpp"
+        },
+        {
+            "assetUUID": "2bc7a7d1-030f-492c-81a8-10d52eec8769",
+            "bankId": 0,
+            "checksum": 1043014876,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Header",
+            "name": "GameOver.h"
         }
     ],
     "banks": [

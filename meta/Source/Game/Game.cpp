@@ -9,7 +9,7 @@ Game::Game(HyEntity2d *pParent /*= nullptr*/) :
 	m_BillyChecklist(this)
 {
 	m_Computer.Hide(true);
-	m_Computer.pos.Set(50.0f, 5.0f);
+	m_Computer.pos.Set(150.0f, 5.0f);
 
 	m_Bills.Hide(true);
 	
@@ -60,7 +60,7 @@ void Game::OnStartDay()
 	m_BillyChecklist.SetVisible(true);
 }
 
-void Game::OnEndDay()
+void Game::OnEndDay(int64 iRepairCost)
 {
 	HyLog("Game::OnEndDay()");
 	m_Clock.Pause();
@@ -69,10 +69,6 @@ void Game::OnEndDay()
 	
 	m_BillyChecklist.OnEndDay();
 	m_BillyChecklist.SetVisible(false);
-
-	// TODO:
-	HyLogError("TODO REPAIR COST");
-	int64 iRepairCost = 0;
 
 	m_Bills.Assemble(GetCurWorkProfit(), iRepairCost, m_BillyChecklist.GetBillyFeels(), m_BillyChecklist.GetBillyGrade());
 	m_Bills.Load();

@@ -8,6 +8,7 @@
 #include "Game.h"
 #include "TitleOverlay.h"
 #include "TheNextDay.h"
+#include "GameOver.h"
 
 class MoonjamTravesty : public HyEngine
 {
@@ -19,8 +20,8 @@ class MoonjamTravesty : public HyEngine
 	Inside						m_Inside;
 	Game						m_Game;
 	TitleOverlay				m_Title;
-
 	TheNextDay					m_TheNextDay;
+	GameOver					m_GameOver;
 
 	HyPrimitive2d				m_LoadCover;
 

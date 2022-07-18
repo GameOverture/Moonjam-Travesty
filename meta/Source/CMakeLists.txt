@@ -50,7 +50,9 @@ set(GAME_SRCFILES
 	"Game/UI/TitleOverlay.cpp"
 	"Game/UI/TitleOverlay.h"
 	"Game/UI/BillyChecklist.cpp"
-	"Game/UI/BillyChecklist.h")
+	"Game/UI/BillyChecklist.h"
+	"Game/UI/GameOver.cpp"
+	"Game/UI/GameOver.h")
 
 set(GAME_INCLUDE_DIRS "")
 list(APPEND GAME_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}")

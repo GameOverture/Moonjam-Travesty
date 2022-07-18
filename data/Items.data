@@ -1,6 +1,294 @@
 {
     "$fileVersion": 9,
     "Audio": {
+        "Sounds/BillySick": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 1580150234,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 374927043,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/Borpa": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 1269669804,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 3951642286,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 170175928,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/BuySound": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 2693190621,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/FasterBilly": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 3526312691,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 953496131,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/Gums": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 2789927902,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/HouseDamage": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 1351391956,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/Jump": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 3735310631,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 15952909,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/MinorConfirm": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 2132954066,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/ShameOnBilly": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 3417026958,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 769948775,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 2,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/Shoot": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 2286150795,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/StartGame": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 4277385991,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/StoryEnd": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 1340429974,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 1187400638,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/TurretExplode": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 1822221458,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 1338856118,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        },
+        "Sounds/TurretTalk": {
+            "stateArray": [
+                {
+                    "loops": 0,
+                    "maxDist": 0,
+                    "pitch": 1,
+                    "playList": [
+                        {
+                            "checksum": 342308784,
+                            "weight": 10
+                        },
+                        {
+                            "checksum": 1730366663,
+                            "weight": 10
+                        }
+                    ],
+                    "playListMode": 0,
+                    "priority": 0,
+                    "volume": 1
+                }
+            ]
+        }
     },
     "Entities2d": {
     },
@@ -1106,7 +1394,7 @@
                     "duration": 0.01600000075995922,
                     "frames": [
                         {
-                            "checksum": 1331813460,
+                            "checksum": 98661232,
                             "duration": 0.01600000075995922,
                             "offsetX": 0,
                             "offsetY": 0
@@ -1124,7 +1412,21 @@
                     "duration": 0.01600000075995922,
                     "frames": [
                         {
-                            "checksum": 3889852352,
+                            "checksum": 4074704957,
+                            "duration": 0.01600000075995922,
+                            "offsetX": -300,
+                            "offsetY": -239
+                        }
+                    ],
+                    "loop": false,
+                    "reverse": false
+                },
+                {
+                    "bounce": false,
+                    "duration": 0.01600000075995922,
+                    "frames": [
+                        {
+                            "checksum": 45233944,
                             "duration": 0.01600000075995922,
                             "offsetX": -300,
                             "offsetY": -239

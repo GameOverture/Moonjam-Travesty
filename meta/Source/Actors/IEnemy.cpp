@@ -10,6 +10,7 @@ IEnemy::IEnemy(uint32 uiMaxHealth, float fDeferDuration, HyEntity2d *pParent /*=
 	m_uiCurHealth(uiMaxHealth),
 	m_fDeferDuration(fDeferDuration),
 	//m_Debug(this),
+	m_bHasWarCry(false),
 	m_bCanAttack(true)
 {
 	HyAssert(uiMaxHealth > 0, "Bad max health specified");
@@ -36,6 +37,16 @@ IEnemy::IEnemy(uint32 uiMaxHealth, float fDeferDuration, HyEntity2d *pParent /*=
 
 /*virtual*/ void IEnemy::OnUpdate() /*override*/
 {
+}
+
+void IEnemy::DoWarcry()
+{
+	m_bHasWarCry = true;
+}
+
+bool IEnemy::HasWarcry()
+{
+	return m_bHasWarCry;
 }
 
 bool IEnemy::CanAttack()

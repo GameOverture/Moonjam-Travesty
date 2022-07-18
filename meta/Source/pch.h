@@ -36,12 +36,12 @@ enum Tag
 
 enum InputAction
 {
-	INPUT_DebugCamUp = 0,
-	INPUT_DebugCamDown,
-	INPUT_DebugCamLeft,
-	INPUT_DebugCamRight,
-	INPUT_DebugSpawnCum,
-	INPUT_DebugSpawnGun,
+	//INPUT_DebugCamUp = 0,
+	//INPUT_DebugCamDown,
+	//INPUT_DebugCamLeft,
+	//INPUT_DebugCamRight,
+	//INPUT_DebugSpawnCum,
+	//INPUT_DebugSpawnGun,
 
 	INPUT_MoveLeft,
 	INPUT_MoveRight,
@@ -93,7 +93,8 @@ enum BillyGrade
 enum GameOverType
 {
 	GAMEOVER_Bankruptcy = 0,
-	GAMEOVER_Juicer
+	GAMEOVER_Juicer,
+	GAMEOVER_Win
 };
 
 #endif // pch_h__

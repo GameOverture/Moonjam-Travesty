@@ -59,11 +59,21 @@ class Outside : public HyPhysicsGrid2d
 	AttackState					m_eAttackState;
 	int32						m_iHouseDamage;
 
+	
+	HyAudio2d					m_AudGums;
+	HyAudio2d					m_AudBorpa;
+	HyAudio2d					m_AudShoot;
+	HyAudio2d					m_AudTurretTalk;
+	HyAudio2d					m_AudTurretExplode;
+	HyAudio2d					m_AudHouseDamage;
+
 public:
 	Outside(Player &playerRef, HyEntity2d *pParent = nullptr);
 	virtual ~Outside();
 
 	virtual void OnUpdate() override;
+
+	int32 GetHouseDamage();
 
 	void Init();
 	void Hide();
