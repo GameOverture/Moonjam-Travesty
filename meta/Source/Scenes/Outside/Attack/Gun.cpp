@@ -56,6 +56,11 @@ bool Gun::CanShoot()
 
 void Gun::Shoot(float fShootLocation)
 {
+	if(pos.X() < fShootLocation)
+		m_Top.scale.SetX(-1.0f);
+	else
+		m_Top.scale.SetX(1.0f);
+
 	m_CoolDownStopwatch.Reset();
 	m_CoolDownStopwatch.Start();
 	m_CoolDownBar.alpha.Set(1.0f);

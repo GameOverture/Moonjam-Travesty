@@ -53,6 +53,7 @@ class Outside : public HyPhysicsGrid2d
 		ATTACKSTATE_Intro,
 		ATTACKSTATE_IntroPan,
 		ATTACKSTATE_Attacking,
+		ATTACKSTATE_Outro,
 		ATTACKSTATE_Finished
 	};
 	AttackState					m_eAttackState;

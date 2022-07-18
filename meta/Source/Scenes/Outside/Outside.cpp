@@ -402,6 +402,7 @@ void Outside::SetupAttack(uint32 uiDayIndex)
 	switch(uiDayIndex)
 	{
 	case 0:
+	default:
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 0.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 4.0f, this));
@@ -504,8 +505,17 @@ void Outside::AttackUpdate()
 		}
 
 		if(bAttackOngoing == false)
-			m_eAttackState = ATTACKSTATE_Finished;
+		{
+			m_AttackStopwatch.Reset();
+			m_AttackStopwatch.Start();
+			m_eAttackState = ATTACKSTATE_Outro;
+		}
 		break; }
+
+	case ATTACKSTATE_Outro:
+		if(m_AttackStopwatch.TimeElapsed() > 3.0f)
+			m_eAttackState = ATTACKSTATE_Finished;
+		break;
 
 	case ATTACKSTATE_Finished:
 		break;
