@@ -11,6 +11,8 @@ class Gun : public IItem
 
 	HyPrimitive2d		m_Debug;
 
+	HyTimer				m_CoolDown;
+
 public:
 	Gun(HyEntity2d *pParent = nullptr);
 	virtual ~Gun();

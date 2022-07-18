@@ -26,9 +26,11 @@ const int64 iAC_COST = 10000;
 const int64 iMEDICINE_COST = 10000;
 const int64 iHOUSE_DAMAGE_COST = 10000;
 
+// ATTACK
 const float fGUMS_MOVEMENT = 175.0f;
 const float fBORPA_MOVEMENT = 275.0f;
 
+const float fGUN_RANGE = 420.0f;
 const float fGUMS_CUM_MOVE_MOD = 0.42f;
 
 const float fLEFT_BOUNDS = -1375.0f;

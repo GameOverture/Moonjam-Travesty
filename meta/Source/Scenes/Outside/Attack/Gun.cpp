@@ -1,10 +1,9 @@
 #include "pch.h"
 #include "Gun.h"
-
-#define GUN_RANGE 400.0f
+#include "Game.h"
 
 Gun::Gun(HyEntity2d *pParent /*= nullptr*/) :
-	IItem("Package", GUN_RANGE, pParent),
+	IItem("Package", fGUN_RANGE, pParent),
 	m_Base("Outside/Attack", "GunBot", this),
 	m_Top("Outside/Attack", "GunTop", this),
 	m_Debug(this)

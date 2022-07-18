@@ -480,6 +480,18 @@ void Outside::AttackUpdate()
 			}
 		}
 
+		// Update shooting
+		for(auto *pGun : m_GunList)
+		{
+			float fFireThreshold = pGun->pos.X();
+			fFireThreshold -= pGun->GetRange();
+
+			for(auto *pEnemy : m_EnemyList)
+			{
+				//pEnemy->
+			}
+		}
+
 		if(bAttackOngoing == false)
 			m_eAttackState = ATTACKSTATE_Finished;
 		break; }
