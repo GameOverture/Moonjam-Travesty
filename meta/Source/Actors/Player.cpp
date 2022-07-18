@@ -26,6 +26,8 @@ Player::Player(HyEntity2d *pParent /*= nullptr*/) :
 
 	m_HoverLabel.pos.Set(50.0f, 50.0f);
 	m_HoverLabel.alpha.Set(0.0f);
+	m_HoverLabel.scale.Set(0.5f, 0.5f);
+	m_HoverLabel.SetTextState(4);
 	m_HoverLabel.SetAsSideBySide(false);
 }
 

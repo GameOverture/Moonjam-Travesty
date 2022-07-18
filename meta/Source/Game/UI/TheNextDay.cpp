@@ -23,7 +23,7 @@ TheNextDay::TheNextDay(HyEntity2d *pParent /*= nullptr*/) :
 	m_BG.shape.SetAsBox(HyEngine::Window().GetWidthF(), HyEngine::Window().GetHeightF());
 	m_BG.SetTint(HyColor::Black);
 
-	m_Oval.shape.SetAsCircle(HyEngine::Window().GetWidthF(0.4f));
+	m_Oval.shape.SetAsCircle(HyEngine::Window().GetWidthF(0.3f));
 	m_Oval.scale.Set(1.0f, 0.75f);
 	m_Oval.SetTint(HyColor::DarkGray);
 	m_Oval.pos.Set(HyEngine::Window().GetWidthF(0.5f), HyEngine::Window().GetHeightF(0.5f));

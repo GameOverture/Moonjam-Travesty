@@ -11,7 +11,8 @@ class Gun : public IItem
 
 	HyPrimitive2d		m_Debug;
 
-	HyTimer				m_CoolDown;
+	HyStopwatch			m_CoolDownStopwatch;
+	HyProgressBar		m_CoolDownBar;
 
 public:
 	Gun(HyEntity2d *pParent = nullptr);
@@ -20,6 +21,9 @@ public:
 	virtual void OnUpdate() override;
 
 	virtual void StartSetupLoop(float fDuration) override;
+
+	bool CanShoot();
+	void Shoot(float fShootLocation);
 };
 
 #endif // Gun_h__

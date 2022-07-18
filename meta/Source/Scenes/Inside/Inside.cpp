@@ -19,9 +19,9 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_Wall_LowLeft(this),
 	m_Wall_LowRight(this),
 	m_Billy("Actors", "Billy", this),
-	m_SnackBar(HyPanelInit("Actors", "ProgBar"), "", "", 2, 2, 2, 2, this),
-	m_DinnerBar(HyPanelInit("Actors", "ProgBar"), "", "", 2, 2, 2, 2, this),
-	m_HomeworkBar(HyPanelInit("Actors", "ProgBar"), "", "", 2, 2, 2, 2, this),
+	m_SnackBar(HyPanelInit("Actors", "ProgBar"), "", "", 0, 12, 0, 12, this),
+	m_DinnerBar(HyPanelInit("Actors", "ProgBar"), "", "", 0, 12, 0, 12, this),
+	m_HomeworkBar(HyPanelInit("Actors", "ProgBar"), "", "", 0, 12, 0, 12, this),
 	m_eInsideState(STATE_Inactive)
 {
 	SetTag(TAG_Inside);
@@ -101,15 +101,15 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 
 	m_SnackBar.SetRange(0, 100);
 	m_SnackBar.pos.Set(220.0f, 425.0f);
-	m_SnackBar.scale.Set(2.0f, 2.0f);
+	//m_SnackBar.scale.Set(2.0f, 2.0f);
 
 	m_DinnerBar.SetRange(0, 100);
 	m_DinnerBar.pos.Set(220.0f, 425.0f);
-	m_DinnerBar.scale.Set(2.0f, 2.0f);
+	//m_DinnerBar.scale.Set(2.0f, 2.0f);
 
 	m_HomeworkBar.SetRange(0, 100);
 	m_HomeworkBar.pos.Set(100.0f, 50.0f);
-	m_HomeworkBar.scale.Set(2.0f, 2.0f);
+	//m_HomeworkBar.scale.Set(2.0f, 2.0f);
 }
 
 /*virtual*/ Inside::~Inside()
@@ -151,9 +151,9 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 
 	case STATE_PlayKitchen:
 		if(m_SnackBar.alpha.Get() != 0.0f)
-			m_SnackBar.SetValue(static_cast<int32>(100.0f * (m_SnackStopwatch.TimeElapsed() / fSNACK_DUR)));
+			m_SnackBar.SetValue(100 - static_cast<int32>(100.0f * (m_SnackStopwatch.TimeElapsed() / fSNACK_DUR)));
 		if(m_DinnerBar.alpha.Get() != 0.0f)
-			m_DinnerBar.SetValue(static_cast<int32>(100.0f * (m_DinnerStopwatch.TimeElapsed() / fDINNER_DUR)));
+			m_DinnerBar.SetValue(100 - static_cast<int32>(100.0f * (m_DinnerStopwatch.TimeElapsed() / fDINNER_DUR)));
 
 		if(m_SnackBar.alpha.Get() != 0.0f && m_SnackStopwatch.TimeElapsed() > fSNACK_DUR)
 		{
@@ -176,7 +176,7 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 
 	case STATE_PlayHomework:
 		if(m_HomeworkBar.alpha.Get() != 0.0f)
-			m_HomeworkBar.SetValue(static_cast<int32>(100.0f * (m_HomeworkStopwatch.TimeElapsed() / fHOMEWORK_DUR)));
+			m_HomeworkBar.SetValue(100 - static_cast<int32>(100.0f * (m_HomeworkStopwatch.TimeElapsed() / fHOMEWORK_DUR)));
 		if(m_HomeworkBar.alpha.Get() != 0.0f && m_HomeworkStopwatch.TimeElapsed() > fHOMEWORK_DUR)
 		{
 			m_PlayerRef.GetLabel().SetText("");

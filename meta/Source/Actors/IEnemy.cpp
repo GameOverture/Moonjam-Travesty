@@ -50,14 +50,16 @@ float IEnemy::GetDeferTime()
 
 void IEnemy::TakeDamage()
 {
+	if(m_uiCurHealth == 0)
+		return;
+
 	m_HeartList[m_uiCurHealth - 1]->pos.TweenOffset(0.0f, 32.0f, 0.5f, HyTween::QuadOut);
 	m_HeartList[m_uiCurHealth - 1]->alpha.Tween(0.0f, 0.5f);
 
 	m_uiCurHealth--;
 
 	if(m_uiCurHealth == 0)
-	{
-	}
+		Kill();
 }
 
 void IEnemy::AttackUpdate()
@@ -82,6 +84,9 @@ void IEnemy::AttackUpdate()
 
 void IEnemy::Kill()
 {
+	for(int i = 0; i < m_uiCurHealth; ++i)
+		TakeDamage();
+
 	rot.Tween(180.0f, 1.0f, HyTween::BounceInOut);
 	m_bCanAttack = false;
 }

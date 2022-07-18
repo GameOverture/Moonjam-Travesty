@@ -470,6 +470,9 @@ void Outside::AttackUpdate()
 		{
 			if(pEnemy->CanAttack())
 			{
+				if(HyEngine::Window().GetCamera2d(0)->pos.X() < pEnemy->pos.X())
+					HyEngine::Window().GetCamera2d(0)->pos.SetX(pEnemy->pos.X());
+
 				if(pEnemy->pos.X() > -32.0f)
 				{
 					pEnemy->AttackHouse();
@@ -483,12 +486,20 @@ void Outside::AttackUpdate()
 		// Update shooting
 		for(auto *pGun : m_GunList)
 		{
+			if(pGun->CanShoot() == false)
+				continue;
+
 			float fFireThreshold = pGun->pos.X();
 			fFireThreshold -= pGun->GetRange();
 
 			for(auto *pEnemy : m_EnemyList)
 			{
-				//pEnemy->
+				if(pEnemy->CanAttack() && pEnemy->pos.X() >= fFireThreshold)
+				{
+					pGun->Shoot(pEnemy->pos.X());
+					pEnemy->TakeDamage();
+					break;
+				}
 			}
 		}
 
