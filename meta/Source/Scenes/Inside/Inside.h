@@ -47,6 +47,9 @@ class Inside : public HyPhysicsGrid2d
 	};
 	InsideState					m_eInsideState;
 
+	HyAudio2d					m_AudHurry;
+	bool						m_bPlayedHurry;
+
 
 public:
 	Inside(Player &playerRef,  HyEntity2d *pParent = nullptr);

@@ -22,7 +22,9 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_SnackBar(HyPanelInit("Actors", "ProgBar"), "", "", 0, 12, 0, 12, this),
 	m_DinnerBar(HyPanelInit("Actors", "ProgBar"), "", "", 0, 12, 0, 12, this),
 	m_HomeworkBar(HyPanelInit("Actors", "ProgBar"), "", "", 0, 12, 0, 12, this),
-	m_eInsideState(STATE_Inactive)
+	m_eInsideState(STATE_Inactive),
+	m_AudHurry("Sounds", "FasterBilly", this),
+	m_bPlayedHurry(false)
 {
 	SetTag(TAG_Inside);
 	m_b2World.SetContactListener(&m_InsideContactListener);
@@ -176,7 +178,15 @@ Inside::Inside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 
 	case STATE_PlayHomework:
 		if(m_HomeworkBar.alpha.Get() != 0.0f)
+		{
 			m_HomeworkBar.SetValue(100 - static_cast<int32>(100.0f * (m_HomeworkStopwatch.TimeElapsed() / fHOMEWORK_DUR)));
+
+			if(m_bPlayedHurry  == false && (100 - static_cast<int32>(100.0f * (m_HomeworkStopwatch.TimeElapsed() / fHOMEWORK_DUR))) < 50)
+			{
+				m_AudHurry.Play();
+				m_bPlayedHurry = true;
+			}
+		}
 		if(m_HomeworkBar.alpha.Get() != 0.0f && m_HomeworkStopwatch.TimeElapsed() > fHOMEWORK_DUR)
 		{
 			m_PlayerRef.GetLabel().SetText("");
@@ -202,6 +212,9 @@ void Inside::Reset()
 	m_HomeworkStopwatch.Reset();
 	m_HomeworkBar.alpha.Set(1.0f);
 	m_HomeworkBar.SetValue(0);
+
+	
+	m_bPlayedHurry = false;
 }
 
 void Inside::Init()
