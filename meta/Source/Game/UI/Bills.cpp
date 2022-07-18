@@ -5,25 +5,26 @@
 
 Bills::Bills(HyEntity2d *pParent /*= nullptr*/) :
 	HyUiContainer(HYORIEN_Vertical, HyPanelInit(600, 700, 1), pParent),
-	m_PaperPanel("UI", "BillsPanel", this),
-	m_BillsTitle(HyPanelInit(), "UI", "Bills"),
-	m_SavingsLbl(HyPanelInit(), "UI", "Bills"),
-	m_SavingsVal(HyPanelInit(), "UI", "Bills"),
-	m_PaycheckLbl(HyPanelInit(), "UI", "Bills"),
-	m_PaycheckVal(HyPanelInit(), "UI", "Bills"),
-	m_MortgageChk(HyPanelInit(32, 32, 2), "UI", "Bills"),
-	m_MortgageVal(HyPanelInit(), "UI", "Bills"),
-	m_FoodChk(HyPanelInit(32, 32, 2), "UI", "Bills"),
-	m_FoodVal(HyPanelInit(), "UI", "Bills"),
-	m_AcChk(HyPanelInit(32, 32, 2), "UI", "Bills"),
-	m_AcVal(HyPanelInit(), "UI", "Bills"),
-	m_MedicineChk(HyPanelInit(32, 32, 2), "UI", "Bills"),
-	m_MedicineVal(HyPanelInit(), "UI", "Bills"),
-	m_RepairsChk(HyPanelInit(32, 32, 2), "UI", "Bills"),
-	m_RepairsVal(HyPanelInit(), "UI", "Bills"),
-	m_DividerLine(HyPanelInit(175, 5, 1, HyColor::Black, HyColor::Black), "UI", "Bills"),
-	m_RemainingMoney(HyPanelInit(), "UI", "Bills"),
-	m_EndBtn(HyPanelInit(250, 75, 3), "UI", "Bills")
+	m_PaperPanel("UI/Bills", "BillsPanel", this),
+	m_BillsTitle(HyPanelInit(), "UI", "Bills", this),
+	m_SavingsLbl(HyPanelInit(), "UI", "Bills", this),
+	m_SavingsVal(HyPanelInit(), "UI", "Bills", this),
+	m_PaycheckLbl(HyPanelInit(), "UI", "Bills", this),
+	m_PaycheckVal(HyPanelInit(), "UI", "Bills", this),
+	m_MortgageLbl(HyPanelInit(), "UI", "Bills", this),
+	m_MortgageVal(HyPanelInit(), "UI", "Bills", this),
+	m_FoodChk(HyPanelInit(32, 32, 2), "UI", "Bills", this),
+	m_FoodVal(HyPanelInit(), "UI", "Bills", this),
+	m_AcChk(HyPanelInit(32, 32, 2), "UI", "Bills", this),
+	m_AcVal(HyPanelInit(), "UI", "Bills", this),
+	m_MedicineChk(HyPanelInit(32, 32, 2), "UI", "Bills", this),
+	m_MedicineVal(HyPanelInit(), "UI", "Bills", this),
+	m_RepairsChk(HyPanelInit(32, 32, 2), "UI", "Bills", this),
+	m_RepairsVal(HyPanelInit(), "UI", "Bills", this),
+	m_DividerLine(HyPanelInit(175, 5, 1, HyColor::Black, HyColor::Black), "UI", "Bills", this),
+	m_RemainingMoney(HyPanelInit(), "UI", "Bills", this),
+	m_EndBtn(HyPanelInit(300, 75, 3), "UI", "Bills", 10, 5, 10, 5, this),
+	m_BillyStatus(this)
 {
 	UseWindowCoordinates();
 	SetDisplayOrder(DISPLAYORDER_Bills);
@@ -37,15 +38,35 @@ Bills::Bills(HyEntity2d *pParent /*= nullptr*/) :
 	m_SavingsLbl.SetTextState(1);
 	m_PaycheckLbl.SetText("Paycheck");
 	m_PaycheckLbl.SetTextState(1);
-	m_MortgageChk.SetText("Mortgage");
-	m_MortgageChk.SetChecked(true);
-	m_MortgageChk.SetAsEnabled(false);
-	m_FoodChk.SetText("Food");
+	m_MortgageLbl.SetText("Mortgage");
+	m_FoodChk.SetText("Food x2");
 	m_AcChk.SetText("Air Conditioning");
 	m_MedicineChk.SetText("Medicine");
 	m_RepairsChk.SetText("Repairs");
 
-	m_EndBtn.SetButtonClickedCallback(OnEndBtn, this);
+	m_SavingsVal.SetAsSpinningMeter(false);
+	m_SavingsVal.SetNumFormat(HyNumberFormat().SetFractionPrecision(0, 0));
+	m_SavingsVal.ShowAsCash(true);
+	m_PaycheckVal.SetAsSpinningMeter(false);
+	m_PaycheckVal.ShowAsCash(true);
+	m_MortgageVal.SetAsSpinningMeter(false);
+	m_MortgageVal.ShowAsCash(true);
+	m_FoodVal.SetAsSpinningMeter(false);
+	m_FoodVal.ShowAsCash(true);
+	m_AcVal.SetAsSpinningMeter(false);
+	m_AcVal.ShowAsCash(true);
+	m_MedicineVal.SetAsSpinningMeter(false);
+	m_MedicineVal.ShowAsCash(true);
+	m_RepairsVal.SetAsSpinningMeter(false);
+	m_RepairsVal.ShowAsCash(true);
+
+	m_RemainingMoney.SetAsSpinningMeter(false);
+	m_RemainingMoney.ShowAsCash(true);
+
+	m_EndBtn.SetButtonClickedCallback(OnExitBtn, this);
+	m_EndBtn.SetTextState(4);
+
+	m_BillyStatus.pos.Set(640, 0);
 
 	SetLayoutMargin(20, 20, 20, 20);
 }
@@ -54,17 +75,35 @@ Bills::Bills(HyEntity2d *pParent /*= nullptr*/) :
 {
 }
 
-void Bills::Assemble(int64 iPaycheckAmt)
+void Bills::Assemble(int64 iPaycheckAmt, int64 iRepairCost, BillyFeels eBillyStatus, BillyGrade eBillyGrades)
 {
-	m_SavingsVal.SetText(HyLocale::Money_Format(MoonjamTravesty::GetGame().GetMoney()));
+	if(eBillyGrades == BILLYGRADE_F) // Game over
+		eBillyStatus = BILLY_Juicer;
+
+	switch(eBillyStatus)
+	{
+	case BILLY_Okage:	m_BillyStatus.m_Status.SetText("Status: Okage"); break;
+	case BILLY_Hunger:	m_BillyStatus.m_Status.SetText("Status: Hunger"); break;
+	case BILLY_Sick:	m_BillyStatus.m_Status.SetText("Status: Sick"); break;
+	case BILLY_Juicer:	m_BillyStatus.m_Status.SetText("Status: Juicer"); break;
+	}
+	m_BillyStatus.m_Status.SetSpriteState(eBillyStatus);
+	m_BillyStatus.m_GradeLetter.SetState(eBillyGrades);
+
+	m_SavingsVal.SetValue(MoonjamTravesty::GetGame().GetMoney(), 0.0f);
 	m_SavingsVal.SetTextState(1);
-	m_PaycheckVal.SetText(HyLocale::Money_Format(iPaycheckAmt));
+	m_PaycheckVal.SetValue(iPaycheckAmt, 0.0f);
 	m_PaycheckVal.SetTextState(1);
-	m_MortgageVal.SetText(HyLocale::Money_Format(iMORTGAGE_COST));
-	m_FoodVal.SetText(HyLocale::Money_Format(iFOOD_COST));
-	m_AcVal.SetText(HyLocale::Money_Format(iAC_COST));
-	m_MedicineVal.SetText(HyLocale::Money_Format(iMEDICINE_COST));
-	m_RepairsVal.SetText(HyLocale::Money_Format(iMEDICINE_COST));
+	m_MortgageVal.SetValue(iMORTGAGE_COST, 0.0f);
+	m_FoodVal.SetValue(iFOOD_COST, 0.0f);
+	m_AcVal.SetValue(iAC_COST, 0.0f);
+	m_MedicineVal.SetValue(iMEDICINE_COST, 0.0f);
+	m_RepairsVal.SetValue(iRepairCost, 0.0f);
+
+	m_FoodChk.SetChecked(false);
+	m_AcChk.SetChecked(false);
+	m_MedicineChk.SetChecked(false);
+	m_RepairsChk.SetChecked(false);
 
 	m_RemainingMoney.SetValue(0, 0.0f);
 
@@ -84,7 +123,7 @@ void Bills::Assemble(int64 iPaycheckAmt)
 	InsertWidget(m_PaycheckVal, hPaycheck);
 
 	HyLayoutHandle hMortgage = InsertLayout(HYORIEN_Horizontal);
-	InsertWidget(m_MortgageChk, hMortgage);
+	InsertWidget(m_MortgageLbl, hMortgage);
 	InsertSpacer(HYSIZEPOLICY_Expanding, 0, hMortgage);
 	InsertWidget(m_MortgageVal, hMortgage);
 	
@@ -98,20 +137,32 @@ void Bills::Assemble(int64 iPaycheckAmt)
 	InsertSpacer(HYSIZEPOLICY_Expanding, 0, hAC);
 	InsertWidget(m_AcVal, hAC);
 
-	if(true)
+	if(eBillyStatus == BILLY_Sick)
 	{
+		m_MedicineChk.alpha.Set(1.0f);
+
 		HyLayoutHandle hMedicine = InsertLayout(HYORIEN_Horizontal);
 		InsertWidget(m_MedicineChk, hMedicine);
 		InsertSpacer(HYSIZEPOLICY_Expanding, 0, hMedicine);
 		InsertWidget(m_MedicineVal, hMedicine);
 	}
+	else
+	{
+		m_MedicineChk.alpha.Set(0.0f);
+		m_MedicineVal.alpha.Set(0.0f);
+	}
 
-	if(true)
+	if(iRepairCost > 0)
 	{
 		HyLayoutHandle hRepair = InsertLayout(HYORIEN_Horizontal);
 		InsertWidget(m_RepairsChk, hRepair);
 		InsertSpacer(HYSIZEPOLICY_Expanding, 0, hRepair);
 		InsertWidget(m_RepairsVal, hRepair);
+	}
+	else
+	{
+		m_RepairsChk.alpha.Set(0.0f);
+		m_RepairsVal.alpha.Set(0.0f);
 	}
 
 	HyLayoutHandle hDivider = InsertLayout(HYORIEN_Horizontal);
@@ -127,9 +178,41 @@ void Bills::Assemble(int64 iPaycheckAmt)
 
 /*virtual*/ void Bills::OnContainerUpdate() /*override*/
 {
+	if(IsShown() == false)
+		return;
+
+	int64 iRemainingMoney = 0;
+	iRemainingMoney += m_SavingsVal.GetValue();
+	iRemainingMoney += m_PaycheckVal.GetValue();
+	iRemainingMoney -= m_MortgageVal.GetValue();
+	if(m_FoodChk.IsChecked())
+		iRemainingMoney -= m_FoodVal.GetValue();
+	if(m_AcChk.IsChecked())
+		iRemainingMoney -= m_AcVal.GetValue();
+	if(m_MedicineChk.IsChecked())
+		iRemainingMoney -= m_MedicineVal.GetValue();
+	if(m_RepairsChk.IsChecked())
+		iRemainingMoney -= m_RepairsVal.GetValue();
+
+	if(m_RemainingMoney.GetValue() != iRemainingMoney)
+		m_RemainingMoney.SetValue(iRemainingMoney, 1.0f);
+
+	if(m_BillyStatus.m_GradeLetter.GetState() == BILLYGRADE_F)
+		m_EndBtn.SetText("Billy is a juicer");
+	else if(m_RemainingMoney.GetValue() >= 0)
+		m_EndBtn.SetText("Go to sleep");
+	else
+		m_EndBtn.SetText("Declare Bankruptcy");
 }
 
-/*static*/ void Bills::OnEndBtn(HyButton *pBtn, void *pData)
+/*static*/ void Bills::OnExitBtn(HyButton *pBtn, void *pData)
 {
-	//MoonjamTravesty::GetGame().
+	Bills *pThis = reinterpret_cast<Bills *>(pData);
+
+	if(pThis->m_BillyStatus.m_GradeLetter.GetState() == BILLYGRADE_F)
+		MoonjamTravesty::GameOver(GAMEOVER_Juicer);
+	else if(pThis->m_RemainingMoney.GetValue() < 0)
+		MoonjamTravesty::GameOver(GAMEOVER_Bankruptcy);
+	else
+		MoonjamTravesty::Sleep(pThis->m_RemainingMoney.GetValue(), pThis->m_MedicineChk.IsChecked(), pThis->m_FoodChk.IsChecked());
 }

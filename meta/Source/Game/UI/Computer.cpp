@@ -83,7 +83,7 @@ Computer::Computer(HyEntity2d *pParent /*= nullptr*/) :
 
 /*static*/ void Computer::OnWorkBtn(HyButton *pBtn, void *pData)
 {
-	MoonjamTravesty::GetGame().EndDay();
+	MoonjamTravesty::EndDay();
 }
 
 /*static*/ void Computer::OnCumBtn(HyButton *pBtn, void *pData)

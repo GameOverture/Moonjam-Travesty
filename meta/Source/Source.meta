@@ -378,6 +378,24 @@
             "filter": "Game/UI",
             "itemType": "Header",
             "name": "TitleOverlay.h"
+        },
+        {
+            "assetUUID": "5ef291d5-fe66-4527-81cf-0d195bba0451",
+            "bankId": 0,
+            "checksum": 3084114012,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Source",
+            "name": "BillyChecklist.cpp"
+        },
+        {
+            "assetUUID": "fc12aee5-33b4-4195-81da-84e0f5f536a4",
+            "bankId": 0,
+            "checksum": 491803136,
+            "errors": 0,
+            "filter": "Game/UI",
+            "itemType": "Header",
+            "name": "BillyChecklist.h"
         }
     ],
     "banks": [

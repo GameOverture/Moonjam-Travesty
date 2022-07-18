@@ -22,10 +22,12 @@ public:
 
 	void Reset();
 	void Start();
-	void Stop();
+	void Pause();
+	void OnSleep();
 
 	int64 GetMoney();
 	void OffsetMoney(int64 iOffsetAmt, float fDuration);
+	void SetMoney(int64 iAmt, float fDuration);
 
 	int64 GetCurWorkProfit();
 	float GetPercentOfDayLeft();

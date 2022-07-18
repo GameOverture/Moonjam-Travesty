@@ -7,6 +7,7 @@
 #include "Inside.h"
 #include "Game.h"
 #include "TitleOverlay.h"
+#include "TheNextDay.h"
 
 class MoonjamTravesty : public HyEngine
 {
@@ -19,6 +20,8 @@ class MoonjamTravesty : public HyEngine
 	Game						m_Game;
 	TitleOverlay				m_Title;
 
+	TheNextDay					m_TheNextDay;
+
 	HyPrimitive2d				m_LoadCover;
 
 	enum GameState
@@ -26,9 +29,15 @@ class MoonjamTravesty : public HyEngine
 		STATE_Loading = 0,
 		STATE_Title,
 		STATE_Play,
-		STATE_Sleep
+		STATE_FadeOut,
+		STATE_Bills,
+		STATE_Attack,
+		STATE_TheNextDay,
+		STATE_GameOver
 	};
 	GameState					m_eGameState;
+
+	int32						m_iDayIndex;
 
 public:
 	MoonjamTravesty(HarmonyInit &initStruct);
@@ -43,7 +52,10 @@ public:
 	static void BuyCum();
 	static void BuyGun();
 
-	static void Sleep();
+	static void StartDay();
+	static void EndDay();
+	static void Sleep(int64 iRemainingMoney, bool bBoughtMedicine, bool bBoughtFood);
+	static void GameOver(GameOverType eGameOverType);
 };
 
 #endif // MoonjamTravesty_h__

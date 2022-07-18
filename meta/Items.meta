@@ -310,7 +310,7 @@
                 }
             ]
         },
-        "UI/BillsPanel": {
+        "UI/Bills/BillsPanel": {
             "CameraPos": [
                 0,
                 0
@@ -323,6 +323,80 @@
                         "8a436e07-c951-467f-a1eb-9a3075054387"
                     ],
                     "name": ""
+                }
+            ]
+        },
+        "UI/Bills/BillyGrade": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "457b456f-e2c5-4f35-9c66-b8f5197a7d91",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "e7c0b2c4-db73-4982-8a06-89cee460bbfd"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "df01bb01-15f3-4fa7-a9b6-c7be8c6347ac"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "fc36d9e0-133a-4c43-ab0a-992ff4086bf1"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "1382655a-a3a1-4838-a213-032f4f3775dd"
+                    ],
+                    "name": ""
+                },
+                {
+                    "assetUUIDs": [
+                        "d048487d-6ce3-45d7-b73a-72cafeacc91b"
+                    ],
+                    "name": ""
+                }
+            ]
+        },
+        "UI/Bills/BillyIcon": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "d2592aa6-4b41-468c-bca0-9e015a142029",
+            "stateArray": [
+                {
+                    "assetUUIDs": [
+                        "be95c930-0e15-45d4-a5b8-ba65f13dc63f"
+                    ],
+                    "name": "Okage"
+                },
+                {
+                    "assetUUIDs": [
+                        "544f9aa4-e128-4f8f-932a-f3a26758e8bf"
+                    ],
+                    "name": "Hunger"
+                },
+                {
+                    "assetUUIDs": [
+                        "4ebf7407-6408-49ce-9173-fba62f443879"
+                    ],
+                    "name": "Sick"
+                },
+                {
+                    "assetUUIDs": [
+                        "a74d2b43-a346-4ce7-9485-98ff57a065a2"
+                    ],
+                    "name": "Juicin"
                 }
             ]
         },
@@ -691,6 +765,12 @@
                 },
                 {
                     "name": ""
+                },
+                {
+                    "name": ""
+                },
+                {
+                    "name": ""
                 }
             ]
         },
@@ -723,6 +803,27 @@
             "CameraZoom": 1,
             "UUID": "510de4ff-eceb-4472-a0b9-98e4939703a8",
             "assetUUID": "{94ab0b17-080b-4c36-9036-a9e8f1b5a157}",
+            "availableGlyphs": {
+                "0-9": true,
+                "A-Z": true,
+                "a-z": true,
+                "additional": "",
+                "symbols": true
+            },
+            "stateArray": [
+                {
+                    "name": ""
+                }
+            ]
+        },
+        "UI/TheNextDay": {
+            "CameraPos": [
+                0,
+                0
+            ],
+            "CameraZoom": 1,
+            "UUID": "80c831b1-75a5-437c-ad8c-c825e4a54acd",
+            "assetUUID": "{cbc6b144-afee-4e42-8f97-5f84bedecbf7}",
             "availableGlyphs": {
                 "0-9": true,
                 "A-Z": true,

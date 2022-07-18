@@ -52,9 +52,11 @@ class Outside : public HyPhysicsGrid2d
 		ATTACKSTATE_Inactive = 0,
 		ATTACKSTATE_Intro,
 		ATTACKSTATE_IntroPan,
-		ATTACKSTATE_Attacking
+		ATTACKSTATE_Attacking,
+		ATTACKSTATE_Finished
 	};
 	AttackState					m_eAttackState;
+	int32						m_iHouseDamage;
 
 public:
 	Outside(Player &playerRef, HyEntity2d *pParent = nullptr);
@@ -72,6 +74,11 @@ public:
 
 	void SetupAttack(uint32 uiDayIndex);
 	void AttackUpdate();
+
+	void DestroyCum();
+	void DestroyGun();
+
+	bool IsAttackFinished();
 };
 
 #endif // Outside_h__

@@ -27,7 +27,11 @@ enum Tag
 	// Outside Collision
 	TAG_Ground,
 	TAG_Cum,
-	TAG_Gun
+	TAG_Gun,
+
+	// Enemy
+	TAG_Gums,
+	TAG_Borpa
 };
 
 enum InputAction
@@ -67,6 +71,29 @@ enum ItemState
 	ITEMSTATE_SetupInit,
 	ITEMSTATE_SetupLoop,
 	ITEMSTATE_Active
+};
+
+enum BillyFeels
+{
+	BILLY_Okage = 0,
+	BILLY_Hunger,
+	BILLY_Sick,
+	BILLY_Juicer
+};
+
+enum BillyGrade
+{
+	BILLYGRADE_A = 4,
+	BILLYGRADE_B = 3,
+	BILLYGRADE_C = 2,
+	BILLYGRADE_D = 1,
+	BILLYGRADE_F = 0,
+};
+
+enum GameOverType
+{
+	GAMEOVER_Bankruptcy = 0,
+	GAMEOVER_Juicer
 };
 
 #endif // pch_h__

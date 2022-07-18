@@ -26,6 +26,7 @@ public:
 
 	void EnableInput(bool bEnable);
 	bool IsOutside();
+	bool IsGrounded();
 
 	HySprite2d &GetMoonSprite();
 	MoonState GetMoonState() const;

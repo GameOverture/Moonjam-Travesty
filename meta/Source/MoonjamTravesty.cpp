@@ -9,7 +9,8 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 	m_Outside(m_Player),
 	m_Inside(m_Player),
 	m_Title(),
-	m_eGameState(STATE_Loading)
+	m_eGameState(STATE_Loading),
+	m_iDayIndex(0)
 {
 	m_LoadCover.UseWindowCoordinates();
 	m_LoadCover.shape.SetAsBox(HyEngine::Window().GetWidthF(), HyEngine::Window().GetHeightF());
@@ -44,10 +45,12 @@ MoonjamTravesty::MoonjamTravesty(HarmonyInit &initStruct) :
 	m_Inside.Load();
 	m_Game.Load();
 	m_Title.Load();
+	m_TheNextDay.Load();
 	
 	m_Outside.Hide();
 	m_Inside.Hide();
 	m_Title.SetVisible(false);
+	m_TheNextDay.SetVisible(false);
 
 	sm_pInstance = this;
 }
@@ -59,14 +62,17 @@ MoonjamTravesty::~MoonjamTravesty()
 /*virtual*/ bool MoonjamTravesty::OnUpdate() /*override*/
 {
 	const float fDebugCamMovement = 540.0f;
-	if(HyEngine::Input().IsActionDown(INPUT_DebugCamUp))
-		m_pCamera->pos.Offset(0.0f, fDebugCamMovement * HyEngine::DeltaTime());
-	if(HyEngine::Input().IsActionDown(INPUT_DebugCamDown))
-		m_pCamera->pos.Offset(0.0f, -fDebugCamMovement * HyEngine::DeltaTime());
+	//if(HyEngine::Input().IsActionDown(INPUT_DebugCamUp))
+	//	m_pCamera->pos.Offset(0.0f, fDebugCamMovement * HyEngine::DeltaTime());
+	//if(HyEngine::Input().IsActionDown(INPUT_DebugCamDown))
+	//	m_pCamera->pos.Offset(0.0f, -fDebugCamMovement * HyEngine::DeltaTime());
 	if(HyEngine::Input().IsActionDown(INPUT_DebugCamLeft))
 		m_pCamera->pos.Offset(-fDebugCamMovement * HyEngine::DeltaTime(), 0.0f);
 	if(HyEngine::Input().IsActionDown(INPUT_DebugCamRight))
 		m_pCamera->pos.Offset(fDebugCamMovement * HyEngine::DeltaTime(), 0.0f);
+
+	if(HyEngine::Input().IsActionReleased(INPUT_DebugCamUp))
+		EndDay();
 
 	switch(m_eGameState)
 	{
@@ -91,11 +97,12 @@ MoonjamTravesty::~MoonjamTravesty()
 		break;
 
 	case STATE_Title:
+		m_iDayIndex = 0;
 		if(m_Title.IsFinished())
 		{
 			m_Title.alpha.Tween(0.0f, 0.5f, HyTween::Linear, [](IHyNode *pThis) { pThis->SetVisible(false); });
 
-			m_Game.StartDay();
+			m_Game.OnStartDay();
 			EnterHouse();
 			m_eGameState = STATE_Play;
 		}
@@ -104,7 +111,47 @@ MoonjamTravesty::~MoonjamTravesty()
 	case STATE_Play:
 		break;
 
-	case STATE_Sleep:
+	case STATE_FadeOut:
+		if(m_Outside.alpha.IsAnimating() == false)
+		{
+			m_Outside.alpha.Set(1.0f);
+			m_Outside.Hide();
+			m_Inside.alpha.Set(1.0f);
+			m_Inside.Hide();
+
+			m_Game.OnEndDay();
+			m_eGameState = STATE_Bills;
+		}
+		break;
+
+	case STATE_Bills:
+		break;
+
+	case STATE_Attack:
+		if(m_Outside.IsAttackFinished())
+		{
+			m_TheNextDay.Reset();
+			m_TheNextDay.SetVisible(true);
+			m_TheNextDay.alpha.Set(0.0f);
+			m_TheNextDay.alpha.Tween(1.0f, 2.0f, HyTween::Linear, [](IHyNode *pThis) { static_cast<TheNextDay *>(pThis)->Start(); });
+
+			m_eGameState = STATE_TheNextDay;
+		}
+		break;
+
+	case STATE_TheNextDay:
+		if(m_TheNextDay.IsFinished())
+		{
+			m_TheNextDay.alpha.Tween(0.0f, 0.6f, HyTween::Linear, [](IHyNode *pThis) { pThis->SetVisible(false); });
+
+			m_Game.OnStartDay();
+			EnterHouse();
+			m_eGameState = STATE_Play;
+		}
+
+		break;
+
+	case STATE_GameOver:
 		break;
 	}
 
@@ -140,7 +187,37 @@ MoonjamTravesty::~MoonjamTravesty()
 	sm_pInstance->m_Outside.SpawnGun();
 }
 
-/*static*/ void MoonjamTravesty::Sleep()
+/*static*/ void MoonjamTravesty::StartDay()
 {
-	sm_pInstance->m_eGameState = STATE_Sleep;
+	sm_pInstance->m_Game.OnStartDay();
+}
+
+/*static*/ void MoonjamTravesty::EndDay()
+{
+	if(sm_pInstance->m_eGameState == STATE_Play)
+	{
+		sm_pInstance->m_Game.m_Clock.Pause();
+
+		sm_pInstance->m_Player.EnableInput(false);
+		sm_pInstance->m_Game.HideComputer();
+
+		sm_pInstance->m_Inside.alpha.Tween(0.0f, 2.0f);
+		sm_pInstance->m_Outside.alpha.Tween(0.0f, 2.0f);
+
+		sm_pInstance->m_eGameState = STATE_FadeOut;
+	}
+}
+
+/*static*/ void MoonjamTravesty::Sleep(int64 iRemainingMoney, bool bBoughtMedicine, bool bBoughtFood)
+{
+	sm_pInstance->m_Game.m_Clock.SetMoney(iRemainingMoney, 0.0f);
+	sm_pInstance->m_Game.OnSleep(bBoughtMedicine, bBoughtFood);
+	sm_pInstance->m_Outside.SetupAttack(sm_pInstance->m_iDayIndex);
+	sm_pInstance->m_iDayIndex++;
+	sm_pInstance->m_eGameState = STATE_Attack;
+}
+
+/*static*/ void MoonjamTravesty::GameOver(GameOverType eGameOverType)
+{
+	sm_pInstance->m_eGameState = STATE_GameOver;
 }

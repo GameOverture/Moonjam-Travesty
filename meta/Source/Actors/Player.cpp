@@ -179,6 +179,11 @@ bool Player::IsOutside()
 	return false;
 }
 
+bool Player::IsGrounded()
+{
+	return m_bIsGrounded;
+}
+
 HySprite2d &Player::GetMoonSprite()
 {
 	return m_Moon;

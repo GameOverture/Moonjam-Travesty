@@ -13,6 +13,8 @@ public:
 	virtual ~EnemyBorpa();
 
 	virtual void OnUpdate() override;
+
+	void RunAway();
 };
 
 #endif // EnemyBorpa_h__

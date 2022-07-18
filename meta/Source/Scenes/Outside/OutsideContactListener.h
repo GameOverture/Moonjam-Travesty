@@ -13,6 +13,9 @@ class OutsideContactListener : public HyBox2dRuntime
 		PHYSEVENT_LeaveGround,
 		PHYSEVENT_EnterCum,
 		PHYSEVENT_LeaveCum,
+
+		PHYSEVENT_DeleteCum,
+		PHYSEVENT_DeleteGun,
 	};
 	std::queue<EventType>	m_EventQueue;
 

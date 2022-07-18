@@ -2,6 +2,9 @@
 #include "OutsideContactListener.h"
 #include "Player.h"
 #include "Outside.h"
+#include "EnemyGums.h"
+#include "EnemyBorpa.h"
+#include "Game.h"
 
 OutsideContactListener::OutsideContactListener()
 {
@@ -35,10 +38,41 @@ OutsideContactListener::OutsideContactListener()
 	if(pBodyB->GetTag() == TAG_Cum)
 		pCum = pBodyB;
 
+	IHyBody2d *pGun = nullptr;
+	if(pBodyA->GetTag() == TAG_Gun)
+		pGun = pBodyA;
+	if(pBodyB->GetTag() == TAG_Gun)
+		pGun = pBodyB;
+
+	IHyBody2d *pGums = nullptr;
+	if(pBodyA->GetTag() == TAG_Gums)
+		pGums = pBodyA;
+	if(pBodyB->GetTag() == TAG_Gums)
+		pGums = pBodyB;
+
+	IHyBody2d *pBorpa = nullptr;
+	if(pBodyA->GetTag() == TAG_Borpa)
+		pBorpa = pBodyA;
+	if(pBodyB->GetTag() == TAG_Borpa)
+		pBorpa = pBodyB;
+
+
+	if(pGums && pCum)
+		static_cast<EnemyGums *>(pGums)->SetMoveModifer(fGUMS_CUM_MOVE_MOD);
+
+	if(pBorpa && pCum)
+		m_EventQueue.push(PHYSEVENT_DeleteCum);
+
+	if(pGums && pGun)
+		m_EventQueue.push(PHYSEVENT_DeleteGun);
+	if(pBorpa && pGun)
+		m_EventQueue.push(PHYSEVENT_DeleteGun);
+
 	if(pPlayer && pGround)
 		m_EventQueue.push(PHYSEVENT_OnGround);
 	if(pPlayer && pCum)
 		m_EventQueue.push(PHYSEVENT_EnterCum);
+
 }
 
 /// Called when two fixtures cease to touch.
@@ -64,6 +98,15 @@ OutsideContactListener::OutsideContactListener()
 		pCum = pBodyA;
 	if(pBodyB->GetTag() == TAG_Cum)
 		pCum = pBodyB;
+
+	IHyBody2d *pGums = nullptr;
+	if(pBodyA->GetTag() == TAG_Gums)
+		pGums = pBodyA;
+	if(pBodyB->GetTag() == TAG_Gums)
+		pGums = pBodyB;
+
+	if(pGums && pCum)
+		static_cast<EnemyGums *>(pGums)->SetMoveModifer(1.0f);
 
 	if(pPlayer && pGround)
 		m_EventQueue.push(PHYSEVENT_LeaveGround);
@@ -106,6 +149,9 @@ void OutsideContactListener::ProcessQueue(Outside &outsideRef)
 		case PHYSEVENT_LeaveGround:	outsideRef.m_PlayerRef.OnLeaveGround(); break;
 		case PHYSEVENT_EnterCum:	outsideRef.m_PlayerRef.SetMoveModifer(0.1f); break;
 		case PHYSEVENT_LeaveCum:	outsideRef.m_PlayerRef.SetMoveModifer(1.0f); break;
+			
+		case PHYSEVENT_DeleteCum:	outsideRef.DestroyCum(); break;
+		case PHYSEVENT_DeleteGun:	outsideRef.DestroyGun(); break;
 		}
 		m_EventQueue.pop();
 	}

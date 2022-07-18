@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Clock.h"
 #include "Game.h"
+#include "MoonjamTravesty.h"
 
 Clock::Clock(HyEntity2d *pParent /*= nullptr*/) :
 	HyEntity2d(pParent),
@@ -34,7 +35,6 @@ Clock::Clock(HyEntity2d *pParent /*= nullptr*/) :
 
 /*virtual*/ void Clock::OnUpdate() /*override*/
 {
-
 	if(m_Timer.IsRunning())
 	{
 		float fPercLeft = GetPercentOfDayLeft();
@@ -42,6 +42,9 @@ Clock::Clock(HyEntity2d *pParent /*= nullptr*/) :
 
 		m_DayNight.rot.Set(180.0f - (fPercLeft * 180.0f));
 	}
+
+	if(m_Timer.IsExpired())
+		MoonjamTravesty::EndDay();
 }
 
 void Clock::Reset()
@@ -55,9 +58,15 @@ void Clock::Start()
 	m_Timer.Start();
 }
 
-void Clock::Stop()
+void Clock::Pause()
 {
 	m_Timer.Pause();
+}
+
+void Clock::OnSleep()
+{
+	// Hack so timer is expired
+	m_Timer.InitStart(0.1f);
 }
 
 int64 Clock::GetMoney()
@@ -68,6 +77,11 @@ int64 Clock::GetMoney()
 void Clock::OffsetMoney(int64 iOffsetAmt, float fDuration)
 {
 	m_MoneyBox.OffsetValue(iOffsetAmt, fDuration);
+}
+
+void Clock::SetMoney(int64 iAmt, float fDuration)
+{
+	m_MoneyBox.SetValue(iAmt, fDuration);
 }
 
 int64 Clock::GetCurWorkProfit()

@@ -28,7 +28,8 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	HyPhysicsGrid2d(glm::vec2(0.0f, 0.0f), 120.0f),
 	m_PlayerRef(playerRef),
 	m_eOutsideState(STATE_Inactive),
-	m_eAttackState(ATTACKSTATE_Inactive)
+	m_eAttackState(ATTACKSTATE_Inactive),
+	m_iHouseDamage(0)
 {
 	SetTag(TAG_Outside);
 
@@ -71,16 +72,12 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 	m_Ground.physics.SetEnabled(true);
 	ChildAppend(m_Ground);
 
-	m_LeftWall.shape.SetAsBox(75.0f, 1000.0f);
-	m_LeftWall.pos.Set(-2000.0f, -100.0f);
-	m_LeftWall.physics.Init(HYPHYS_Static);
-	m_LeftWall.physics.SetEnabled(true);
+	m_LeftWall.shape.SetAsBox(2.0f, 1000.0f);
+	m_LeftWall.pos.Set(fLEFT_BOUNDS, 0.0f);
 	ChildAppend(m_LeftWall);
 
-	m_RightWall.shape.SetAsBox(75.0f, 1000.0f);
-	m_RightWall.pos.Set(2000.0f, -100.0f);
-	m_RightWall.physics.Init(HYPHYS_Static);
-	m_RightWall.physics.SetEnabled(true);
+	m_RightWall.shape.SetAsBox(2.0f, 1000.0f);
+	m_RightWall.pos.Set(fRIGHT_BOUNDS, 0.0f);
 	ChildAppend(m_RightWall);
 
 	m_NightDarkness.UseWindowCoordinates();
@@ -142,16 +139,23 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 		break;
 
 	case STATE_Play: {
+
 		// Camera logic
 		HyCamera2d *pCamera = HyEngine::Window().GetCamera2d(0);
 		const float fDeadZoneAmt = HyEngine::Window().GetWidthF(0.4f);
 		auto worldBoundsAabb = pCamera->GetWorldViewBounds();
 		float fWorldBoundsLeft = worldBoundsAabb.lowerBound.x + fDeadZoneAmt;
 		float fWorldBoundsRight = worldBoundsAabb.upperBound.x - fDeadZoneAmt;
+
 		if(m_PlayerRef.pos.X() < fWorldBoundsLeft)
 			pCamera->pos.Offset(m_PlayerRef.pos.X() - fWorldBoundsLeft, 0.0f);
 		if(m_PlayerRef.pos.X() > fWorldBoundsRight)
 			pCamera->pos.Offset(m_PlayerRef.pos.X() - fWorldBoundsRight, 0.0f);
+
+		if(m_PlayerRef.pos.X() < fLEFT_BOUNDS)
+			m_PlayerRef.pos.SetX(fLEFT_BOUNDS);
+		if(m_PlayerRef.pos.X() > fRIGHT_BOUNDS)
+			m_PlayerRef.pos.SetX(fRIGHT_BOUNDS);
 
 		// Enter House logic
 		if(HyEngine::Input().IsActionDown(INPUT_MoveUp) &&
@@ -170,7 +174,7 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 		// Item handling logic
 		if(m_PlayerRef.GetEquipedItem() == nullptr)
 		{
-			if(HyEngine::Input().IsActionDown(INPUT_Action))
+			if(m_PlayerRef.IsGrounded() && HyEngine::Input().IsActionDown(INPUT_Action))
 			{
 				// Try and pick up item
 				const float fMINIMUM_DIST = 20.0f;
@@ -205,7 +209,7 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 				break;
 
 			case ITEMSTATE_Held:
-				if(HyEngine::Input().IsActionDown(INPUT_Action) && m_PlayerRef.pos.X() < -fMINIMUM_DIST_FROM_DOOR)
+				if(m_PlayerRef.IsGrounded() && HyEngine::Input().IsActionDown(INPUT_Action) && m_PlayerRef.pos.X() < -fMINIMUM_DIST_FROM_DOOR)
 				{
 					m_PlayerRef.EnableInput(false);
 					HyLog("EnableInput: false - item in setup init");
@@ -312,6 +316,8 @@ void Outside::Init()
 	m_PlayerRef.pos.Tween(0.0f, 0.0f, ACTOR_DOOR_DURATION);
 	m_PlayerRef.scale.Tween(ACTOR_FOREGROUND_ZOOM, ACTOR_FOREGROUND_ZOOM, ACTOR_DOOR_DURATION);
 
+	m_LeftWall.alpha.Set(1.0f);
+
 	m_eOutsideState = STATE_LeavingHouse;
 }
 
@@ -398,16 +404,25 @@ void Outside::SetupAttack(uint32 uiDayIndex)
 	case 0:
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 0.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(2, 2.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 4.0f, this));
 		break;
 	}
 	for(auto *pEnemy : m_EnemyList)
+	{
 		pEnemy->SetDisplayOrder(DISPLAYORDER_Enemies);
+		pEnemy->pos.Set(-2000.0f, 0.0f);
+		pEnemy->Load();
+	}
 
 	SetVisible(true);
 	HyEngine::Window().GetCamera2d(0)->SetZoom(1.0f);
 	HyEngine::Window().GetCamera2d(0)->pos.Set(0.0f, 275.0f);
 
+	m_LeftWall.alpha.Set(0.0f);
+
+	m_PlayerRef.pos.Set(850.0f, 200.0f);
+
+	m_iHouseDamage = 0;
 	m_AttackStopwatch.Reset();
 	m_AttackStopwatch.Start();
 	m_eOutsideState = STATE_Attack;
@@ -427,7 +442,7 @@ void Outside::AttackUpdate()
 			m_AirText.SetText("Meanwhile...");
 			m_AirText.alpha.Set(0.0f);
 			m_AirText.alpha.Tween(1.0f, 0.5f);
-			HyEngine::Window().GetCamera2d(0)->pos.Tween(-1500.0f, 275.0f, 2.0f, HyTween::QuadInOut);
+			HyEngine::Window().GetCamera2d(0)->pos.Tween(-1200.0f, 275.0f, 2.0f, HyTween::QuadInOut);
 			m_eAttackState = ATTACKSTATE_IntroPan;
 		}
 		break;
@@ -443,11 +458,124 @@ void Outside::AttackUpdate()
 		}
 		break;
 
-	case ATTACKSTATE_Attacking:
+	case ATTACKSTATE_Attacking: {
 		for(auto *pEnemy : m_EnemyList)
 		{
-
+			if(m_AttackStopwatch.TimeElapsed() > pEnemy->GetDeferTime())
+				pEnemy->AttackUpdate();
 		}
+
+		bool bAttackOngoing = false;
+		for(auto *pEnemy : m_EnemyList)
+		{
+			if(pEnemy->CanAttack())
+			{
+				if(pEnemy->pos.X() > -32.0f)
+				{
+					pEnemy->AttackHouse();
+					m_iHouseDamage++;
+				}
+				else
+					bAttackOngoing = true;
+			}
+		}
+
+		if(bAttackOngoing == false)
+			m_eAttackState = ATTACKSTATE_Finished;
+		break; }
+
+	case ATTACKSTATE_Finished:
 		break;
 	}
+}
+
+void Outside::DestroyCum()
+{
+	float fLeftMostPosX = 999.0f;
+	Cum *pCumToDelete = nullptr;
+	for(auto *pItem : m_CumList)
+	{
+		if(pItem->pos.X() < fLeftMostPosX)
+		{
+			pCumToDelete = pItem;
+			fLeftMostPosX = pItem->pos.X();
+		}
+	}
+
+	if(pCumToDelete)
+	{
+		for(auto iter = m_CumList.begin(); iter != m_CumList.end(); ++iter)
+		{
+			if(pCumToDelete == (*iter))
+			{
+				delete (*iter);
+				m_CumList.erase(iter);
+				break;
+			}
+		}
+	}
+
+	// Find rightmost borpa to remove
+	float fRightMostPosX = -9999.0f;
+	EnemyBorpa *pBorpa = nullptr;
+	for(auto iter = m_EnemyList.begin(); iter != m_EnemyList.end(); ++iter)
+	{
+		if((*iter)->GetTag() == TAG_Borpa)
+		{
+			if((*iter)->pos.X() > fRightMostPosX)
+			{
+				pBorpa = static_cast<EnemyBorpa *>(*iter);
+				fRightMostPosX = (*iter)->pos.X();
+			}
+		}
+	}
+	if(pBorpa)
+		pBorpa->RunAway();
+}
+
+void Outside::DestroyGun()
+{
+	float fLeftMostPosX = 999.0f;
+	Gun *pGunToDelete = nullptr;
+	for(auto *pItem : m_GunList)
+	{
+		if(pItem->pos.X() < fLeftMostPosX)
+		{
+			pGunToDelete = pItem;
+			fLeftMostPosX = pItem->pos.X();
+		}
+	}
+
+	if(pGunToDelete)
+	{
+		for(auto iter = m_GunList.begin(); iter != m_GunList.end(); ++iter)
+		{
+			if(pGunToDelete == (*iter))
+			{
+				delete (*iter);
+				m_GunList.erase(iter);
+				break;
+			}
+		}
+	}
+
+
+	// Consume enemy that destroyed gun
+	float fRightMostPosX = -9999.0f;
+	IEnemy *pEnemy = nullptr;
+	for(auto iter = m_EnemyList.begin(); iter != m_EnemyList.end(); ++iter)
+	{
+		if((*iter)->pos.X() > fRightMostPosX)
+		{
+			pEnemy = (*iter);
+			fRightMostPosX = (*iter)->pos.X();
+		}
+	}
+	if(pEnemy)
+		pEnemy->Kill();
+}
+
+bool Outside::IsAttackFinished()
+{
+	return m_eAttackState == ATTACKSTATE_Finished;
 }

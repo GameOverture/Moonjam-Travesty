@@ -8,10 +8,15 @@
 
 class IEnemy : public IActor
 {
+public:
 	std::vector<HySprite2d *>		m_HeartList;
 	uint32							m_uiCurHealth;
 
 	float							m_fDeferDuration;
+
+	//HyPrimitive2d					m_Debug;
+
+	bool							m_bCanAttack;
 
 public:
 	IEnemy(uint32 uiMaxHealth, float fDeferDuration, HyEntity2d *pParent = nullptr);
@@ -19,7 +24,16 @@ public:
 
 	virtual void OnUpdate() override;
 
+	bool CanAttack();
+
+	float GetDeferTime();
 	void TakeDamage();
+
+	void AttackUpdate();
+
+	void Kill();
+
+	void AttackHouse();
 };
 
 #endif // IEnemy_h__

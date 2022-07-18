@@ -14,7 +14,7 @@
             "height": 246,
             "itemType": "Text",
             "name": "+SystemText",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 246,
             "x": 1395,
@@ -33,10 +33,10 @@
             "height": 60,
             "itemType": "Atlas",
             "name": "close_bush1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 81,
-            "x": 1397,
+            "x": 1564,
             "y": 1982
         },
         {
@@ -52,11 +52,11 @@
             "height": 158,
             "itemType": "Atlas",
             "name": "close_leaves1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 319,
-            "x": 1715,
-            "y": 1147
+            "x": 892,
+            "y": 1841
         },
         {
             "assetUUID": "e8518042-e5c0-4384-b025-3c6dea9875a5",
@@ -71,7 +71,7 @@
             "height": 40,
             "itemType": "Atlas",
             "name": "close_leaves2",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 230,
             "x": 1715,
@@ -90,11 +90,11 @@
             "height": 85,
             "itemType": "Atlas",
             "name": "close_leaves3",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 179,
-            "x": 710,
-            "y": 1849
+            "x": 758,
+            "y": 1706
         },
         {
             "assetUUID": "1b74654b-fb55-4d7c-824d-4806f702930e",
@@ -109,7 +109,7 @@
             "height": 415,
             "itemType": "Atlas",
             "name": "close_trunk1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 37,
             "x": 1949,
@@ -128,7 +128,7 @@
             "height": 421,
             "itemType": "Atlas",
             "name": "close_trunk2",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 46,
             "x": 1991,
@@ -147,10 +147,10 @@
             "height": 417,
             "itemType": "Atlas",
             "name": "close_trunk3",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 32,
-            "x": 1799,
+            "x": 1834,
             "y": 723
         },
         {
@@ -169,8 +169,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 185,
-            "x": 1207,
-            "y": 0
+            "x": 1235,
+            "y": 1424
         },
         {
             "assetUUID": "e63d2273-458e-45d5-a841-0853b88123db",
@@ -185,7 +185,7 @@
             "height": 440,
             "itemType": "Atlas",
             "name": "cottage",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 622,
             "x": 1423,
@@ -204,10 +204,10 @@
             "height": 58,
             "itemType": "Atlas",
             "name": "far_bush1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 81,
-            "x": 1565,
+            "x": 1648,
             "y": 1982
         },
         {
@@ -223,11 +223,11 @@
             "height": 158,
             "itemType": "Atlas",
             "name": "far_leaves1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 319,
-            "x": 892,
-            "y": 1841
+            "x": 1715,
+            "y": 1147
         },
         {
             "assetUUID": "5ba4e997-8568-4d36-b1bf-973d1a91d940",
@@ -242,11 +242,11 @@
             "height": 40,
             "itemType": "Atlas",
             "name": "far_leaves2",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 230,
-            "x": 1715,
-            "y": 1308
+            "x": 758,
+            "y": 1663
         },
         {
             "assetUUID": "ec582bf9-5acf-4c59-b0ee-0f919dfb66de",
@@ -261,11 +261,11 @@
             "height": 85,
             "itemType": "Atlas",
             "name": "far_leaves3",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 179,
-            "x": 528,
-            "y": 1849
+            "x": 1384,
+            "y": 1867
         },
         {
             "assetUUID": "ceeb33b7-8826-4fac-8d90-50ac1bbec70c",
@@ -280,10 +280,10 @@
             "height": 415,
             "itemType": "Atlas",
             "name": "far_trunk1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 37,
-            "x": 1869,
+            "x": 1909,
             "y": 723
         },
         {
@@ -299,11 +299,11 @@
             "height": 421,
             "itemType": "Atlas",
             "name": "far_trunk2",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 46,
-            "x": 1715,
-            "y": 723
+            "x": 1999,
+            "y": 424
         },
         {
             "assetUUID": "2d337d59-7390-4e52-97a2-126212401aa8",
@@ -318,10 +318,10 @@
             "height": 417,
             "itemType": "Atlas",
             "name": "far_trunk3",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 32,
-            "x": 1764,
+            "x": 1799,
             "y": 723
         },
         {
@@ -337,10 +337,10 @@
             "height": 414,
             "itemType": "Atlas",
             "name": "far_trunk4",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 185,
-            "x": 1235,
+            "x": 1047,
             "y": 1424
         },
         {
@@ -356,7 +356,7 @@
             "height": 241,
             "itemType": "Atlas",
             "name": "grass",
-            "textureIndex": 1,
+            "textureIndex": 2,
             "textureInfo": 262144,
             "width": 1001,
             "x": 0,
@@ -375,10 +375,10 @@
             "height": 58,
             "itemType": "Atlas",
             "name": "mid_bush1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 81,
-            "x": 1481,
+            "x": 1732,
             "y": 1982
         },
         {
@@ -394,7 +394,7 @@
             "height": 158,
             "itemType": "Atlas",
             "name": "mid_leaves1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 319,
             "x": 58,
@@ -413,11 +413,11 @@
             "height": 40,
             "itemType": "Atlas",
             "name": "mid_leaves2",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 230,
-            "x": 758,
-            "y": 1663
+            "x": 1715,
+            "y": 1308
         },
         {
             "assetUUID": "6ba1131c-c2c9-4e89-a79e-39b4323cecc4",
@@ -432,11 +432,11 @@
             "height": 85,
             "itemType": "Atlas",
             "name": "mid_leaves3",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 179,
-            "x": 758,
-            "y": 1706
+            "x": 175,
+            "y": 1846
         },
         {
             "assetUUID": "83058517-5725-48e4-bec8-59ee809c0ea0",
@@ -451,10 +451,10 @@
             "height": 415,
             "itemType": "Atlas",
             "name": "mid_trunk1",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 37,
-            "x": 1909,
+            "x": 1869,
             "y": 723
         },
         {
@@ -470,11 +470,11 @@
             "height": 421,
             "itemType": "Atlas",
             "name": "mid_trunk2",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 46,
-            "x": 1999,
-            "y": 424
+            "x": 1715,
+            "y": 723
         },
         {
             "assetUUID": "e994dd7b-3198-4a68-999b-e7ee1631afb0",
@@ -489,10 +489,10 @@
             "height": 417,
             "itemType": "Atlas",
             "name": "mid_trunk3",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 32,
-            "x": 1834,
+            "x": 1764,
             "y": 723
         },
         {
@@ -508,11 +508,11 @@
             "height": 414,
             "itemType": "Atlas",
             "name": "mid_trunk4",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 185,
-            "x": 1047,
-            "y": 1424
+            "x": 1207,
+            "y": 0
         },
         {
             "assetUUID": "85f06379-6218-40e1-82c1-7a6530719fca",
@@ -527,7 +527,7 @@
             "height": 40,
             "itemType": "Atlas",
             "name": "path",
-            "textureIndex": 1,
+            "textureIndex": 2,
             "textureInfo": 262144,
             "width": 269,
             "x": 0,
@@ -546,7 +546,7 @@
             "height": 55,
             "itemType": "Atlas",
             "name": "path_entry",
-            "textureIndex": 1,
+            "textureIndex": 2,
             "textureInfo": 262144,
             "width": 538,
             "x": 463,
@@ -565,7 +565,7 @@
             "height": 259,
             "itemType": "Atlas",
             "name": "sky",
-            "textureIndex": 1,
+            "textureIndex": 2,
             "textureInfo": 262144,
             "width": 326,
             "x": 134,
@@ -584,7 +584,7 @@
             "height": 259,
             "itemType": "Atlas",
             "name": "sky2",
-            "textureIndex": 1,
+            "textureIndex": 2,
             "textureInfo": 262144,
             "width": 326,
             "x": 463,
@@ -603,7 +603,7 @@
             "height": 997,
             "itemType": "Atlas",
             "name": "skyBG",
-            "textureIndex": 1,
+            "textureIndex": 2,
             "textureInfo": 262144,
             "width": 1000,
             "x": 1004,
@@ -622,11 +622,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00000",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 298,
-            "y": 1222
+            "x": 1722,
+            "y": 1340
         },
         {
             "assetUUID": "2630e191-3cfe-4c9c-b51f-8c40d308e763",
@@ -641,11 +641,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00001",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1639,
-            "y": 1239
+            "x": 405,
+            "y": 1356
         },
         {
             "assetUUID": "031a290c-c65d-46ae-8d1f-7169f999c544",
@@ -660,11 +660,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00002",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 436,
-            "y": 1241
+            "x": 1675,
+            "y": 1356
         },
         {
             "assetUUID": "0cc13f7c-d83c-4b63-9e71-46bda06c3924",
@@ -679,11 +679,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00003",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 576,
-            "y": 1259
+            "x": 1583,
+            "y": 1356
         },
         {
             "assetUUID": "edb9cdea-6f07-4829-b98a-646d3becc383",
@@ -698,11 +698,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00004",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 622,
-            "y": 1259
+            "x": 452,
+            "y": 1356
         },
         {
             "assetUUID": "f390c7b7-fa83-4df4-b8b9-8452fbb71bb1",
@@ -717,10 +717,10 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00005",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
-            "x": 2043,
+            "x": 2040,
             "y": 0
         },
         {
@@ -736,10 +736,10 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00006",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
-            "x": 2043,
+            "x": 2040,
             "y": 0
         },
         {
@@ -755,10 +755,10 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "DownIdle_00007",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
-            "x": 2043,
+            "x": 2040,
             "y": 0
         },
         {
@@ -774,11 +774,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00000",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1778,
-            "y": 1227
+            "x": 266,
+            "y": 1355
         },
         {
             "assetUUID": "84d3c6fb-0d0f-42f4-8859-12014b898ca9",
@@ -793,11 +793,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00001",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1871,
-            "y": 1227
+            "x": 126,
+            "y": 1355
         },
         {
             "assetUUID": "413e41be-5641-4b05-8b0a-3ceb330d317c",
@@ -812,11 +812,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00002",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1824,
-            "y": 1227
+            "x": 173,
+            "y": 1355
         },
         {
             "assetUUID": "0c5bd7e6-276f-4123-8865-bd34dbc582eb",
@@ -831,11 +831,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00003",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1732,
-            "y": 1227
+            "x": 220,
+            "y": 1355
         },
         {
             "assetUUID": "563e3c62-df0c-4413-b89f-2577b3efe43d",
@@ -850,11 +850,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00004",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 530,
-            "y": 1259
+            "x": 1629,
+            "y": 1356
         },
         {
             "assetUUID": "af76a240-7030-4aa2-9554-ea5178ea31f1",
@@ -869,11 +869,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00005",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 483,
-            "y": 1241
+            "x": 358,
+            "y": 1355
         },
         {
             "assetUUID": "ffa7fb7c-50a2-4383-85d4-7d6593ad0a35",
@@ -888,10 +888,10 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00006",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
-            "x": 2043,
+            "x": 2040,
             "y": 0
         },
         {
@@ -907,10 +907,10 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "downWalk_00007",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
-            "x": 2043,
+            "x": 2040,
             "y": 0
         },
         {
@@ -926,11 +926,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sheetIndex_00000",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 237,
-            "y": 1222
+            "x": 65,
+            "y": 1355
         },
         {
             "assetUUID": "d33253d2-e350-43cf-9030-7d3cf71bd6e5",
@@ -948,8 +948,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1918,
-            "y": 1228
+            "x": 1499,
+            "y": 1955
         },
         {
             "assetUUID": "15432f27-1b25-4d63-ac4c-0410699b7528",
@@ -964,7 +964,7 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sheetIndex_00002",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
             "x": 1989,
@@ -986,8 +986,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1395,
-            "y": 249
+            "x": 0,
+            "y": 1785
         },
         {
             "assetUUID": "cf0c4f62-57c0-4019-a3fa-2523bdc70a5f",
@@ -1002,7 +1002,7 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideIdle_00001",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
             "x": 5,
@@ -1021,7 +1021,7 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideIdle_00002",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
             "x": 1989,
@@ -1040,11 +1040,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideIdle_00003",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1972,
-            "y": 1867
+            "x": 1989,
+            "y": 463
         },
         {
             "assetUUID": "c0676bb4-2cb6-4df0-aa9b-14d479056834",
@@ -1059,11 +1059,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideIdle_00004",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 971,
-            "y": 1168
+            "x": 1090,
+            "y": 1278
         },
         {
             "assetUUID": "e8d811e9-b804-4055-b87c-4e874169ca1c",
@@ -1078,11 +1078,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideWalk_00000",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 0,
-            "y": 1949
+            "x": 1989,
+            "y": 563
         },
         {
             "assetUUID": "5307276c-32b0-480e-b597-bbfa1e0aa2e1",
@@ -1097,7 +1097,7 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideWalk_00001",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 192,
             "x": 1989,
@@ -1116,11 +1116,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideWalk_00002",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1408,
-            "y": 631
+            "x": 1989,
+            "y": 860
         },
         {
             "assetUUID": "7558522d-7742-4050-97bc-fa63e3f0e4d3",
@@ -1135,11 +1135,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideWalk_00003",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1465,
-            "y": 1166
+            "x": 1989,
+            "y": 959
         },
         {
             "assetUUID": "7c03fceb-3e18-4175-afdd-d271feef55c8",
@@ -1154,11 +1154,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideWalk_00004",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1408,
-            "y": 532
+            "x": 1989,
+            "y": 662
         },
         {
             "assetUUID": "10d4a1c5-e571-46d5-952e-1bd097d9b5ef",
@@ -1173,11 +1173,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "sideWalk_00005",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1380,
-            "y": 877
+            "x": 1989,
+            "y": 761
         },
         {
             "assetUUID": "6e6b2551-880d-42a6-82e7-a6cf80c28e77",
@@ -1192,11 +1192,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upIdle_00000",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 390,
-            "y": 1219
+            "x": 1768,
+            "y": 1340
         },
         {
             "assetUUID": "2154b6f0-f7a4-4308-a83a-bbf905be907e",
@@ -1211,11 +1211,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upIdle_00001",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 2001,
-            "y": 0
+            "x": 1176,
+            "y": 1330
         },
         {
             "assetUUID": "14b7afb9-071e-48dd-83ed-2c2b3a1fdb93",
@@ -1230,11 +1230,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upIdle_00002",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1267,
-            "y": 1208
+            "x": 1984,
+            "y": 1058
         },
         {
             "assetUUID": "bb9091b6-4756-465e-a0bd-3e81e3ca928d",
@@ -1249,11 +1249,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upIdle_00003",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 344,
-            "y": 1219
+            "x": 2002,
+            "y": 1334
         },
         {
             "assetUUID": "cf63b5d8-7104-403f-893a-ecdab5ae3740",
@@ -1268,11 +1268,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upIdle_00004",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1686,
-            "y": 1239
+            "x": 312,
+            "y": 1355
         },
         {
             "assetUUID": "96d3ab29-84d5-4b87-9316-40ebdb89c199",
@@ -1287,11 +1287,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upWalk_00000",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1407,
-            "y": 1218
+            "x": 1910,
+            "y": 1334
         },
         {
             "assetUUID": "f2e115de-c30b-4b06-bd04-80d0637d9e93",
@@ -1306,11 +1306,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upWalk_00001",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1314,
-            "y": 1218
+            "x": 2001,
+            "y": 95
         },
         {
             "assetUUID": "5bb6523d-dd9f-4c7d-a249-fe9a8f1bed62",
@@ -1325,11 +1325,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upWalk_00002",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
             "x": 2001,
-            "y": 95
+            "y": 0
         },
         {
             "assetUUID": "c72c4d84-9f8f-406b-8682-581035210bbe",
@@ -1344,11 +1344,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upWalk_00003",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1361,
-            "y": 1218
+            "x": 1956,
+            "y": 1334
         },
         {
             "assetUUID": "5afa7249-e1fd-45d7-98e2-da1b953ac981",
@@ -1363,11 +1363,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upWalk_00004",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 715,
-            "y": 1259
+            "x": 723,
+            "y": 1370
         },
         {
             "assetUUID": "ab1c4347-9156-44e0-a7f9-05f392de8118",
@@ -1382,11 +1382,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "upWalk_00005",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 668,
-            "y": 1259
+            "x": 676,
+            "y": 1370
         },
         {
             "assetUUID": "e5aa4ec2-637c-4116-a609-0434888bf5d5",
@@ -1401,7 +1401,7 @@
             "height": 800,
             "itemType": "Atlas",
             "name": "Inside",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 1280,
             "x": 0,
@@ -1420,7 +1420,7 @@
             "height": 800,
             "itemType": "Atlas",
             "name": "InsideWalls",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 1280,
             "x": 380,
@@ -1439,7 +1439,7 @@
             "height": 239,
             "itemType": "Text",
             "name": "Computer",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 239,
             "x": 1644,
@@ -1458,11 +1458,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "cum",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 62,
-            "x": 3,
-            "y": 1846
+            "x": 1207,
+            "y": 417
         },
         {
             "assetUUID": "dbe4bc7f-9171-40c6-a718-12a3cf3ecb88",
@@ -1477,11 +1477,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "CarePackage",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 101,
-            "x": 133,
-            "y": 1162
+            "x": 1371,
+            "y": 1273
         },
         {
             "assetUUID": "3a011a66-08f2-47cd-9e80-338434a8a7a1",
@@ -1496,11 +1496,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "pickup_00000",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 1023,
-            "y": 1164
+            "x": 1319,
+            "y": 1316
         },
         {
             "assetUUID": "7fe2a1a2-eb26-43aa-8e79-e7060ed41c75",
@@ -1515,11 +1515,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "pickup_00001",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 0,
-            "y": 1257
+            "x": 822,
+            "y": 1373
         },
         {
             "assetUUID": "2954d331-1d4b-44ba-baf5-a957059b034b",
@@ -1534,11 +1534,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "pickup_00002",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 53,
-            "y": 1257
+            "x": 769,
+            "y": 1373
         },
         {
             "assetUUID": "da09c776-6a09-417c-85d5-b589d30b8fb7",
@@ -1553,11 +1553,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "pickup_00003",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 106,
-            "y": 1265
+            "x": 1124,
+            "y": 1376
         },
         {
             "assetUUID": "616db665-bfab-4d25-ae59-0b6043aaeac5",
@@ -1572,11 +1572,11 @@
             "height": 192,
             "itemType": "Atlas",
             "name": "pickup_00004",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 192,
-            "x": 158,
-            "y": 1265
+            "x": 1531,
+            "y": 1376
         },
         {
             "assetUUID": "101dcaa2-6065-4fa3-b01d-af145640fec4",
@@ -1591,7 +1591,7 @@
             "height": 25,
             "itemType": "Atlas",
             "name": "Turret4Base",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 55,
             "x": 1874,
@@ -1610,7 +1610,7 @@
             "height": 25,
             "itemType": "Atlas",
             "name": "Turret4Top",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 71,
             "x": 1800,
@@ -1629,11 +1629,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "atlantean clock 2",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 300,
-            "x": 1075,
-            "y": 1208
+            "x": 1814,
+            "y": 1331
         },
         {
             "assetUUID": "8120685a-ca62-4ead-a2df-e0a90c87d07c",
@@ -1648,11 +1648,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "atlantean clock noon",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 300,
-            "x": 1171,
-            "y": 1208
+            "x": 1223,
+            "y": 1330
         },
         {
             "assetUUID": "4f182166-86d8-43c9-85a9-f9b99869ff31",
@@ -1667,11 +1667,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "atlantean gui HP MP full",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 300,
-            "x": 1007,
-            "y": 1424
+            "x": 991,
+            "y": 1626
         },
         {
             "assetUUID": "37b27595-a6ad-4ac1-9e78-048bbb3d1470",
@@ -1686,11 +1686,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "atlantean gui top",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 300,
-            "x": 1983,
-            "y": 1228
+            "x": 0,
+            "y": 1352
         },
         {
             "assetUUID": "009c2312-e0de-4217-a41f-0db1a95e4870",
@@ -1705,7 +1705,7 @@
             "height": 43,
             "itemType": "Atlas",
             "name": "hpmanabar",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 405,
             "x": 1268,
@@ -1724,11 +1724,11 @@
             "height": 180,
             "itemType": "Text",
             "name": "Text",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 180,
-            "x": 1214,
-            "y": 1841
+            "x": 357,
+            "y": 1849
         },
         {
             "assetUUID": "4cf692b8-5895-420f-9156-3d2518ee6ca0",
@@ -1743,7 +1743,7 @@
             "height": 25,
             "itemType": "Atlas",
             "name": "MoneyBox_small",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 82,
             "x": 1715,
@@ -1762,11 +1762,11 @@
             "height": 42,
             "itemType": "Atlas",
             "name": "Computer CloseButton",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 46,
-            "x": 991,
-            "y": 1654
+            "x": 758,
+            "y": 1794
         },
         {
             "assetUUID": "56680eda-a836-46c9-aea3-92ccf60c959d",
@@ -1781,7 +1781,7 @@
             "height": 650,
             "itemType": "Atlas",
             "name": "Windows_Example_ItchPic",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 820,
             "x": 892,
@@ -1800,7 +1800,7 @@
             "height": 43,
             "itemType": "Atlas",
             "name": "hpmanabar_fill_25",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 405,
             "x": 0,
@@ -1819,11 +1819,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "cumBtn",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 100,
-            "x": 1514,
-            "y": 1166
+            "x": 987,
+            "y": 1278
         },
         {
             "assetUUID": "10df4434-0178-44e5-b4f4-b7a6eb93b32d",
@@ -1838,11 +1838,11 @@
             "height": 92,
             "itemType": "Atlas",
             "name": "cumBtnClicked",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 101,
-            "x": 661,
-            "y": 1164
+            "x": 676,
+            "y": 1275
         },
         {
             "assetUUID": "2fb5250a-e5b7-4cea-a4cd-2b942d3d89ad",
@@ -1857,11 +1857,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "GunBtn",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 100,
-            "x": 765,
-            "y": 1164
+            "x": 884,
+            "y": 1278
         },
         {
             "assetUUID": "ab16174d-5ee4-47f5-88ee-09dfa1f17f0f",
@@ -1876,11 +1876,11 @@
             "height": 92,
             "itemType": "Atlas",
             "name": "GunBtnClicked",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 101,
-            "x": 29,
-            "y": 1162
+            "x": 1475,
+            "y": 1281
         },
         {
             "assetUUID": "3375c839-faac-41a0-bf94-de38fc76de04",
@@ -1895,11 +1895,11 @@
             "height": 100,
             "itemType": "Atlas",
             "name": "moneyBtn",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 100,
-            "x": 868,
-            "y": 1168
+            "x": 541,
+            "y": 1283
         },
         {
             "assetUUID": "c95e612b-4671-4fbe-9086-bc7269efcd59",
@@ -1914,11 +1914,11 @@
             "height": 92,
             "itemType": "Atlas",
             "name": "moneyBtnClicked",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 101,
-            "x": 557,
-            "y": 1164
+            "x": 780,
+            "y": 1278
         },
         {
             "assetUUID": "8a436e07-c951-467f-a1eb-9a3075054387",
@@ -1933,29 +1933,10 @@
             "height": 700,
             "itemType": "Atlas",
             "name": "billsPanel",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 600,
             "x": 0,
-            "y": 0
-        },
-        {
-            "assetUUID": "ae60d04c-e895-4bed-96dd-a6d44384a320",
-            "bankId": 0,
-            "checksum": 1697167707,
-            "cropBottom": 719,
-            "cropLeft": 0,
-            "cropRight": 719,
-            "cropTop": 0,
-            "errors": 0,
-            "filter": "",
-            "height": 720,
-            "itemType": "Text",
-            "name": "Bills",
-            "textureIndex": 2,
-            "textureInfo": 262147,
-            "width": 720,
-            "x": 1268,
             "y": 0
         },
         {
@@ -1971,11 +1952,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00000",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1627,
-            "y": 1867
+            "x": 345,
+            "y": 703
         },
         {
             "assetUUID": "b4d55d33-d324-42c8-81e2-e6719def3f7b",
@@ -1990,11 +1971,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00001",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 920,
-            "y": 826
+            "x": 1886,
+            "y": 115
         },
         {
             "assetUUID": "8f76a089-11dc-4296-8862-f80c8913a167",
@@ -2009,11 +1990,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00002",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1473,
-            "y": 364
+            "x": 920,
+            "y": 711
         },
         {
             "assetUUID": "ee1455f7-660e-45eb-857c-c9ba9a727ed2",
@@ -2028,11 +2009,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00003",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 230,
-            "y": 703
+            "x": 948,
+            "y": 596
         },
         {
             "assetUUID": "e3705da3-e36c-4748-8486-689571a22aba",
@@ -2050,8 +2031,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1886,
-            "y": 115
+            "x": 1796,
+            "y": 1867
         },
         {
             "assetUUID": "52075558-448e-46b3-bc03-30284c8fce02",
@@ -2066,11 +2047,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00005",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 603,
-            "y": 481
+            "x": 1529,
+            "y": 824
         },
         {
             "assetUUID": "24c76544-6436-4646-8d6a-f96c2c9f6549",
@@ -2085,11 +2066,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00006",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1937,
-            "y": 1136
+            "x": 1703,
+            "y": 1248
         },
         {
             "assetUUID": "4ebf7407-6408-49ce-9173-fba62f443879",
@@ -2103,11 +2084,11 @@
             "filter": "Emotes",
             "height": 112,
             "itemType": "Atlas",
-            "name": "MoonEmote_00007",
-            "textureIndex": 3,
+            "name": "Sick",
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 718,
+            "x": 1063,
             "y": 481
         },
         {
@@ -2123,11 +2104,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00008",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 587
+            "x": 345,
+            "y": 933
         },
         {
             "assetUUID": "66eeb53a-3faa-46f9-9544-0c122721435f",
@@ -2142,11 +2123,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00009",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1380,
-            "y": 762
+            "x": 1049,
+            "y": 1163
         },
         {
             "assetUUID": "ff73829d-9131-4416-91ea-c718d7999793",
@@ -2164,8 +2145,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 229,
-            "y": 933
+            "x": 242,
+            "y": 1934
         },
         {
             "assetUUID": "9fd18899-045d-445a-9aa6-07d5f2441dc5",
@@ -2180,11 +2161,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00011",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 805,
-            "y": 711
+            "x": 1150,
+            "y": 762
         },
         {
             "assetUUID": "84d9df04-eae4-48c9-ba2d-6c574d6539e0",
@@ -2199,11 +2180,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00012",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 805
+            "x": 1150,
+            "y": 992
         },
         {
             "assetUUID": "6f5c73c2-89cd-48ff-aa4e-92476e31c96a",
@@ -2218,11 +2199,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00013",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 575,
-            "y": 711
+            "x": 690,
+            "y": 941
         },
         {
             "assetUUID": "e6e7aa68-0d28-4775-a16c-d3ecfe53d387",
@@ -2237,10 +2218,10 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00014",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 603,
+            "x": 718,
             "y": 596
         },
         {
@@ -2256,11 +2237,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00015",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 833,
-            "y": 596
+            "x": 1644,
+            "y": 562
         },
         {
             "assetUUID": "b1b17f2a-763b-41a8-926a-a6fec4028b2f",
@@ -2275,11 +2256,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00016",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 805,
-            "y": 826
+            "x": 1265,
+            "y": 877
         },
         {
             "assetUUID": "6427fdee-dd4b-479c-bf43-b588d68bc437",
@@ -2294,11 +2275,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00017",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 777,
-            "y": 1937
+            "x": 675,
+            "y": 1056
         },
         {
             "assetUUID": "b27b5bf1-8374-4f93-9f30-4d74408f0dfb",
@@ -2313,11 +2294,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00018",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 1035
+            "x": 1240,
+            "y": 1107
         },
         {
             "assetUUID": "0dfdc857-bf3b-4a61-b78f-9e89414120d7",
@@ -2332,11 +2313,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00019",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 115,
-            "y": 818
+            "x": 1543,
+            "y": 249
         },
         {
             "assetUUID": "5221ef58-5432-4658-8fcf-f843e02ae833",
@@ -2351,11 +2332,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00020",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 690
+            "x": 1395,
+            "y": 364
         },
         {
             "assetUUID": "993813f6-b1ac-48b2-abf1-7777c1857ce5",
@@ -2370,11 +2351,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "Gums",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1358,
-            "y": 417
+            "x": 1178,
+            "y": 532
         },
         {
             "assetUUID": "90936666-6bca-42ef-aa35-773306174382",
@@ -2389,11 +2370,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00022",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 662,
-            "y": 1937
+            "x": 1417,
+            "y": 1054
         },
         {
             "assetUUID": "dcc8e111-ce89-43f4-9a59-067297149201",
@@ -2408,11 +2389,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00023",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1020,
-            "y": 941
+            "x": 564,
+            "y": 1056
         },
         {
             "assetUUID": "06a8f974-6371-4dc9-800b-3198a86e22c0",
@@ -2427,11 +2408,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00024",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 68,
-            "y": 1846
+            "x": 603,
+            "y": 481
         },
         {
             "assetUUID": "26102606-7b03-46db-b29d-5d95094cfdbe",
@@ -2446,11 +2427,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00025",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 932
+            "x": 460,
+            "y": 818
         },
         {
             "assetUUID": "7cab0396-0624-4484-ad48-1479ff632fbf",
@@ -2465,11 +2446,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00026",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 547,
-            "y": 1937
+            "x": 790,
+            "y": 1056
         },
         {
             "assetUUID": "74a84686-743d-4043-a01b-662bac15e99c",
@@ -2484,11 +2465,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00027",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 1047
+            "x": 1933,
+            "y": 1153
         },
         {
             "assetUUID": "3402c8d3-82fb-4c1a-a435-aea424a996d7",
@@ -2506,8 +2487,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 344,
-            "y": 1048
+            "x": 1384,
+            "y": 1955
         },
         {
             "assetUUID": "fb568434-25a3-44f1-b004-54b81677dc35",
@@ -2525,8 +2506,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 230,
-            "y": 818
+            "x": 1911,
+            "y": 1867
         },
         {
             "assetUUID": "be95c930-0e15-45d4-a5b8-ba65f13dc63f",
@@ -2541,11 +2522,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "Billy",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 932
+            "x": 575,
+            "y": 711
         },
         {
             "assetUUID": "4c93435a-981b-4b42-a1a6-e2247351156d",
@@ -2560,7 +2541,7 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00031",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
             "x": 1948,
@@ -2579,11 +2560,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00032",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 892,
-            "y": 1424
+            "x": 1414,
+            "y": 709
         },
         {
             "assetUUID": "1584e60b-767d-4bb4-afd5-530858547605",
@@ -2598,11 +2579,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00033",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 357
+            "x": 575,
+            "y": 826
         },
         {
             "assetUUID": "a458a776-d6e3-4b30-9352-9edcd9d69328",
@@ -2617,11 +2598,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00034",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 229,
-            "y": 1047
+            "x": 1703,
+            "y": 1153
         },
         {
             "assetUUID": "42c91f22-e038-4b66-851b-ad4f30371dc9",
@@ -2636,11 +2617,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00035",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1588,
-            "y": 594
+            "x": 1414,
+            "y": 824
         },
         {
             "assetUUID": "89f52533-b1ec-483e-9a1e-4ca2a5ae6c5f",
@@ -2655,11 +2636,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00036",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1473,
-            "y": 249
+            "x": 0,
+            "y": 933
         },
         {
             "assetUUID": "a74d2b43-a346-4ce7-9485-98ff57a065a2",
@@ -2673,12 +2654,12 @@
             "filter": "Emotes",
             "height": 112,
             "itemType": "Atlas",
-            "name": "MoonEmote_00037",
-            "textureIndex": 3,
+            "name": "a juicer",
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 587
+            "x": 1759,
+            "y": 463
         },
         {
             "assetUUID": "8c0c18d2-9b78-4aff-8cff-cb61e94946f1",
@@ -2693,11 +2674,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00038",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 457,
-            "y": 933
+            "x": 226,
+            "y": 1048
         },
         {
             "assetUUID": "b1d81153-05a2-40bd-a8cf-f6f565c08400",
@@ -2712,11 +2693,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00039",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
             "x": 0,
-            "y": 703
+            "y": 818
         },
         {
             "assetUUID": "8e5daf20-21c5-4d1f-a4ce-4e038eb680e7",
@@ -2731,11 +2712,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00040",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1473,
-            "y": 824
+            "x": 948,
+            "y": 481
         },
         {
             "assetUUID": "a95f4f12-4bb1-4b30-9fed-79c44f7a1487",
@@ -2750,11 +2731,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00041",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 906,
-            "y": 1056
+            "x": 1483,
+            "y": 1169
         },
         {
             "assetUUID": "2c67986d-085e-4d8e-8618-d70a8d1a977b",
@@ -2769,11 +2750,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00042",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1150,
-            "y": 877
+            "x": 1644,
+            "y": 447
         },
         {
             "assetUUID": "1d5e21d9-e0c2-466e-8bad-a54f150fef41",
@@ -2791,8 +2772,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 345,
-            "y": 703
+            "x": 1681,
+            "y": 1867
         },
         {
             "assetUUID": "a5d85917-ec91-4bcc-aec9-5bdcf39b7c4d",
@@ -2807,11 +2788,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00044",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1742,
-            "y": 1867
+            "x": 1874,
+            "y": 693
         },
         {
             "assetUUID": "1af27d0e-ad18-4f2c-b1d8-14f9c8fb59ee",
@@ -2826,11 +2807,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00045",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 345
+            "x": 1874,
+            "y": 463
         },
         {
             "assetUUID": "bd401dc4-d292-427d-9335-edaf9ce23007",
@@ -2845,11 +2826,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00046",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1588,
-            "y": 709
+            "x": 230,
+            "y": 818
         },
         {
             "assetUUID": "fdc94ae6-0747-42fe-9ab8-9e9fbeef6d10",
@@ -2864,11 +2845,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00047",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1178,
-            "y": 532
+            "x": 1759,
+            "y": 693
         },
         {
             "assetUUID": "f635bc31-7a7f-40b5-b71c-cd609f4af1c6",
@@ -2883,11 +2864,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00048",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 0,
-            "y": 933
+            "x": 1414,
+            "y": 939
         },
         {
             "assetUUID": "0ef2063b-a4c2-4a39-8410-870aba8c4f6c",
@@ -2902,11 +2883,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00049",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1588,
-            "y": 249
+            "x": 230,
+            "y": 703
         },
         {
             "assetUUID": "61de9f04-370c-458d-9057-c4b78ac1bbbc",
@@ -2921,11 +2902,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00050",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 472
+            "x": 1265,
+            "y": 992
         },
         {
             "assetUUID": "78d6236d-29b9-42e8-b689-2023440d295e",
@@ -2940,11 +2921,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00051",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1178,
-            "y": 647
+            "x": 718,
+            "y": 481
         },
         {
             "assetUUID": "dc51cf13-7b95-40ba-bad6-90e0a7914e1e",
@@ -2959,11 +2940,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00052",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 183,
-            "y": 1846
+            "x": 920,
+            "y": 826
         },
         {
             "assetUUID": "3350e735-4eb7-4b7e-92a3-63901ec45dc6",
@@ -2978,11 +2959,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00053",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1265,
-            "y": 877
+            "x": 460,
+            "y": 933
         },
         {
             "assetUUID": "b16d569c-0bb7-4de0-970f-bd72bc1318dc",
@@ -2997,11 +2978,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00054",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 460
+            "x": 1886,
+            "y": 0
         },
         {
             "assetUUID": "60dd5590-892b-4d36-8ebf-337d5352b24a",
@@ -3016,11 +2997,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00055",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1293,
-            "y": 532
+            "x": 690,
+            "y": 826
         },
         {
             "assetUUID": "2bb8bec1-d8ba-4b21-a43d-8966a05cad36",
@@ -3035,11 +3016,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00056",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1886,
-            "y": 0
+            "x": 1529,
+            "y": 939
         },
         {
             "assetUUID": "d01da4fb-0fb1-4abc-b3bc-d241f85cb75f",
@@ -3054,11 +3035,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00057",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1293,
-            "y": 647
+            "x": 1644,
+            "y": 792
         },
         {
             "assetUUID": "4bcef0e7-606e-4caa-a93f-438c656f40af",
@@ -3073,11 +3054,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00058",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 833,
-            "y": 481
+            "x": 1874,
+            "y": 808
         },
         {
             "assetUUID": "6aa48bc1-736a-42a8-828f-0c01c3d35523",
@@ -3092,7 +3073,7 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00059",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
             "x": 1063,
@@ -3111,11 +3092,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00060",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 345,
-            "y": 818
+            "x": 1644,
+            "y": 907
         },
         {
             "assetUUID": "c842e0d3-08b0-48f9-b9b5-837a94cd91d9",
@@ -3130,11 +3111,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00061",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 702
+            "x": 833,
+            "y": 596
         },
         {
             "assetUUID": "dd8a5bbe-4840-4449-9c58-4e9ea5148ecd",
@@ -3149,11 +3130,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00062",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1035,
-            "y": 826
+            "x": 1529,
+            "y": 594
         },
         {
             "assetUUID": "799740c1-07a8-4b3e-a451-96d466b114c7",
@@ -3168,11 +3149,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00063",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 460,
-            "y": 703
+            "x": 345,
+            "y": 818
         },
         {
             "assetUUID": "307907ef-ffda-45b1-a227-c8ace84ab074",
@@ -3187,11 +3168,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00064",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1397,
-            "y": 1867
+            "x": 1150,
+            "y": 877
         },
         {
             "assetUUID": "9b498ab4-1125-47aa-a14b-321278fc8c21",
@@ -3206,11 +3187,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00065",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 718,
-            "y": 596
+            "x": 115,
+            "y": 818
         },
         {
             "assetUUID": "88453f60-159e-4424-9d00-71d99c005916",
@@ -3225,11 +3206,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00066",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 817
+            "x": 1759,
+            "y": 923
         },
         {
             "assetUUID": "b45f83fe-9e6d-4c44-8711-bfc12677aa67",
@@ -3244,11 +3225,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00067",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1473,
-            "y": 479
+            "x": 603,
+            "y": 596
         },
         {
             "assetUUID": "ccf96346-216c-4c6a-89ff-faae7584f3c6",
@@ -3263,11 +3244,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00068",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 242
+            "x": 833,
+            "y": 481
         },
         {
             "assetUUID": "6dd7560d-0489-45d7-99e7-624d102ff2bb",
@@ -3282,11 +3263,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00069",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 575
+            "x": 1280,
+            "y": 417
         },
         {
             "assetUUID": "cd4e7822-e043-4832-a1ea-0b953b31c8ab",
@@ -3301,11 +3282,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00070",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 702
+            "x": 1265,
+            "y": 762
         },
         {
             "assetUUID": "98477b9f-7e7a-4020-9310-f8b97417f85b",
@@ -3320,11 +3301,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00071",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 298,
-            "y": 1849
+            "x": 1759,
+            "y": 808
         },
         {
             "assetUUID": "7aa8eca2-61c5-4530-9fd5-db1ef82b596f",
@@ -3339,11 +3320,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00072",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 948,
-            "y": 596
+            "x": 1035,
+            "y": 941
         },
         {
             "assetUUID": "66cd54f0-41bb-4390-b5a0-06ded71f308c",
@@ -3358,11 +3339,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00073",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1512,
-            "y": 1867
+            "x": 805,
+            "y": 941
         },
         {
             "assetUUID": "13bf3912-0b0b-4f5a-a0f4-bef2a4e5a631",
@@ -3377,11 +3358,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00074",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 115,
-            "y": 933
+            "x": 1644,
+            "y": 1022
         },
         {
             "assetUUID": "6621d3e6-32ef-4f1e-a445-c2b5f9019ec3",
@@ -3396,11 +3377,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00075",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 908,
-            "y": 941
+            "x": 452,
+            "y": 1048
         },
         {
             "assetUUID": "cbb8632b-75b6-4708-aaf2-3ab7a358d54a",
@@ -3415,11 +3396,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00076",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 570,
-            "y": 941
+            "x": 1871,
+            "y": 1038
         },
         {
             "assetUUID": "f25484d9-a671-4134-8fde-2f52d47261d2",
@@ -3434,11 +3415,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00077",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1590,
-            "y": 939
+            "x": 0,
+            "y": 1048
         },
         {
             "assetUUID": "08cfbeca-154d-45e0-897a-bd5a18ad3228",
@@ -3453,11 +3434,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00078",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1473,
-            "y": 594
+            "x": 1529,
+            "y": 709
         },
         {
             "assetUUID": "52de1299-6a66-471a-bd9d-598ee0709007",
@@ -3472,11 +3453,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00079",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1473,
-            "y": 709
+            "x": 1293,
+            "y": 647
         },
         {
             "assetUUID": "34bae8c6-c889-4da5-80d4-b3a48bc7e540",
@@ -3491,11 +3472,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00080",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 242
+            "x": 1874,
+            "y": 923
         },
         {
             "assetUUID": "9488ae4f-240f-4039-952d-ba6c6deb0129",
@@ -3510,11 +3491,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00081",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 344,
-            "y": 933
+            "x": 1758,
+            "y": 1038
         },
         {
             "assetUUID": "256496a2-1982-47b9-95c1-faed9bce5c65",
@@ -3529,11 +3510,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00082",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1477,
-            "y": 939
+            "x": 113,
+            "y": 1048
         },
         {
             "assetUUID": "88bb11dc-084e-4a66-bcda-7d9fe6a18901",
@@ -3548,11 +3529,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00083",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 796,
-            "y": 941
+            "x": 1532,
+            "y": 1054
         },
         {
             "assetUUID": "6f9ce30d-65b3-4614-a6f1-9beddb38ef62",
@@ -3567,11 +3548,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00084",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 7,
-            "y": 1048
+            "x": 341,
+            "y": 1163
         },
         {
             "assetUUID": "98d5c4c1-c1d9-48b4-8ecb-1645e9b39522",
@@ -3586,11 +3567,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00085",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1588,
-            "y": 479
+            "x": 1178,
+            "y": 647
         },
         {
             "assetUUID": "c69de3d4-e103-4150-87a1-c837f27b2ebb",
@@ -3608,8 +3589,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 690,
-            "y": 711
+            "x": 1566,
+            "y": 1867
         },
         {
             "assetUUID": "42e34670-4208-42c4-b77e-66cea7e04140",
@@ -3624,11 +3605,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00087",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1857,
-            "y": 1867
+            "x": 805,
+            "y": 826
         },
         {
             "assetUUID": "478df99a-026d-46d7-92d4-c243600f6eef",
@@ -3643,11 +3624,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00088",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 690,
-            "y": 826
+            "x": 575,
+            "y": 941
         },
         {
             "assetUUID": "0b33cdd6-1d72-4c81-a465-d8056411068b",
@@ -3662,11 +3643,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00089",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1590,
-            "y": 1054
+            "x": 452,
+            "y": 1171
         },
         {
             "assetUUID": "ae4c035b-1e86-452e-a422-21041e2c6daa",
@@ -3681,11 +3662,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00090",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1703,
-            "y": 1047
+            "x": 1818,
+            "y": 1153
         },
         {
             "assetUUID": "46adbb4c-3243-4be8-a6b1-79d9ceddc503",
@@ -3700,11 +3681,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00091",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 230
+            "x": 460,
+            "y": 703
         },
         {
             "assetUUID": "f26ce9a6-847b-4282-b19c-e6b0fe3eaf0e",
@@ -3719,11 +3700,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00092",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1265,
-            "y": 762
+            "x": 1644,
+            "y": 677
         },
         {
             "assetUUID": "8f777395-447a-4921-bfec-75bd74b42b12",
@@ -3738,11 +3719,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00093",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1131,
-            "y": 992
+            "x": 905,
+            "y": 1056
         },
         {
             "assetUUID": "5166e737-f629-485f-a2f3-71052cb77964",
@@ -3757,11 +3738,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00094",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1361,
-            "y": 992
+            "x": 1135,
+            "y": 1107
         },
         {
             "assetUUID": "9c65a18a-0560-4df8-a2ff-df1e47371f51",
@@ -3776,11 +3757,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00095",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 91,
-            "y": 1961
+            "x": 0,
+            "y": 1163
         },
         {
             "assetUUID": "d01e878c-8311-4d6e-8fb9-92e672324502",
@@ -3795,11 +3776,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00096",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1617,
-            "y": 1160
+            "x": 435,
+            "y": 1277
         },
         {
             "assetUUID": "6f980f8c-e4c2-427a-8e8f-9d33289d2339",
@@ -3814,11 +3795,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00097",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 344,
-            "y": 1139
+            "x": 1921,
+            "y": 1254
         },
         {
             "assetUUID": "e9d95a95-bd10-4aaf-b9c1-8227ac91fccd",
@@ -3833,11 +3814,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00098",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1723,
-            "y": 1148
+            "x": 328,
+            "y": 1276
         },
         {
             "assetUUID": "65254e45-3e16-40e5-adac-800e664a1caf",
@@ -3852,11 +3833,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00099",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 319,
-            "y": 1964
+            "x": 128,
+            "y": 1961
         },
         {
             "assetUUID": "827c9ece-762b-4803-924f-b2bb5d66dc9e",
@@ -3871,11 +3852,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00100",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 433,
-            "y": 1964
+            "x": 114,
+            "y": 1163
         },
         {
             "assetUUID": "c3df6150-0983-4a0f-b469-a1b8d88d98e0",
@@ -3890,11 +3871,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00101",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1830,
-            "y": 1148
+            "x": 221,
+            "y": 1276
         },
         {
             "assetUUID": "257dbd87-224f-4ea3-94e5-87c9cfff75ad",
@@ -3909,11 +3890,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00102",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 237,
-            "y": 1142
+            "x": 1814,
+            "y": 1251
         },
         {
             "assetUUID": "c54292a5-9b81-4bac-82c2-fe918712a50f",
@@ -3928,11 +3909,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00103",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 451,
-            "y": 1162
+            "x": 1597,
+            "y": 1277
         },
         {
             "assetUUID": "1fcf136e-7957-4333-a693-6b56791586fc",
@@ -3947,11 +3928,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00104",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 205,
-            "y": 1964
+            "x": 14,
+            "y": 1961
         },
         {
             "assetUUID": "0de3918e-8790-4edc-b810-a4dce31a8dca",
@@ -3966,11 +3947,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00105",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 357
+            "x": 1759,
+            "y": 578
         },
         {
             "assetUUID": "a6627b12-1b8c-48e4-b2a8-882c162c1a89",
@@ -3985,11 +3966,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00106",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1246,
-            "y": 992
+            "x": 1020,
+            "y": 1056
         },
         {
             "assetUUID": "cc4fb2de-db0b-4773-94e0-5f421e8272d1",
@@ -4004,7 +3985,7 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00107",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
             "x": 940,
@@ -4023,11 +4004,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00108",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 413,
-            "y": 1849
+            "x": 1414,
+            "y": 479
         },
         {
             "assetUUID": "02af47c5-41b1-4488-aad7-ae78c0b4c6da",
@@ -4042,11 +4023,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00109",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1588,
-            "y": 364
+            "x": 1874,
+            "y": 578
         },
         {
             "assetUUID": "0398a1c5-4e7e-4888-9a50-269ba2c4d761",
@@ -4061,11 +4042,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00110",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 460,
-            "y": 818
+            "x": 115,
+            "y": 703
         },
         {
             "assetUUID": "db89957a-a0a9-438a-bc23-01397810f0ab",
@@ -4080,11 +4061,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00111",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1035,
-            "y": 711
+            "x": 1414,
+            "y": 594
         },
         {
             "assetUUID": "45a39dfd-af9d-4071-ae0b-52d74ccd43ad",
@@ -4099,11 +4080,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00112",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1150,
-            "y": 762
+            "x": 0,
+            "y": 703
         },
         {
             "assetUUID": "4a27b242-910a-4582-8e5d-cb66708d1d62",
@@ -4118,11 +4099,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00113",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 948,
-            "y": 481
+            "x": 115,
+            "y": 933
         },
         {
             "assetUUID": "3d40bd90-6705-40df-aa79-c095efa2f298",
@@ -4137,11 +4118,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00114",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 817
+            "x": 1428,
+            "y": 249
         },
         {
             "assetUUID": "b8d54f28-5adc-49f4-ad16-695f960f300c",
@@ -4156,10 +4137,10 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00115",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 575,
+            "x": 1035,
             "y": 826
         },
         {
@@ -4175,11 +4156,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00116",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1063,
-            "y": 481
+            "x": 1529,
+            "y": 479
         },
         {
             "assetUUID": "54d69276-061e-4d5b-b388-c7176a311712",
@@ -4197,8 +4178,8 @@
             "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1588,
-            "y": 824
+            "x": 60,
+            "y": 1846
         },
         {
             "assetUUID": "65f5deaf-6e83-43d3-8572-c56b2ac813a8",
@@ -4213,11 +4194,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00118",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 115,
-            "y": 703
+            "x": 920,
+            "y": 941
         },
         {
             "assetUUID": "b69337a9-a7b7-4ccf-bbae-b30963b0af4c",
@@ -4232,11 +4213,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00119",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1243,
-            "y": 417
+            "x": 1510,
+            "y": 364
         },
         {
             "assetUUID": "e13aa948-c02c-4a3c-9bb9-7af3cf3fd634",
@@ -4251,11 +4232,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00120",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 683,
-            "y": 941
+            "x": 339,
+            "y": 1048
         },
         {
             "assetUUID": "98b3b49d-0071-41ab-8549-f9107a927923",
@@ -4270,10 +4251,10 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00121",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 920,
+            "x": 1035,
             "y": 711
         },
         {
@@ -4289,11 +4270,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00122",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1350,
-            "y": 1107
+            "x": 112,
+            "y": 1244
         },
         {
             "assetUUID": "5366cd5f-0f49-4b0f-b69b-5e3674943824",
@@ -4308,11 +4289,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00123",
-            "textureIndex": 2,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 892,
-            "y": 1539
+            "x": 690,
+            "y": 711
         },
         {
             "assetUUID": "fee348aa-f7ec-45e1-ba58-cb063cba728b",
@@ -4327,11 +4308,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00124",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1818,
-            "y": 472
+            "x": 1293,
+            "y": 532
         },
         {
             "assetUUID": "167f0986-85bc-4cea-85de-1ab6ce21b0ee",
@@ -4346,11 +4327,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00125",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 0,
-            "y": 818
+            "x": 805,
+            "y": 711
         },
         {
             "assetUUID": "1dd9f725-8163-4842-81ac-1699a8e9c116",
@@ -4365,11 +4346,11 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00126",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 112,
-            "x": 1933,
-            "y": 920
+            "x": 230,
+            "y": 933
         },
         {
             "assetUUID": "66116c8c-c322-4e87-8af2-d937e5dc4926",
@@ -4384,10 +4365,10 @@
             "height": 112,
             "itemType": "Atlas",
             "name": "MoonEmote_00127",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 112,
-            "x": 2040,
+            "x": 2043,
             "y": 0
         },
         {
@@ -4403,7 +4384,7 @@
             "height": 889,
             "itemType": "Text",
             "name": "Main",
-            "textureIndex": 2,
+            "textureIndex": 3,
             "textureInfo": 262147,
             "width": 889,
             "x": 0,
@@ -4422,11 +4403,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_00_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 118,
-            "y": 1048
+            "x": 827,
+            "y": 1164
         },
         {
             "assetUUID": "dd55d966-fcd9-40b7-ba69-dd97f9e886f5",
@@ -4441,11 +4422,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_01_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 459,
-            "y": 1048
+            "x": 938,
+            "y": 1164
         },
         {
             "assetUUID": "77d701ad-c38d-4803-b9fb-3bd0c697c00f",
@@ -4460,11 +4441,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_02_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 118,
-            "y": 1048
+            "x": 827,
+            "y": 1164
         },
         {
             "assetUUID": "36e94904-9354-439e-85b6-f8ef917d36ff",
@@ -4479,11 +4460,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_03_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1479,
-            "y": 1054
+            "x": 565,
+            "y": 1171
         },
         {
             "assetUUID": "24d9c194-afde-4899-ba46-92cb0bc30409",
@@ -4498,11 +4479,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_04_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 118,
-            "y": 1048
+            "x": 827,
+            "y": 1164
         },
         {
             "assetUUID": "57799783-f55e-42ae-bb26-e1bee51e58fd",
@@ -4517,11 +4498,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_05_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 459,
-            "y": 1048
+            "x": 938,
+            "y": 1164
         },
         {
             "assetUUID": "af882dd9-eef1-4c6e-81ab-e5db5243a2d6",
@@ -4536,11 +4517,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_06_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 118,
-            "y": 1048
+            "x": 827,
+            "y": 1164
         },
         {
             "assetUUID": "3cbb9efb-8cfe-4c6d-a3e7-496883d3b5c0",
@@ -4555,11 +4536,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_07_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1479,
-            "y": 1054
+            "x": 565,
+            "y": 1171
         },
         {
             "assetUUID": "d297e060-358c-4868-a1c4-ddbace35d4f7",
@@ -4574,11 +4555,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_08_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 118,
-            "y": 1048
+            "x": 827,
+            "y": 1164
         },
         {
             "assetUUID": "e794044e-863d-4b4f-8278-ccce9a2dc1dd",
@@ -4593,11 +4574,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_09_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1479,
-            "y": 1054
+            "x": 565,
+            "y": 1171
         },
         {
             "assetUUID": "57a0fe87-6dfa-4c9c-8c76-d58e6937df02",
@@ -4612,11 +4593,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_10_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 794,
-            "y": 1056
+            "x": 1371,
+            "y": 1165
         },
         {
             "assetUUID": "97514527-fa99-4d98-a8b4-3cb84b058b6c",
@@ -4631,11 +4612,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_11_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1014,
-            "y": 1056
+            "x": 0,
+            "y": 1244
         },
         {
             "assetUUID": "a85e4e13-5fc5-486b-98a0-50856e8f51a1",
@@ -4650,11 +4631,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_12_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1126,
-            "y": 1100
+            "x": 1591,
+            "y": 1169
         },
         {
             "assetUUID": "3c128f7b-cb07-41c9-a18b-435c9d76fc58",
@@ -4669,11 +4650,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_13_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 570,
-            "y": 1056
+            "x": 676,
+            "y": 1167
         },
         {
             "assetUUID": "3145b716-55a4-434e-b630-d7c8314f3125",
@@ -4688,11 +4669,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_14_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1238,
-            "y": 1100
+            "x": 1259,
+            "y": 1208
         },
         {
             "assetUUID": "80e64483-af38-406a-b7d1-9ae21a92dc19",
@@ -4707,11 +4688,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_15_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 682,
-            "y": 1056
+            "x": 1147,
+            "y": 1222
         },
         {
             "assetUUID": "747f6c6e-c4c1-4060-9add-8632c428de62",
@@ -4726,11 +4707,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_16_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1238,
-            "y": 1100
+            "x": 1259,
+            "y": 1208
         },
         {
             "assetUUID": "3c3c3f2c-a2d6-4eb2-83fe-615984133416",
@@ -4745,11 +4726,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_17_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 682,
-            "y": 1056
+            "x": 1147,
+            "y": 1222
         },
         {
             "assetUUID": "ed2e2f61-1d23-4cbe-b98f-598317651d84",
@@ -4764,11 +4745,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_18_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1238,
-            "y": 1100
+            "x": 1259,
+            "y": 1208
         },
         {
             "assetUUID": "e9c17c4b-0ced-4161-a7fb-50e9887828e0",
@@ -4783,11 +4764,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_19_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 570,
-            "y": 1056
+            "x": 676,
+            "y": 1167
         },
         {
             "assetUUID": "94c79f60-45bd-46b6-9594-cb8853001dce",
@@ -4802,11 +4783,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_20_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1126,
-            "y": 1100
+            "x": 1591,
+            "y": 1169
         },
         {
             "assetUUID": "e86d6c59-930d-4b40-a0a2-d19df6b681d6",
@@ -4821,11 +4802,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_21_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1126,
-            "y": 1100
+            "x": 1591,
+            "y": 1169
         },
         {
             "assetUUID": "8940a21b-1e32-4a9b-9e4b-5623423862e5",
@@ -4840,11 +4821,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_22_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 570,
-            "y": 1056
+            "x": 676,
+            "y": 1167
         },
         {
             "assetUUID": "f1e3639f-d7c7-4b90-833f-c561dccb6f65",
@@ -4859,11 +4840,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_23_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1238,
-            "y": 1100
+            "x": 1259,
+            "y": 1208
         },
         {
             "assetUUID": "16831b16-b961-447a-8e5c-56817f722d6f",
@@ -4878,11 +4859,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_24_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 682,
-            "y": 1056
+            "x": 1147,
+            "y": 1222
         },
         {
             "assetUUID": "85ecc69a-d2f8-4d31-bd56-66dd81deab7f",
@@ -4897,11 +4878,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_25_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1238,
-            "y": 1100
+            "x": 1259,
+            "y": 1208
         },
         {
             "assetUUID": "33b17f2b-73c6-43b6-a760-71cfe129f92e",
@@ -4916,11 +4897,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_26_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 570,
-            "y": 1056
+            "x": 676,
+            "y": 1167
         },
         {
             "assetUUID": "a72f1418-c4b9-459a-9b1d-a92c1eaff928",
@@ -4935,11 +4916,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_27_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1126,
-            "y": 1100
+            "x": 1591,
+            "y": 1169
         },
         {
             "assetUUID": "445cec44-cc40-477c-b4a3-6d80d136025d",
@@ -4954,11 +4935,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_28_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1014,
-            "y": 1056
+            "x": 0,
+            "y": 1244
         },
         {
             "assetUUID": "6d443f56-1b5c-4dd4-98ba-fe17b308c321",
@@ -4973,11 +4954,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "frame_29_delay-0",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 1479,
-            "y": 1054
+            "x": 565,
+            "y": 1171
         },
         {
             "assetUUID": "90501fa5-de08-4944-ba99-e31c120b093f",
@@ -4992,11 +4973,11 @@
             "height": 111,
             "itemType": "Atlas",
             "name": "NOTED",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 111,
-            "x": 118,
-            "y": 1048
+            "x": 827,
+            "y": 1164
         },
         {
             "assetUUID": "beca28bc-7a1a-4be1-a558-a8f2eae03b90",
@@ -5011,11 +4992,163 @@
             "height": 478,
             "itemType": "Atlas",
             "name": "paper_panel_601_x_478",
-            "textureIndex": 3,
+            "textureIndex": 4,
             "textureInfo": 262147,
             "width": 601,
             "x": 603,
             "y": 0
+        },
+        {
+            "assetUUID": "544f9aa4-e128-4f8f-932a-f3a26758e8bf",
+            "bankId": 0,
+            "checksum": 1010361339,
+            "cropBottom": 109,
+            "cropLeft": 0,
+            "cropRight": 109,
+            "cropTop": 0,
+            "errors": 0,
+            "filter": "Emotes",
+            "height": 110,
+            "itemType": "Atlas",
+            "name": "Hunger",
+            "textureIndex": 4,
+            "textureInfo": 262147,
+            "width": 110,
+            "x": 228,
+            "y": 1163
+        },
+        {
+            "assetUUID": "d048487d-6ce3-45d7-b73a-72cafeacc91b",
+            "bankId": 0,
+            "checksum": 2616173605,
+            "cropBottom": 241,
+            "cropLeft": 38,
+            "cropRight": 204,
+            "cropTop": 40,
+            "errors": 0,
+            "filter": "UI/Grades",
+            "height": 256,
+            "itemType": "Atlas",
+            "name": "Grade_A",
+            "textureIndex": 3,
+            "textureInfo": 262147,
+            "width": 256,
+            "x": 1214,
+            "y": 1841
+        },
+        {
+            "assetUUID": "1382655a-a3a1-4838-a213-032f4f3775dd",
+            "bankId": 0,
+            "checksum": 4256064122,
+            "cropBottom": 219,
+            "cropLeft": 42,
+            "cropRight": 207,
+            "cropTop": 18,
+            "errors": 0,
+            "filter": "UI/Grades",
+            "height": 256,
+            "itemType": "Atlas",
+            "name": "Grade_B",
+            "textureIndex": 4,
+            "textureInfo": 262147,
+            "width": 256,
+            "x": 1658,
+            "y": 242
+        },
+        {
+            "assetUUID": "fc36d9e0-133a-4c43-ab0a-992ff4086bf1",
+            "bankId": 0,
+            "checksum": 4054964445,
+            "cropBottom": 208,
+            "cropLeft": 54,
+            "cropRight": 210,
+            "cropTop": 23,
+            "errors": 0,
+            "filter": "UI/Grades",
+            "height": 256,
+            "itemType": "Atlas",
+            "name": "Grade_C",
+            "textureIndex": 3,
+            "textureInfo": 262147,
+            "width": 256,
+            "x": 540,
+            "y": 1849
+        },
+        {
+            "assetUUID": "df01bb01-15f3-4fa7-a9b6-c7be8c6347ac",
+            "bankId": 0,
+            "checksum": 3792522876,
+            "cropBottom": 219,
+            "cropLeft": 46,
+            "cropRight": 234,
+            "cropTop": 25,
+            "errors": 0,
+            "filter": "UI/Grades",
+            "height": 256,
+            "itemType": "Atlas",
+            "name": "Grade_D",
+            "textureIndex": 3,
+            "textureInfo": 262147,
+            "width": 256,
+            "x": 700,
+            "y": 1849
+        },
+        {
+            "assetUUID": "e7c0b2c4-db73-4982-8a06-89cee460bbfd",
+            "bankId": 0,
+            "checksum": 753501783,
+            "cropBottom": 225,
+            "cropLeft": 49,
+            "cropRight": 174,
+            "cropTop": 27,
+            "errors": 0,
+            "filter": "UI/Grades",
+            "height": 256,
+            "itemType": "Atlas",
+            "name": "Grade_F",
+            "textureIndex": 3,
+            "textureInfo": 262147,
+            "width": 256,
+            "x": 892,
+            "y": 1424
+        },
+        {
+            "assetUUID": "ae60d04c-e895-4bed-96dd-a6d44384a320",
+            "bankId": 0,
+            "checksum": 1697167707,
+            "cropBottom": 719,
+            "cropLeft": 0,
+            "cropRight": 719,
+            "cropTop": 0,
+            "errors": 0,
+            "filter": "",
+            "height": 720,
+            "itemType": "Text",
+            "name": "Bills",
+            "textureIndex": 3,
+            "textureInfo": 262147,
+            "width": 720,
+            "x": 1268,
+            "y": 0
+        },
+        {
+            "assetUUID": "cbc6b144-afee-4e42-8f97-5f84bedecbf7",
+            "bankId": 0,
+            "checksum": 360185889,
+            "cropBottom": 217,
+            "cropLeft": 0,
+            "cropRight": 217,
+            "cropTop": 0,
+            "errors": 0,
+            "filter": "",
+            "height": 218,
+            "itemType": "Text",
+            "name": "TheNextDay",
+            "textureIndex": 4,
+            "textureInfo": 262147,
+            "width": 218,
+            "x": 1827,
+            "y": 242
         }
     ],
     "banks": [
@@ -5031,8 +5164,8 @@
             "sbFrameMarginRight": 1,
             "sbFrameMarginTop": 0,
             "unfilledIndices": [
-                1,
-                3
+                2,
+                4
             ]
         }
     ],
