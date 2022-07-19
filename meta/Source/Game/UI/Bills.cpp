@@ -210,7 +210,7 @@ void Bills::Assemble(int64 iPaycheckAmt, int64 iRepairCost, BillyFeels eBillySta
 
 	if(pThis->m_BillyStatus.m_GradeLetter.GetState() == BILLYGRADE_F)
 		MoonjamTravesty::GameOver(GAMEOVER_Juicer);
-	else if(pThis->m_RemainingMoney.GetValue() < 0)
+	else if(pThis->m_RemainingMoney.GetValue() <= 0)
 		MoonjamTravesty::GameOver(GAMEOVER_Bankruptcy);
 	else
 		MoonjamTravesty::Sleep(pThis->m_RemainingMoney.GetValue(), pThis->m_MedicineChk.IsChecked(), pThis->m_FoodChk.IsChecked());
