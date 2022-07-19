@@ -198,7 +198,7 @@ void Bills::Assemble(int64 iPaycheckAmt, int64 iRepairCost, BillyFeels eBillySta
 
 	if(m_BillyStatus.m_GradeLetter.GetState() == BILLYGRADE_F)
 		m_EndBtn.SetText("Billy is a juicer");
-	else if(m_RemainingMoney.GetValue() >= 0)
+	else if(m_RemainingMoney.GetValue() > 0)
 		m_EndBtn.SetText("Go to sleep");
 	else
 		m_EndBtn.SetText("Declare Bankruptcy");
