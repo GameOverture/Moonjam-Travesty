@@ -91,20 +91,27 @@ Computer::Computer(HyEntity2d *pParent /*= nullptr*/) :
 /*static*/ void Computer::OnExitBtn(HyButton *pBtn, void *pData)
 {
 	Computer *pThis = reinterpret_cast<Computer *>(pData);
-	pThis->Hide();
+	if(pThis->IsShown())
+		pThis->Hide();
 }
 
 /*static*/ void Computer::OnWorkBtn(HyButton *pBtn, void *pData)
 {
-	MoonjamTravesty::EndDay();
+	Computer *pThis = reinterpret_cast<Computer *>(pData);
+	if(pThis->IsShown())
+		MoonjamTravesty::EndDay();
 }
 
 /*static*/ void Computer::OnCumBtn(HyButton *pBtn, void *pData)
 {
-	MoonjamTravesty::BuyCum();
+	Computer *pThis = reinterpret_cast<Computer *>(pData);
+	if(pThis->IsShown())
+		MoonjamTravesty::BuyCum();
 }
 
 /*static*/ void Computer::OnGunBtn(HyButton *pBtn, void *pData)
 {
-	MoonjamTravesty::BuyGun();
+	Computer *pThis = reinterpret_cast<Computer *>(pData);
+	if(pThis->IsShown())
+		MoonjamTravesty::BuyGun();
 }

@@ -207,6 +207,8 @@ void Bills::Assemble(int64 iPaycheckAmt, int64 iRepairCost, BillyFeels eBillySta
 /*static*/ void Bills::OnExitBtn(HyButton *pBtn, void *pData)
 {
 	Bills *pThis = reinterpret_cast<Bills *>(pData);
+	if(pThis->IsShown() == false)
+		return;
 
 	if(pThis->m_BillyStatus.m_GradeLetter.GetState() == BILLYGRADE_F)
 		MoonjamTravesty::GameOver(GAMEOVER_Juicer);

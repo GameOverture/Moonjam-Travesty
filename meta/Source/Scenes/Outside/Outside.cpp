@@ -561,7 +561,7 @@ void Outside::AttackUpdate()
 		// Update shooting
 		for(auto *pGun : m_GunList)
 		{
-			if(pGun->CanShoot() == false)
+			if(pGun->CanShoot() == false || pGun->GetItemState() != ITEMSTATE_Active)
 				continue;
 
 			float fFireThreshold = pGun->pos.X();
