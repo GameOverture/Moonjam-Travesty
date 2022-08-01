@@ -65,7 +65,7 @@ TheNextDay::TheNextDay(HyEntity2d *pParent /*= nullptr*/) :
 	m_Y.SetText("Y");
 	m_Y.pos.Set(fStartX + m_D.GetWidth() + m_A.GetWidth(), HyEngine::Window().GetHeightF(0.5f));
 
-	Reset();
+	Reset(false);
 }
 
 /*virtual*/ TheNextDay::~TheNextDay()
@@ -76,7 +76,7 @@ TheNextDay::TheNextDay(HyEntity2d *pParent /*= nullptr*/) :
 {
 }
 
-void TheNextDay::Reset()
+void TheNextDay::Reset(bool bChangeToHexed)
 {
 	float fStartX = HyEngine::Window().GetWidthF(0.3f);
 	m_T.pos.Set(fStartX, HyEngine::Window().GetHeightF(0.5f));
@@ -103,6 +103,13 @@ void TheNextDay::Reset()
 	m_A.scale.Set(1.0f, 1.0f);
 	m_Y.pos.Set(fStartX + m_D.GetWidth() + m_A.GetWidth(), HyEngine::Window().GetHeightF(0.5f));
 	m_Y.scale.Set(1.0f, 1.0f);
+
+	if(bChangeToHexed)
+	{
+		m_N.SetText("H");
+		m_T2.SetText("D");
+		m_Oval.SetTint(HyColor::DarkRed);
+	}
 
 	m_bStarted = false;
 }

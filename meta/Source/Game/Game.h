@@ -9,7 +9,7 @@
 
 const float fSNACK_DUR = 6.0f;
 const float fDINNER_DUR = 12.0f;
-const float fHOMEWORK_DUR = 8.0f;
+const float fHOMEWORK_DUR = 10.0f;
 
 const float fDAY_LENGTH = 90.0f;
 const int64 iSTART_MONEY = 2000 * 100;
@@ -35,6 +35,8 @@ const float fGUMS_CUM_MOVE_MOD = 0.42f;
 
 const float fLEFT_BOUNDS = -1375.0f;
 const float fRIGHT_BOUNDS = 666.0f;
+
+const int32 iDAYINDEX_ENDGAME = 4;
 
 
 class MoonjamTravesty;

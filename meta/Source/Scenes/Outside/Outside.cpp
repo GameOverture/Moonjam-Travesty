@@ -215,16 +215,25 @@ Outside::Outside(Player &playerRef, HyEntity2d *pParent /*= nullptr*/) :
 				break;
 
 			case ITEMSTATE_Held:
-				if(m_PlayerRef.IsGrounded() && HyEngine::Input().IsActionDown(INPUT_Action) && m_PlayerRef.pos.X() < -fMINIMUM_DIST_FROM_DOOR)
+				if(m_PlayerRef.IsGrounded() && HyEngine::Input().IsActionDown(INPUT_Action))
 				{
-					m_PlayerRef.EnableInput(false);
-					HyLog("EnableInput: false - item in setup init");
-					m_PlayerRef.SetMoonState(MOONSTATE_Pickup);
+					if(m_PlayerRef.pos.X() < -fMINIMUM_DIST_FROM_DOOR)
+					{
+						m_PlayerRef.EnableInput(false);
+						HyLog("EnableInput: false - item in setup init");
+						m_PlayerRef.SetMoonState(MOONSTATE_Pickup);
 
-					bool bFlipped = (m_PlayerRef.GetMoonSprite().scale.X() < 0.0f);
-					pItem->GetPackage().pos.Tween(bFlipped ? fItemSetupOffsetX : -fItemSetupOffsetX, fItemHeldPosY, fSETUP_INIT_DURATION, HyTween::BounceInOut);
-					pItem->GetPackage().rot.Tween(bFlipped ? -170.0f : 170.0f, fSETUP_INIT_DURATION);
-					pItem->SetItemState(ITEMSTATE_SetupInit);
+						bool bFlipped = (m_PlayerRef.GetMoonSprite().scale.X() < 0.0f);
+						pItem->GetPackage().pos.Tween(bFlipped ? fItemSetupOffsetX : -fItemSetupOffsetX, fItemHeldPosY, fSETUP_INIT_DURATION, HyTween::BounceInOut);
+						pItem->GetPackage().rot.Tween(bFlipped ? -170.0f : 170.0f, fSETUP_INIT_DURATION);
+						pItem->SetItemState(ITEMSTATE_SetupInit);
+					}
+					else
+					{
+						m_PlayerRef.GetLabel().SetText("Too close to house!");
+						m_PlayerRef.GetLabel().SetVisible(true);
+						m_PlayerRef.GetLabel().alpha.Tween(1.0f, 1.42f, HyTween::QuadOut, [](IHyNode *pThis) { static_cast<HyLabel *>(pThis)->alpha.Tween(0.0f, 0.33f); });
+					}
 				}
 				break;
 
@@ -434,27 +443,16 @@ void Outside::SetupAttack(uint32 uiDayIndex)
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 6.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyGums(2, 7.0f, this));
 		break;
-	
-	case 3:
-		m_EnemyList.push_back(HY_NEW EnemyBorpa(2, 0.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(3, 2.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(2, 3.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 4.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(3, 6.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(3, 7.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 8.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(3, 9.0f, this));
-		break;
 
-	case 4:
-		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 0.0f, this));
+	case 3:
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 0.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 1.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyGums(3, 2.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(3, 3.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 4.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(3, 6.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 3.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 4.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyGums(3, 5.0f, this));
+		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 6.0f, this));
 		m_EnemyList.push_back(HY_NEW EnemyGums(3, 7.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyBorpa(3, 8.0f, this));
-		m_EnemyList.push_back(HY_NEW EnemyGums(3, 9.0f, this));
 		break;
 
 	default:

@@ -134,12 +134,21 @@ MoonjamTravesty::~MoonjamTravesty()
 	case STATE_Attack:
 		if(m_Outside.IsAttackFinished())
 		{
-			m_TheNextDay.Reset();
-			m_TheNextDay.SetVisible(true);
-			m_TheNextDay.alpha.Set(0.0f);
-			m_TheNextDay.alpha.Tween(1.0f, 2.0f, HyTween::Linear, [](IHyNode *pThis) { static_cast<TheNextDay *>(pThis)->Start(); });
-
-			m_eGameState = STATE_TheNextDay;
+			if(m_iDayIndex >= iDAYINDEX_ENDGAME)
+			{
+				m_Game.m_Bills.Assemble(iMAX_WORK_PROFIT, m_Outside.GetHouseDamage() * iHOUSE_DAMAGE_COST, m_Game.m_BillyChecklist.GetBillyFeels(), m_Game.m_BillyChecklist.GetBillyGrade());
+				m_Game.m_Bills.Load();
+				m_Game.m_Bills.Show();
+				m_eGameState = STATE_Bills;
+			}
+			else
+			{
+				m_TheNextDay.Reset(m_iDayIndex >= iDAYINDEX_ENDGAME - 1);
+				m_TheNextDay.SetVisible(true);
+				m_TheNextDay.alpha.Set(0.0f);
+				m_TheNextDay.alpha.Tween(1.0f, 2.0f, HyTween::Linear, [](IHyNode *pThis) { static_cast<TheNextDay *>(pThis)->Start(); });
+				m_eGameState = STATE_TheNextDay;
+			}
 		}
 		break;
 
@@ -183,6 +192,11 @@ MoonjamTravesty::~MoonjamTravesty()
 	return sm_pInstance->m_Game;
 }
 
+/*static*/ int32 MoonjamTravesty::GetDayIndex()
+{
+	return sm_pInstance->m_iDayIndex;
+}
+
 /*static*/ void MoonjamTravesty::BuyCum()
 {
 	sm_pInstance->m_Game.BuyCum();
@@ -222,13 +236,10 @@ MoonjamTravesty::~MoonjamTravesty()
 	sm_pInstance->m_Game.OnSleep(bBoughtMedicine, bBoughtFood);
 	sm_pInstance->m_Outside.SetupAttack(sm_pInstance->m_iDayIndex);
 	sm_pInstance->m_iDayIndex++;
-	if(sm_pInstance->m_iDayIndex > 5)
-	{
-		sm_pInstance->m_GameOver.m_GameOver.SetText("YOU WIN!");
-		GameOver(GAMEOVER_Win);
-	}
-	else
-		sm_pInstance->m_eGameState = STATE_Attack;
+
+	HyLog("Day: " << sm_pInstance->m_iDayIndex);
+
+	sm_pInstance->m_eGameState = STATE_Attack;
 }
 
 /*static*/ void MoonjamTravesty::GameOver(GameOverType eGameOverType)
@@ -241,6 +252,9 @@ MoonjamTravesty::~MoonjamTravesty()
 	sm_pInstance->m_Title.SetVisible(false);
 	sm_pInstance->m_TheNextDay.SetVisible(false);
 	
+	if(eGameOverType == GAMEOVER_Win)
+		sm_pInstance->m_GameOver.m_GameOver.SetText("YOU WIN!");
+
 	sm_pInstance->m_GameOver.SetVisible(true);
 	sm_pInstance->m_GameOver.m_StoryEnds.Play();
 

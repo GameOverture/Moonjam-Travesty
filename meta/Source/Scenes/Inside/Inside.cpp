@@ -222,7 +222,7 @@ void Inside::Init()
 	SetVisible(true);
 	HyEngine::Window().GetCamera2d(0)->pos.Set(635, 354);
 
-	HyEngine::Window().GetCamera2d(0)->SetZoom(1.2f);
+	HyEngine::Window().GetCamera2d(0)->SetZoom(1.0f / 1.2f);
 
 	m_PlayerRef.physics.SetEnabled(false);
 	ChildAppend(m_PlayerRef);

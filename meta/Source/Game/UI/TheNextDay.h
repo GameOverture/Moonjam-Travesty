@@ -29,7 +29,7 @@ public:
 
 	virtual void OnUpdate() override;
 
-	void Reset();
+	void Reset(bool bChangeToHexed);
 	void Start();
 	bool IsFinished();
 };

@@ -50,6 +50,8 @@ public:
 	static void EnterHouse();
 
 	static Game &GetGame();
+	static int32 GetDayIndex();
+
 	static void BuyCum();
 	static void BuyGun();
 

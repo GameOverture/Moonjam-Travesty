@@ -199,7 +199,12 @@ void Bills::Assemble(int64 iPaycheckAmt, int64 iRepairCost, BillyFeels eBillySta
 	if(m_BillyStatus.m_GradeLetter.GetState() == BILLYGRADE_F)
 		m_EndBtn.SetText("Billy is a juicer");
 	else if(m_RemainingMoney.GetValue() > 0)
-		m_EndBtn.SetText("Go to sleep");
+	{
+		if(MoonjamTravesty::GetDayIndex() >= iDAYINDEX_ENDGAME)
+			m_EndBtn.SetText("Win at Life");
+		else
+			m_EndBtn.SetText("Go to sleep");
+	}
 	else
 		m_EndBtn.SetText("Declare Bankruptcy");
 }
@@ -215,5 +220,10 @@ void Bills::Assemble(int64 iPaycheckAmt, int64 iRepairCost, BillyFeels eBillySta
 	else if(pThis->m_RemainingMoney.GetValue() <= 0)
 		MoonjamTravesty::GameOver(GAMEOVER_Bankruptcy);
 	else
-		MoonjamTravesty::Sleep(pThis->m_RemainingMoney.GetValue(), pThis->m_MedicineChk.IsChecked(), pThis->m_FoodChk.IsChecked());
+	{
+		if(MoonjamTravesty::GetDayIndex() >= iDAYINDEX_ENDGAME)
+			MoonjamTravesty::GameOver(GAMEOVER_Win);
+		else
+			MoonjamTravesty::Sleep(pThis->m_RemainingMoney.GetValue(), pThis->m_MedicineChk.IsChecked(), pThis->m_FoodChk.IsChecked());
+	}
 }

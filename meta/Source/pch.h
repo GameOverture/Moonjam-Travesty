@@ -1,7 +1,7 @@
 #ifndef pch_h__
 #define pch_h__
 
-#include "Harmony/HyEngine.h"
+#include "HyEngine.h"
 
 #define DISPLAYORDER_LoadCover		999999999
 #define DISPLAYORDER_Bills			999999990
