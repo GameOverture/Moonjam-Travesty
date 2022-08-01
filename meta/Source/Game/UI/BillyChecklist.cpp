@@ -100,13 +100,16 @@ void BillyChecklist::OnEndDay() // BEFORE BILLS
 	switch(iFoodPts)
 	{
 	case 0:
-		if(m_HomeworkChkBox.GetState() == 1)
+		if(m_HomeworkChkBox.GetState() == 1 && m_eBillyFeels == BILLY_Okage)
 			iGradePts = 1;
 		break;
 
 	case -1:
 		if(m_eBillyFeels == BILLY_Okage) // Billy was...
+		{
 			m_eBillyFeels = BILLY_Hunger;
+			iGradePts--;
+		}
 		else if(m_eBillyFeels == BILLY_Hunger) // Billy was...
 		{
 			m_eBillyFeels = BILLY_Sick;
