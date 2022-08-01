@@ -91,6 +91,8 @@ void IEnemy::AttackUpdate()
 		physics.Init(HYPHYS_Dynamic);
 		//pEnemy->physics.SetSensor(true);
 	}
+
+	OnAttackUpdate();
 }
 
 void IEnemy::Kill()

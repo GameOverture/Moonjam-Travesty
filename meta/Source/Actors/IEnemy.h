@@ -38,6 +38,8 @@ public:
 	void Kill();
 
 	void AttackHouse();
+
+	virtual void OnAttackUpdate() { }
 };
 
 #endif // IEnemy_h__

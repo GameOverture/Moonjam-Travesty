@@ -13,6 +13,8 @@ public:
 	virtual ~EnemyGums();
 
 	virtual void OnUpdate() override;
+
+	virtual void OnAttackUpdate() override;
 };
 
 #endif // EnemyGums_h__
